@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check } from "lucide-react"
+import bigFourImage from './images/big4.png'
+
+console.log('Image path:', bigFourImage);
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -253,7 +256,7 @@ function App() {
                 <div className="absolute inset-0 bg-white rounded-xl shadow-sm group-hover:shadow-md transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
                 <div className="relative h-full flex items-center justify-center p-8">
                   <img
-                    src={`https://placehold.co/200x80?text=Partner+${i}`}
+                    src={bigFourImage}
                     alt={`Partner logo ${i}`}
                     className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
                   />
