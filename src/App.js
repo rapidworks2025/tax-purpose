@@ -3,12 +3,15 @@
 import { useState, useEffect } from "react"
 import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check } from "lucide-react"
 import bigFourImage from './images/big4.png'
+import { translations } from './translations'
 
 console.log('Image path:', bigFourImage);
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [lang, setLang] = useState('de')
+  const t = translations[lang]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,23 +71,29 @@ function App() {
   const services = [
     {
       icon: <Users className="h-6 w-6" />,
-      title: "Social Entrepreneurship",
-      description: "Tax expertise for social enterprises and non-profit organizations.",
-      features: ["Non-profit tax compliance", "Social impact measurement", "Grant and funding strategies"],
+      title: t.services.cards.social.title,
+      description: t.services.cards.social.description,
+      features: t.services.cards.social.features,
     },
     {
       icon: <Leaf className="h-6 w-6" />,
-      title: "Sustainability",
-      description: "Tax advice for environmental projects and sustainable infrastructure.",
-      features: ["Green tax incentives", "Carbon credit accounting", "ESG reporting support"],
+      title: t.services.cards.sustainability.title,
+      description: t.services.cards.sustainability.description,
+      features: t.services.cards.sustainability.features,
     },
     {
       icon: <Globe className="h-6 w-6" />,
-      title: "International Tax",
-      description: "Cross-border tax consulting with a focus on Belgium and Netherlands.",
-      features: ["Transfer pricing", "Global mobility solutions", "International tax structuring"],
+      title: t.services.cards.international.title,
+      description: t.services.cards.international.description,
+      features: t.services.cards.international.features,
     },
   ]
+
+  const insightImages = {
+    sustainable: "https://images.unsplash.com/photo-1618044733300-9472054094ee",
+    crossBorder: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e",
+    social: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f"
+  }
 
   return (
     <div className="min-h-screen">
@@ -100,28 +109,52 @@ function App() {
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex lg:gap-16">
-              {navigation.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium text-text hover:text-accent transition-colors duration-300 relative group"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-1 left-0 w-full h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </a>
-              ))}
-            </nav>
+            <div className="hidden lg:flex lg:items-center lg:gap-8">
+              <nav className="flex gap-16">
+                {navigation.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-text hover:text-accent transition-colors duration-300 relative group"
+                  >
+                    {t.nav[item.name.toLowerCase()]}
+                    <span className="absolute -bottom-1 left-0 w-full h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  </a>
+                ))}
+              </nav>
 
-            {/* Schedule Button */}
-            <a
-              href="https://calendly.com/contact-taxandpurpose/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium bg-accent/90 text-white hover:bg-accent transition-all duration-300 shadow-sm hover:shadow-md"
-            >
-              Schedule Consultation
-            </a>
+              {/* Schedule Button */}
+              <a
+                href="https://calendly.com/contact-taxandpurpose/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium bg-accent/90 text-white hover:bg-accent transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                {t.nav.schedule}
+              </a>
+
+              {/* Language Switcher with flags - showing current language flag and name */}
+              <button 
+                onClick={() => setLang(lang === 'en' ? 'de' : 'en')}
+                className="text-sm font-medium text-text hover:text-accent transition-colors duration-300 flex items-center gap-2"
+              >
+                {lang === 'de' ? (
+                  <>
+                    <span className="w-5 h-5 rounded-full overflow-hidden">
+                      <img src="https://flagcdn.com/de.svg" alt="Deutsch" className="w-full h-full object-cover" />
+                    </span>
+                    DE
+                  </>
+                ) : (
+                  <>
+                    <span className="w-5 h-5 rounded-full overflow-hidden">
+                      <img src="https://flagcdn.com/gb.svg" alt="English" className="w-full h-full object-cover" />
+                    </span>
+                    EN
+                  </>
+                )}
+              </button>
+            </div>
 
             {/* Mobile menu button */}
             <button
@@ -132,30 +165,30 @@ function App() {
             </button>
 
             {/* Mobile menu panel */}
-        {isMenuOpen && (
+            {isMenuOpen && (
               <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-primary/10 shadow-lg">
                 <div className="p-4 space-y-3">
-              {navigation.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
+                  {navigation.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
                       className="block px-4 py-2 text-base font-medium text-text hover:text-accent rounded-lg hover:bg-accent/5 transition-colors duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-              <a
-                href="https://calendly.com/contact-taxandpurpose/30min"
-                target="_blank"
-                rel="noopener noreferrer"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {t.nav[item.name.toLowerCase()]}
+                    </a>
+                  ))}
+                  <a
+                    href="https://calendly.com/contact-taxandpurpose/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block mt-4 px-4 py-2 text-center rounded-full bg-accent text-white hover:bg-primary transition-all duration-300"
-              >
-                Schedule Consultation
-              </a>
-            </div>
-          </div>
-        )}
+                  >
+                    {t.nav.schedule}
+                  </a>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </header>
@@ -185,22 +218,21 @@ function App() {
             <div className="space-y-10">
               <div className="space-y-8">
                 <span className="inline-flex px-4 py-1.5 text-sm font-medium bg-accent/90 text-white rounded-full shadow-sm">
-                  International Tax Consulting
+                  {t.hero.tag}
                 </span>
                 <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
                   <span className="block text-text font-serif">
-                    Empowering Social &
+                    {t.hero.title.line1}
                   </span>
                   <span className="block text-accent font-serif">
-                    Sustainable Business
+                    {t.hero.title.line2}
                   </span>
                   <span className="block mt-4 text-text/80 text-2xl sm:text-3xl font-sans font-light">
-                    Through Expert Tax Advice
+                    {t.hero.title.line3}
                   </span>
                 </h1>
                 <p className="text-xl text-text/70 max-w-2xl font-light leading-relaxed">
-                  Combining 30 years of international tax expertise with a passion for social entrepreneurship and
-                  sustainability to drive meaningful change.
+                  {t.hero.description}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -210,29 +242,26 @@ function App() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-medium bg-accent text-white hover:bg-accent/90 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
-                  Schedule a Consultation
+                  {t.hero.cta.schedule}
                 </a>
                 <a
                   href="#about"
                   className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-medium text-text border-2 border-accent/20 hover:bg-accent/5 transition-all duration-300"
                 >
-                  Learn More
+                  {t.hero.cta.learn}
                 </a>
               </div>
             </div>
 
             {/* Right side - temporary placeholder using the coffee workspace image */}
-            <div className="relative hidden lg:block">
-              <div className="relative rounded-3xl overflow-hidden shadow-xl">
-                <img
-                  src="https://images.unsplash.com/photo-1488751045188-3c55bbf9a3fa?q=80&w=1374"
-                  alt="Workspace"
-                  className="h-[600px] w-full object-cover object-center"
-                />
-                {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent mix-blend-multiply"></div>
-              </div>
-              {/* Decorative dot pattern - adjusted position */}
+            <div className="relative aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1497215842964-222b430dc094"
+                alt={t.partners.workspace}
+                className="object-cover w-full h-full"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent mix-blend-multiply"></div>
+              {/* Decorative elements suggesting sustainability */}
               <div className="absolute -right-8 -bottom-8 w-64 h-64 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:12px_12px] opacity-[0.15] rounded-full"></div>
             </div>
           </div>
@@ -245,13 +274,13 @@ function App() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-background bg-accent/90 rounded-full backdrop-blur-sm shadow-lg">
-              Trusted Partners
+              {t.partners.tag}
             </span>
             <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl text-text font-serif">
-              Trusted by Industry Leaders
+              {t.partners.title}
             </h2>
             <p className="mt-4 text-lg text-text/70 max-w-2xl mx-auto font-light">
-              Working with organizations committed to sustainable and social impact
+              {t.partners.description}
             </p>
           </div>
           
@@ -263,11 +292,11 @@ function App() {
                 <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-primary/10 hover:border-accent/20 transition-all duration-500 hover:shadow-lg">
                   <div className="absolute top-0 left-0 h-full w-1 bg-accent/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                   <div className="h-20 flex items-center justify-center">
-                  <img
-                    src={bigFourImage}
-                    alt={`Partner logo ${i}`}
+                    <img
+                      src={bigFourImage}
+                      alt={`${t.partners.logoAlt} ${i}`}
                       className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
-                  />
+                    />
                   </div>
                 </div>
               </div>
@@ -298,13 +327,13 @@ function App() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <span className="inline-flex px-4 py-1.5 text-sm font-medium bg-accent/90 text-white rounded-full shadow-sm">
-              Our Expertise
+              {t.services.tag}
             </span>
             <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl text-text font-serif">
-              Comprehensive Tax Services
+              {t.services.title}
             </h2>
             <p className="mt-4 text-lg text-text/70 max-w-2xl mx-auto font-light">
-              Expert tax consulting tailored to your sustainable and social impact goals
+              {t.services.description}
             </p>
           </div>
 
@@ -350,11 +379,8 @@ function App() {
                 {/* Learn more link with organic animation */}
                 <div className="mt-8 pt-6 border-t border-primary/10">
                   <a href="#" className="inline-flex items-center text-accent group/link">
-                    <span className="relative">
-                      Learn more
-                      <span className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-accent via-primary to-transparent scale-x-0 group-hover/link:scale-x-100 transition-transform duration-500"></span>
-                      </span>
-                    <ChevronRight className="h-4 w-4 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-500" />
+                    {t.services.learnMore}
+                    <ChevronRight className="h-4 w-4 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-300" />
                     </a>
                 </div>
               </div>
@@ -374,57 +400,37 @@ function App() {
           </div>
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div className="space-y-8">
-              <div>
-                <span className="inline-block px-3 py-1 text-sm font-medium text-text bg-primary/30 rounded-full">About Us</span>
-                <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl text-text">Expertise Meets Purpose</h2>
-              </div>
-
-              <p className="text-lg text-text/70">
-                With 30 years of experience in international tax consulting, including 17.5 years with the "big four", I
-                bring deep expertise to help businesses achieve both economic success and positive social impact.
-              </p>
-
-              <div className="space-y-6">
-                <h3 className="text-xl font-semibold text-text">Our Mission</h3>
-                <ul className="space-y-4">
-                  {[
-                    "Strive for both economic success and positive social impact",
-                    "Want to promote sustainable business practices",
-                    "Are considering alternative business models",
-                    "Need expertise in international tax matters",
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start group">
-                      <span className="flex-shrink-0 p-1 rounded-full bg-primary/30 text-text mt-1 group-hover:scale-110 transition-transform duration-300">
-                        <Check className="h-5 w-5" />
-                      </span>
-                      <span className="ml-4 text-text/70">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-
-            {/* Stats grid with more engaging hover effects */}
-            <div className="grid gap-6 sm:grid-cols-2">
-              {[
-                { number: "30+", label: "Years Experience" },
-                { number: "3", label: "Countries Expertise" },
-                { number: "100+", label: "Satisfied Clients" },
-                { number: "50M+", label: "Tax Savings" },
-              ].map((stat, index) => (
-                <div className="group relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
-                  <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 transition-all duration-300">
-                    <div className="text-5xl font-bold text-accent group-hover:scale-110 transition-transform duration-300 font-serif">
-                      {stat.number}
-                    </div>
-                    <div className="mt-2 text-sm font-medium text-text/70 uppercase tracking-wider">{stat.label}</div>
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-text text-sm font-medium mb-3">
+              {t.about.tag}
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
+              {t.about.title}
+            </h2>
+            <p className="text-lg text-text/70 max-w-2xl mx-auto">
+              {t.about.description}
+            </p>
+          </div>
+          
+          {/* Stats section */}
+          <div className="grid gap-6 sm:grid-cols-2">
+            {[
+              t.about.stats.experience,
+              t.about.stats.countries,
+              t.about.stats.clients,
+              t.about.stats.savings,
+            ].map((stat, index) => (
+              <div key={index} className="group relative overflow-hidden">
+                <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 transition-all duration-300">
+                  <div className="text-5xl font-bold text-accent group-hover:scale-110 transition-transform duration-300 font-serif">
+                    {stat.number}
+                  </div>
+                  <div className="mt-2 text-sm font-medium text-text/70 uppercase tracking-wider">
+                    {stat.label}
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -435,17 +441,17 @@ function App() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <span className="inline-block px-4 py-1 rounded-full bg-primary/30 text-text text-sm font-medium mb-3">
-              Latest Updates
+              {t.insights.tag}
             </span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
-              Featured Insights
+              {t.insights.title}
             </h2>
             <p className="text-lg text-text/70 max-w-2xl mx-auto">
-              Expert perspectives on sustainable tax practices and social entrepreneurship
+              {t.insights.description}
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            {insights.map((insight, index) => (
+            {[t.insights.articles.sustainable, t.insights.articles.crossBorder, t.insights.articles.social].map((article, index) => (
               <div
                 key={index}
                 className="group bg-white/50 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden animate-slide-up border border-primary/10 hover:border-accent/20"
@@ -453,27 +459,27 @@ function App() {
               >
                 <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
                   <img
-                    src={insight.image}
-                    alt={insight.title}
+                    src={insightImages[Object.keys(t.insights.articles)[index]]}
+                    alt={article.title}
                     className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-text/90 via-text/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4">
                     <span className="inline-block px-3 py-1 text-xs font-medium text-background bg-accent/90 backdrop-blur-sm rounded-full shadow-lg">
-                      {insight.category}
+                      {article.category}
                     </span>
                   </div>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3 text-text group-hover:text-accent transition-colors duration-300">
-                    {insight.title}
+                    {article.title}
                   </h3>
-                  <p className="text-text/70">{insight.description}</p>
+                  <p className="text-text/70">{article.description}</p>
                   <a
                     href="#"
                     className="inline-flex items-center text-accent hover:text-primary font-medium group/link"
                   >
-                    Read more
+                    {t.insights.readMore}
                     <ChevronRight className="h-4 w-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-300" />
                   </a>
                 </div>
@@ -489,18 +495,18 @@ function App() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-text text-sm font-medium mb-3">
-              Testimonials
+              {t.testimonials.tag}
             </span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
-              What Our Clients Say
+              {t.testimonials.title}
             </h2>
             <p className="text-lg text-text/70 max-w-2xl mx-auto">
-              Hear from organizations we've helped achieve their sustainable and social impact goals
+              {t.testimonials.description}
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-3">
-            {testimonials.map((testimonial, index) => (
-              <div className="group relative">
+            {[t.testimonials.quotes.first, t.testimonials.quotes.second, t.testimonials.quotes.third].map((testimonial, index) => (
+              <div key={index} className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
                 <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-primary/10 hover:border-accent/20 transition-all duration-500">
                   <div className="absolute -top-4 -left-4">
@@ -538,42 +544,22 @@ function App() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-accent font-medium">FAQ</span>
+            <span className="text-accent font-medium">{t.faq.tag}</span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
-              Frequently Asked Questions
+              {t.faq.title}
             </h2>
             <p className="text-lg text-text/70 max-w-2xl mx-auto">
-              Find answers to common questions about our services and approach
+              {t.faq.description}
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
-            {[
-              {
-                question: "How can sustainable tax practices benefit my business?",
-                answer:
-                  "Sustainable tax practices can lead to long-term cost savings, improved reputation, and better alignment with global sustainability goals. They can also help you identify new opportunities for tax incentives related to green initiatives.",
-              },
-              {
-                question: "What industries do you specialize in?",
-                answer:
-                  "We specialize in a wide range of industries, with a particular focus on social enterprises, non-profits, green technology, and businesses with international operations. Our expertise allows us to provide tailored solutions for each sector.",
-              },
-              {
-                question: "How do you stay updated with changing tax laws?",
-                answer:
-                  "Our team continuously monitors global tax developments and participates in professional development programs. We also maintain close relationships with tax authorities and industry bodies to stay ahead of changes.",
-              },
-              {
-                question: "Can you help with both domestic and international tax issues?",
-                answer:
-                  "Absolutely. We have extensive experience in both domestic and international tax matters, with a particular focus on cross-border transactions and operations in Belgium and the Netherlands.",
-              },
-            ].map((faq, index) => (
-              <div key={index} className="bg-white/50 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-accent/20">
-                <h3 className="text-lg font-semibold mb-2 text-text">{faq.question}</h3>
-                <p className="text-text/70">{faq.answer}</p>
-              </div>
-            ))}
+            {[t.faq.questions.sustainable, t.faq.questions.industries, t.faq.questions.updates, t.faq.questions.scope]
+              .map((faq, index) => (
+                <div key={index} className="bg-white/50 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-accent/20">
+                  <h3 className="text-lg font-semibold mb-2 text-text">{faq.question}</h3>
+                  <p className="text-text/70">{faq.answer}</p>
+                </div>
+              ))}
           </div>
         </div>
       </section>
@@ -582,9 +568,9 @@ function App() {
       <section className="py-24 relative bg-primary">
         <div className="absolute inset-0 bg-[radial-gradient(#eb98e2_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl mb-4">Ready to make an impact?</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl mb-4">{t.cta.title}</h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-text/80 mb-8">
-            Let's work together to create sustainable value for your business and society.
+            {t.cta.description}
           </p>
           <a
             href="https://calendly.com/contact-taxandpurpose/30min"
@@ -592,7 +578,7 @@ function App() {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-medium text-white hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
           >
-            Schedule a Consultation
+            {t.cta.button}
           </a>
         </div>
       </section>
@@ -605,32 +591,42 @@ function App() {
             <div className="space-y-4">
               <h3 className="text-lg font-medium text-primary">tax & purpose</h3>
               <p className="text-sm text-secondary">
-                Expert tax consulting for social entrepreneurship and sustainable projects
+                {t.footer.description}
               </p>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block text-primary hover:text-accent transition-colors"
-              >
-                <Linkedin className="h-6 w-6" />
-              </a>
             </div>
             <div className="lg:col-span-2 grid gap-8 sm:grid-cols-2">
               <div className="space-y-4">
-                <h4 className="text-base font-medium">Quick Links</h4>
+                <h4 className="text-base font-medium">{t.footer.quickLinks}</h4>
                 <ul className="space-y-2 text-sm text-secondary">
-                  {navigation.map((item) => (
-                    <li key={item.name}>
-                      <a href={item.href} className="hover:text-primary transition-colors">
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
+                  <li>
+                    <a href="#" className="hover:text-primary transition-colors">
+                      {t.nav.home}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#services" className="hover:text-primary transition-colors">
+                      {t.nav.services}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#about" className="hover:text-primary transition-colors">
+                      {t.nav.about}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#insights" className="hover:text-primary transition-colors">
+                      {t.nav.insights}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#contact" className="hover:text-primary transition-colors">
+                      {t.nav.contact}
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="space-y-4">
-                <h4 className="text-base font-medium">Contact</h4>
+                <h4 className="text-base font-medium">{t.footer.contact}</h4>
                 <ul className="space-y-2 text-sm text-secondary">
                   <li>Dr. Leila Momen</li>
                   <li>Jülicher Straße 72a</li>
@@ -650,7 +646,7 @@ function App() {
             </div>
           </div>
           <div className="mt-8 border-t border-primary/20 pt-8 text-center text-sm text-secondary">
-            © {new Date().getFullYear()} tax & purpose. All rights reserved.
+            © {new Date().getFullYear()} tax & purpose. {t.footer.rights}
           </div>
         </div>
       </footer>
