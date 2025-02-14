@@ -20,6 +20,8 @@ module.exports = {
         'slide-in': 'slideIn 0.9s ease-out',
         'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
+        'spin-slow': 'spin 8s linear infinite',
+        'number-scroll': 'numberScroll 20s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -38,6 +40,10 @@ module.exports = {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-20px)' },
         },
+        numberScroll: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-100%)' },
+        }
       },
       backdropBlur: {
         xs: '2px',

@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 0)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -89,73 +89,57 @@ function App() {
   return (
     <div className="min-h-screen">
       {/* Header - more subtle transparency */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
-        }`}
-      >
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-background shadow-md backdrop-blur-sm" : "bg-transparent"
+      }`}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-20 items-center justify-between">
-            <a href="#" className={`font-serif text-2xl font-bold ${
-              isScrolled ? 'text-text' : 'text-white'
-            }`}>
+          <div className="flex h-24 items-center justify-between">
+            {/* Logo */}
+            <a href="#" className="font-serif text-2xl font-bold text-text tracking-tight">
               tax & purpose
+            </a>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex lg:gap-16">
+              {navigation.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm font-medium text-text hover:text-accent transition-colors duration-300 relative group"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-1 left-0 w-full h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                </a>
+              ))}
+            </nav>
+
+            {/* Schedule Button */}
+            <a
+              href="https://calendly.com/contact-taxandpurpose/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden lg:inline-flex items-center justify-center rounded-full px-6 py-2.5 text-sm font-medium bg-accent/90 text-white hover:bg-accent transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              Schedule Consultation
             </a>
 
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`lg:hidden rounded-md p-2 ${
-                isScrolled 
-                  ? 'text-text hover:bg-primary/10' 
-                  : 'text-white hover:bg-white/10'
-              }`}
+              className="lg:hidden rounded-full p-2 text-text hover:bg-accent/10"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
 
-            {/* Desktop menu */}
-            <nav className="hidden lg:flex lg:gap-8">
-              {navigation.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className={`text-sm font-medium transition-colors ${
-                    isScrolled
-                      ? 'text-text hover:text-accent'
-                      : 'text-white hover:text-primary'
-                  }`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-
-            {/* Consultation button */}
-            <a
-              href="https://calendly.com/contact-taxandpurpose/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`hidden lg:inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-all duration-300 shadow-sm hover:shadow-md ${
-                isScrolled
-                  ? 'bg-accent text-white hover:bg-primary'
-                  : 'bg-white text-accent hover:bg-primary/10'
-              }`}
-            >
-              Schedule Consultation
-            </a>
-          </div>
-        </div>
-
-        {/* Mobile menu - update colors */}
+            {/* Mobile menu panel */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-sm shadow-md">
-            <div className="space-y-1 px-4 pb-3 pt-2">
+              <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-primary/10 shadow-lg">
+                <div className="p-4 space-y-3">
               {navigation.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
-                  className="block rounded-md px-3 py-2 text-base font-medium text-text hover:bg-primary/10 hover:text-accent"
+                      className="block px-4 py-2 text-base font-medium text-text hover:text-accent rounded-lg hover:bg-accent/5 transition-colors duration-300"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -165,63 +149,72 @@ function App() {
                 href="https://calendly.com/contact-taxandpurpose/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mt-4 w-full rounded-md bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-primary transition-all duration-300"
+                    className="block mt-4 px-4 py-2 text-center rounded-full bg-accent text-white hover:bg-primary transition-all duration-300"
               >
                 Schedule Consultation
               </a>
             </div>
           </div>
         )}
+          </div>
+        </div>
       </header>
 
-      {/* Hero Section - refined gradients and colors */}
-      <section className="relative h-screen flex items-center">
+      {/* Hero Section - improved contrast and overlay */}
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-white">
+        {/* Add floating calculator icons */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-[15%] w-64 h-64 opacity-[0.03] rotate-[12deg]">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-accent">
+              <path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+            </svg>
+          </div>
+          <div className="absolute bottom-20 right-[10%] w-48 h-48 opacity-[0.03] -rotate-[12deg]">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-accent">
+              <path d="M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h14V4H5zm2 2h10v2H7V6zm0 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 14h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+            </svg>
+          </div>
+        </div>
+        {/* Existing grid pattern with improved opacity */}
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3"
-            alt="Background"
-            className="h-full w-full object-cover filter brightness-90"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-text/90 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-text/30 via-transparent to-text/30"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(232,189,230,0.15)_1px,transparent_1px)] bg-[size:24px_24px]"></div>
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
-            {/* Text content */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-background bg-accent/90 rounded-full backdrop-blur-sm shadow-lg">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-32">
+          <div className="grid gap-16 lg:grid-cols-2 items-center">
+            <div className="space-y-10">
+              <div className="space-y-8">
+                <span className="inline-flex px-4 py-1.5 text-sm font-medium bg-accent/90 text-white rounded-full shadow-sm">
                   International Tax Consulting
                 </span>
-                <h1 className="text-5xl font-bold tracking-tight sm:text-6xl text-background">
-                  <span className="block font-serif">
+                <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
+                  <span className="block text-text font-serif">
                     Empowering Social &
                   </span>
                   <span className="block text-accent font-serif">
                     Sustainable Business
                   </span>
-                  <span className="block mt-2 text-background/90 text-3xl sm:text-4xl font-sans">
+                  <span className="block mt-4 text-text/80 text-2xl sm:text-3xl font-sans font-light">
                     Through Expert Tax Advice
                   </span>
                 </h1>
-                <p className="text-xl text-background/80 max-w-2xl font-light">
+                <p className="text-xl text-text/70 max-w-2xl font-light leading-relaxed">
                   Combining 30 years of international tax expertise with a passion for social entrepreneurship and
                   sustainability to drive meaningful change.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="https://calendly.com/contact-taxandpurpose/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-medium text-white hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-medium bg-accent text-white hover:bg-accent/90 transition-all duration-300 shadow-sm hover:shadow-md"
                 >
                   Schedule a Consultation
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex items-center justify-center rounded-md border-2 border-white/20 px-6 py-3 text-base font-medium text-white hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-medium text-text border-2 border-accent/20 hover:bg-accent/5 transition-all duration-300"
                 >
                   Learn More
                 </a>
@@ -230,17 +223,17 @@ function App() {
 
             {/* Right side - temporary placeholder using the coffee workspace image */}
             <div className="relative hidden lg:block">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[450px]">
+              <div className="relative rounded-3xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1488751045188-3c55bbf9a3fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Workspace with laptop and coffee"
-                  className="h-full w-full object-cover object-center"
+                  src="https://images.unsplash.com/photo-1488751045188-3c55bbf9a3fa?q=80&w=1374"
+                  alt="Workspace"
+                  className="h-[600px] w-full object-cover object-center"
                 />
                 {/* Subtle overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-slate-900/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent mix-blend-multiply"></div>
               </div>
               {/* Decorative dot pattern - adjusted position */}
-              <div className="absolute -right-8 -bottom-8 w-64 h-64 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.15] rounded-full"></div>
+              <div className="absolute -right-8 -bottom-8 w-64 h-64 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:12px_12px] opacity-[0.15] rounded-full"></div>
             </div>
           </div>
         </div>
@@ -270,11 +263,11 @@ function App() {
                 <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-primary/10 hover:border-accent/20 transition-all duration-500 hover:shadow-lg">
                   <div className="absolute top-0 left-0 h-full w-1 bg-accent/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
                   <div className="h-20 flex items-center justify-center">
-                    <img
-                      src={bigFourImage}
-                      alt={`Partner logo ${i}`}
+                  <img
+                    src={bigFourImage}
+                    alt={`Partner logo ${i}`}
                       className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
-                    />
+                  />
                   </div>
                 </div>
               </div>
@@ -283,86 +276,86 @@ function App() {
         </div>
       </section>
 
-      {/* Services Section with glassmorphism design */}
-      <section id="services" className="py-24 relative overflow-hidden bg-gradient-to-br from-text/95 to-text/80">
-        {/* Animated background elements */}
+      {/* Services Section - improved contrast and visual hierarchy */}
+      <section id="services" className="py-24 relative bg-white overflow-hidden">
+        {/* Add floating numbers and symbols */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-[500px] h-[500px] -top-32 -left-32 bg-primary/30 rounded-full blur-3xl animate-pulse-slow"></div>
-          <div className="absolute w-[500px] h-[500px] -bottom-32 -right-32 bg-accent/30 rounded-full blur-3xl animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-40 left-10 text-[120px] font-serif opacity-[0.03] rotate-[-12deg] text-accent">
+            §
+          </div>
+          <div className="absolute bottom-20 right-10 text-[160px] font-serif opacity-[0.03] rotate-[8deg] text-accent">
+            €
+          </div>
+          <div className="absolute top-1/3 right-1/4 text-[140px] font-serif opacity-[0.03] rotate-[-5deg] text-accent">
+            $
+          </div>
+        </div>
+        {/* More organic, leaf-like pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.15)_2px,transparent_2px),linear-gradient(90deg,rgba(232,189,230,0.15)_2px,transparent_2px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black_70%)]"></div>
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {/* Section header */}
           <div className="text-center mb-20">
-            <div className="inline-flex items-center justify-center p-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-4">
-              <span className="px-4 py-1 rounded-full text-sm font-medium text-white bg-accent/80">
-                Our Expertise
-              </span>
-            </div>
-            <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl text-white font-serif">
+            <span className="inline-flex px-4 py-1.5 text-sm font-medium bg-accent/90 text-white rounded-full shadow-sm">
+              Our Expertise
+            </span>
+            <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl text-text font-serif">
               Comprehensive Tax Services
             </h2>
-            <p className="mt-4 text-lg text-white/80 max-w-2xl mx-auto font-light">
+            <p className="mt-4 text-lg text-text/70 max-w-2xl mx-auto font-light">
               Expert tax consulting tailored to your sustainable and social impact goals
             </p>
           </div>
 
-          {/* Services grid */}
+          {/* Services grid with more sustainable design */}
           <div className="grid gap-8 lg:grid-cols-3">
             {services.map((service, index) => (
-              <div 
+              <div
                 key={index}
-                className="group relative animate-slide-up"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className="group relative bg-background/50 rounded-3xl p-8 hover:bg-background transition-all duration-500"
               >
-                {/* Glass card */}
-                <div className="relative h-full backdrop-blur-xl bg-white/10 rounded-3xl p-8 border border-white/20 transition-all duration-500 hover:bg-white/20">
-                  {/* Hover effect overlay */}
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                  
-                  {/* Content wrapper */}
-                  <div className="relative z-10">
-                    {/* Icon */}
-                    <div className="inline-flex p-4 rounded-2xl bg-white/20 text-white backdrop-blur-sm border border-white/20 group-hover:scale-110 transition-all duration-500">
-                      {service.icon}
-                    </div>
+                {/* Organic decorative element */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
-                    {/* Title and description */}
-                    <h3 className="mt-6 text-2xl font-semibold text-white group-hover:text-accent transition-colors duration-300 font-serif">
-                      {service.title}
-                    </h3>
-                    <p className="mt-4 text-white/70 font-light leading-relaxed">
-                      {service.description}
-                    </p>
-
-                    {/* Features list */}
-                    <ul className="mt-8 space-y-4">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-center text-white/70 group/item">
-                          <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-white/20 text-white border border-white/20 group-hover/item:bg-accent/20 transition-all duration-300">
-                            <Check className="h-4 w-4" />
-                          </div>
-                          <span className="ml-3 group-hover/item:text-white transition-colors duration-300">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Learn more link */}
-                    <div className="mt-8 pt-6 border-t border-white/10">
-                      <a
-                        href="#"
-                        className="inline-flex items-center text-white group/link"
-                      >
-                        <span className="relative">
-                          Learn more
-                          <span className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-accent to-transparent scale-x-0 group-hover/link:scale-x-100 transition-transform duration-300"></span>
-                        </span>
-                        <ChevronRight className="h-4 w-4 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-300" />
-                      </a>
-                    </div>
+                {/* Icon with organic animation */}
+                <div className="relative">
+                  <div className="absolute -inset-1 bg-accent/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className="relative inline-flex p-4 rounded-2xl bg-accent/10 text-accent group-hover:scale-110 transition-all duration-500">
+                    {service.icon}
                   </div>
+                  </div>
+
+                <h3 className="mt-6 text-2xl font-semibold text-text group-hover:text-accent transition-colors duration-300 font-serif">
+                    {service.title}
+                  </h3>
+                <p className="mt-4 text-text/70 font-light leading-relaxed">
+                    {service.description}
+                  </p>
+
+                {/* Features list with organic hover effect */}
+                  <ul className="mt-8 space-y-4">
+                    {service.features.map((feature, i) => (
+                    <li key={i} className="flex items-center text-text/70 group/item">
+                      <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent group-hover:bg-accent/20 transition-all duration-300">
+                          <Check className="h-4 w-4" />
+                        </div>
+                      <span className="ml-3 group-hover:text-text transition-all duration-300">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+
+                {/* Learn more link with organic animation */}
+                <div className="mt-8 pt-6 border-t border-primary/10">
+                  <a href="#" className="inline-flex items-center text-accent group/link">
+                    <span className="relative">
+                      Learn more
+                      <span className="absolute -bottom-1 left-0 w-full h-px bg-gradient-to-r from-accent via-primary to-transparent scale-x-0 group-hover/link:scale-x-100 transition-transform duration-500"></span>
+                      </span>
+                    <ChevronRight className="h-4 w-4 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-500" />
+                    </a>
                 </div>
               </div>
             ))}
@@ -371,8 +364,15 @@ function App() {
       </section>
 
       {/* About Section with modern office background */}
-      <section id="about" className="py-24 relative bg-background">
-        <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+      <section id="about" className="py-24 relative bg-background overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(232,189,230,0.2)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 opacity-[0.02]">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-accent">
+              <path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+            </svg>
+          </div>
+        </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div className="space-y-8">
@@ -507,23 +507,23 @@ function App() {
                     <div className="w-8 h-8 bg-accent shadow-lg rounded-full flex items-center justify-center">
                       <span className="text-background text-xl">"</span>
                     </div>
-                  </div>
-                  <blockquote className="relative">
+                </div>
+                <blockquote className="relative">
                     <p className="text-lg text-text/80 italic leading-relaxed">{testimonial.quote}</p>
                     <footer className="mt-6">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all duration-300">
                           <span className="text-text font-serif text-xl">
-                            {testimonial.author[0]}
-                          </span>
-                        </div>
-                        <div>
+                        {testimonial.author[0]}
+                      </span>
+                    </div>
+                    <div>
                           <cite className="not-italic font-medium text-text block">{testimonial.author}</cite>
                           <span className="text-sm text-text/60">{testimonial.position}</span>
                         </div>
-                      </div>
-                    </footer>
-                  </blockquote>
+                    </div>
+                  </footer>
+                </blockquote>
                 </div>
               </div>
             ))}
@@ -531,16 +531,10 @@ function App() {
         </div>
       </section>
 
-      {/* FAQ Section with light overlay */}
-      <section className="py-24 relative">
+      {/* FAQ Section - improved readability */}
+      <section className="py-24 relative bg-white">
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3"
-            alt="Background"
-            className="h-full w-full object-cover"
-          />
-          <div className="absolute inset-0 bg-white/95"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px] opacity-20"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.1)_1.5px,transparent_1.5px),linear-gradient(90deg,rgba(232,189,230,0.1)_1.5px,transparent_1.5px)] bg-[size:32px_32px]"></div>
         </div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
