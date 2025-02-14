@@ -638,7 +638,7 @@ function App() {
               <div className="space-y-4">
                 <h4 className="text-base font-medium">Contact</h4>
                 <ul className="space-y-2 text-sm text-secondary">
-                  <li>Leila Momen</li>
+                  <li>Dr. Leila Momen</li>
                   <li>Jülicher Straße 72a</li>
                   <li>52070 Aachen</li>
                   <li>
