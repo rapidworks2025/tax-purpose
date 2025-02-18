@@ -96,11 +96,10 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-sans text-text bg-background">
       {/* Header - more subtle transparency */}
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background shadow-md backdrop-blur-sm" : "bg-transparent"
-      }`}>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background shadow-md backdrop-blur-sm" : "bg-transparent"
+        }`}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 items-center justify-between">
             {/* Logo */}
@@ -134,7 +133,7 @@ function App() {
               </a>
 
               {/* Language Switcher with flags - showing current language flag and name */}
-              <button 
+              <button
                 onClick={() => setLang(lang === 'en' ? 'de' : 'en')}
                 className="text-sm font-medium text-text hover:text-accent transition-colors duration-300 flex items-center gap-2"
               >
@@ -193,18 +192,18 @@ function App() {
         </div>
       </header>
 
-      {/* Hero Section - improved contrast and overlay */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-background to-white">
+      {/* Hero Section - add gradient and improve typography */}
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-white to-secondary">
         {/* Add floating calculator icons */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-[15%] w-64 h-64 opacity-[0.03] rotate-[12deg]">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-accent">
-              <path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+              <path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z" />
             </svg>
           </div>
           <div className="absolute bottom-20 right-[10%] w-48 h-48 opacity-[0.03] -rotate-[12deg]">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-accent">
-              <path d="M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h14V4H5zm2 2h10v2H7V6zm0 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 14h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+              <path d="M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h14V4H5zm2 2h10v2H7V6zm0 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 14h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z" />
             </svg>
           </div>
         </div>
@@ -283,7 +282,7 @@ function App() {
               {t.partners.description}
             </p>
           </div>
-          
+
           {/* Updated partner grid with better hover effects */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
             {[1, 2, 3, 4].map((i) => (
@@ -353,35 +352,35 @@ function App() {
                   <div className="relative inline-flex p-4 rounded-2xl bg-accent/10 text-accent group-hover:scale-110 transition-all duration-500">
                     {service.icon}
                   </div>
-                  </div>
+                </div>
 
                 <h3 className="mt-6 text-2xl font-semibold text-text group-hover:text-accent transition-colors duration-300 font-serif">
-                    {service.title}
-                  </h3>
+                  {service.title}
+                </h3>
                 <p className="mt-4 text-text/70 font-light leading-relaxed">
-                    {service.description}
-                  </p>
+                  {service.description}
+                </p>
 
                 {/* Features list with organic hover effect */}
-                  <ul className="mt-8 space-y-4">
-                    {service.features.map((feature, i) => (
+                <ul className="mt-8 space-y-4">
+                  {service.features.map((feature, i) => (
                     <li key={i} className="flex items-center text-text/70 group/item">
                       <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent group-hover:bg-accent/20 transition-all duration-300">
-                          <Check className="h-4 w-4" />
-                        </div>
+                        <Check className="h-4 w-4" />
+                      </div>
                       <span className="ml-3 group-hover:text-text transition-all duration-300">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
 
                 {/* Learn more link with organic animation */}
                 <div className="mt-8 pt-6 border-t border-primary/10">
                   <a href="#" className="inline-flex items-center text-accent group/link">
                     {t.services.learnMore}
                     <ChevronRight className="h-4 w-4 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-300" />
-                    </a>
+                  </a>
                 </div>
               </div>
             ))}
@@ -395,7 +394,7 @@ function App() {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(232,189,230,0.2)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
           <div className="absolute top-20 right-20 w-96 h-96 opacity-[0.02]">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-accent">
-              <path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/>
+              <path d="M4 2h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h16V4H4zm2 2h12v2H6V6zm0 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z" />
             </svg>
           </div>
         </div>
@@ -411,8 +410,8 @@ function App() {
               {t.about.description}
             </p>
           </div>
-          
-          {/* Stats section */}
+
+          {/* Stats section without zoom effect */}
           <div className="grid gap-6 sm:grid-cols-2">
             {[
               t.about.stats.experience,
@@ -422,7 +421,7 @@ function App() {
             ].map((stat, index) => (
               <div key={index} className="group relative overflow-hidden">
                 <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 transition-all duration-300">
-                  <div className="text-5xl font-bold text-accent group-hover:scale-110 transition-transform duration-300 font-serif">
+                  <div className="text-5xl font-bold text-accent font-serif">
                     {stat.number}
                   </div>
                   <div className="mt-2 text-sm font-medium text-text/70 uppercase tracking-wider">
@@ -513,23 +512,23 @@ function App() {
                     <div className="w-8 h-8 bg-accent shadow-lg rounded-full flex items-center justify-center">
                       <span className="text-background text-xl">"</span>
                     </div>
-                </div>
-                <blockquote className="relative">
+                  </div>
+                  <blockquote className="relative">
                     <p className="text-lg text-text/80 italic leading-relaxed">{testimonial.quote}</p>
                     <footer className="mt-6">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all duration-300">
                           <span className="text-text font-serif text-xl">
-                        {testimonial.author[0]}
-                      </span>
-                    </div>
-                    <div>
+                            {testimonial.author[0]}
+                          </span>
+                        </div>
+                        <div>
                           <cite className="not-italic font-medium text-text block">{testimonial.author}</cite>
                           <span className="text-sm text-text/60">{testimonial.position}</span>
                         </div>
-                    </div>
-                  </footer>
-                </blockquote>
+                      </div>
+                    </footer>
+                  </blockquote>
                 </div>
               </div>
             ))}
@@ -583,7 +582,7 @@ function App() {
         </div>
       </section>
 
-      {/* Footer - darkest background */}
+      {/* Footer - add subtle texture and improve contrast */}
       <footer className="relative bg-text text-background">
         <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:32px_32px] opacity-10"></div>
         <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
