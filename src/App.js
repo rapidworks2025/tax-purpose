@@ -1,17 +1,65 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check } from "lucide-react"
 import bigFourImage from './images/big4.png'
 import { translations } from './translations'
 
 console.log('Image path:', bigFourImage);
 
+const colors = {
+  background: "#f3e7e7",
+  text: "#3e3b3e",
+  primary: "#e4bfbf",
+  secondary: "#efd8d8",
+  accent: "#657c62"
+};
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [lang, setLang] = useState('de')
   const t = translations[lang]
+
+  const useIntersectionObserver = (options = {}) => {
+    const [elements, setElements] = useState([]);
+    const [entries, setEntries] = useState([]);
+
+    const observer = useRef(null);
+
+    useEffect(() => {
+      if (elements.length) {
+        observer.current = new IntersectionObserver((observedEntries) => {
+          setEntries(observedEntries);
+        }, options);
+        
+        elements.forEach((element) => observer.current.observe(element));
+      }
+      
+      return () => {
+        if (observer.current) {
+          observer.current.disconnect();
+        }
+      };
+    }, [elements, options]);
+
+    return [setElements, entries];
+  };
+
+  const [setElements, entries] = useIntersectionObserver({ threshold: 0.1 });
+
+  useEffect(() => {
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    setElements(animatedElements);
+  }, [setElements]);
+
+  useEffect(() => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fade-in');
+      }
+    });
+  }, [entries]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +73,7 @@ function App() {
     { name: "Home", href: "#" },
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
-    { name: "Insights", href: "#insights" },
+    { name: "Partners", href: "#partners" },
     { name: "Contact", href: "#contact" },
   ]
 
@@ -94,6 +142,49 @@ function App() {
     crossBorder: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e",
     social: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f"
   }
+
+  const partners = [
+    { 
+      name: "DigitalHUB Aachen e.V.", 
+      representatives: "Iris Wilhelmi, Udo Glaser",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("DigitalHUB")}` 
+    },
+    { 
+      name: "ecoHUB Aachen", 
+      representatives: "",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("ecoHUB")}` 
+    },
+    { 
+      name: "Zakat Deutschland e.V.", 
+      representatives: "Khurrem",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Zakat")}` 
+    },
+    { 
+      name: "Bischöfliche Akademie Aachen", 
+      representatives: "Angela Reinders",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Bischöfliche Akademie")}` 
+    },
+    { 
+      name: "Stiftung Verantwortungseigentum", 
+      representatives: "",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Stiftung")}` 
+    },
+    { 
+      name: "PwC", 
+      representatives: "Rainer Kroker",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("PwC")}` 
+    },
+    { 
+      name: "Qualitec", 
+      representatives: "",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Qualitec")}` 
+    },
+    { 
+      name: "Inaia", 
+      representatives: "",
+      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Inaia")}` 
+    }
+  ];
 
   return (
     <div className="min-h-screen font-sans text-text bg-background">
@@ -165,26 +256,30 @@ function App() {
 
             {/* Mobile menu panel */}
             {isMenuOpen && (
-              <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-primary/10 shadow-lg">
-                <div className="p-4 space-y-3">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.href}
-                      href={item.href}
-                      className="block px-4 py-2 text-base font-medium text-text hover:text-accent rounded-lg hover:bg-accent/5 transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {t.nav[item.name.toLowerCase()]}
-                    </a>
-                  ))}
-                  <a
-                    href="https://calendly.com/contact-taxandpurpose/30min"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block mt-4 px-4 py-2 text-center rounded-full bg-accent text-white hover:bg-primary transition-all duration-300"
-                  >
-                    {t.nav.schedule}
-                  </a>
+              <div className="lg:hidden fixed inset-0 z-40 bg-black/20 backdrop-blur-sm transition-opacity duration-300">
+                <div className="absolute top-24 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-[#e4bfbf]/10 shadow-lg max-h-[80vh] overflow-y-auto transform transition-transform duration-300">
+                  <div className="p-6 space-y-4">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-3 text-base font-medium text-text hover:text-accent rounded-lg hover:bg-accent/5 transition-colors duration-300"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {t.nav[item.name.toLowerCase()]}
+                      </a>
+                    ))}
+                    <div className="pt-4 border-t border-[#e4bfbf]/10">
+                      <a
+                        href="https://calendly.com/contact-taxandpurpose/30min"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block w-full px-4 py-3 text-center rounded-lg bg-accent text-white hover:bg-accent/90 transition-all duration-300"
+                      >
+                        {t.nav.schedule}
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
@@ -193,7 +288,7 @@ function App() {
       </header>
 
       {/* Hero Section - add gradient and improve typography */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-white to-secondary">
+      <section className="relative min-h-screen flex items-center bg-gradient-to-br from-background via-white to-primary/10">
         {/* Add floating calculator icons */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-[15%] w-64 h-64 opacity-[0.03] rotate-[12deg]">
@@ -203,7 +298,7 @@ function App() {
           </div>
           <div className="absolute bottom-20 right-[10%] w-48 h-48 opacity-[0.03] -rotate-[12deg]">
             <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full text-accent">
-              <path d="M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h14V4H5zm2 2h10v2H7V6zm0 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zM7 14h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z" />
+              <path d="M5 2h14a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm0 2v16h14V4H5zm2 2h10v2H7V6zm0 4h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2zm-8 4h2v2H6v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z" />
             </svg>
           </div>
         </div>
@@ -220,18 +315,28 @@ function App() {
                   {t.hero.tag}
                 </span>
                 <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
-                  <span className="block text-text font-serif">
+                  <span className="block text-[#3e3b3e] font-serif leading-tight">
                     {t.hero.title.line1}
                   </span>
-                  <span className="block text-accent font-serif">
+                  <span className="block text-[#657c62] font-serif leading-tight">
                     {t.hero.title.line2}
                   </span>
-                  <span className="block mt-4 text-text/80 text-2xl sm:text-3xl font-sans font-light">
+                  <span className="block mt-6 text-[#3e3b3e]/80 text-2xl sm:text-3xl font-sans font-light leading-relaxed">
                     {t.hero.title.line3}
                   </span>
                 </h1>
-                <p className="text-xl text-text/70 max-w-2xl font-light leading-relaxed">
-                  {t.hero.description}
+                <p className="text-xl text-[#3e3b3e]/70 max-w-2xl font-light leading-relaxed">
+                  {lang === 'de' ? (
+                    <>
+                      30 Jahre internationale Steuerexpertise kombiniert mit der Leidenschaft für 
+                      <span className="text-[#e4bfbf] font-medium"> soziales </span> 
+                      Unternehmertum und 
+                      <span className="text-[#657c62] font-medium"> Nachhaltigkeit</span>, 
+                      um bedeutsame gesellschaftliche Veränderungen zu bewirken.
+                    </>
+                  ) : (
+                    t.hero.description
+                  )}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -239,7 +344,7 @@ function App() {
                   href="https://calendly.com/contact-taxandpurpose/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-medium bg-accent text-white hover:bg-accent/90 transition-all duration-300 shadow-sm hover:shadow-md"
+                  className="inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-medium bg-accent text-white hover:bg-accent/90 hover:-translate-y-0.5 transition-all duration-300 shadow-md hover:shadow-xl"
                 >
                   {t.hero.cta.schedule}
                 </a>
@@ -265,6 +370,10 @@ function App() {
             </div>
           </div>
         </div>
+
+        {/* Add decorative elements to the hero section */}
+        <div className="absolute top-1/4 left-10 w-64 h-64 rounded-full bg-primary/10 mix-blend-multiply blur-3xl animate-blob"></div>
+        <div className="absolute bottom-1/4 right-10 w-64 h-64 rounded-full bg-accent/10 mix-blend-multiply blur-3xl animate-blob animation-delay-2000"></div>
       </section>
 
       {/* Client Logos - darker background */}
@@ -285,17 +394,23 @@ function App() {
 
           {/* Updated partner grid with better hover effects */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            {[1, 2, 3, 4].map((i) => (
+            {partners.map((partner, i) => (
               <div key={i} className="w-full relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
-                <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-primary/10 hover:border-accent/20 transition-all duration-500 hover:shadow-lg">
+                <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 transition-all duration-500 hover:shadow-lg">
                   <div className="absolute top-0 left-0 h-full w-1 bg-accent/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-                  <div className="h-20 flex items-center justify-center">
+                  <div className="h-16 flex items-center justify-center mb-3">
                     <img
-                      src={bigFourImage}
-                      alt={`${t.partners.logoAlt} ${i}`}
+                      src={partner.logo || bigFourImage}
+                      alt={`${partner.name} logo`}
                       className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
                     />
+                  </div>
+                  <div className="text-center">
+                    <h4 className="font-medium text-text">{partner.name}</h4>
+                    {partner.representatives && (
+                      <p className="text-xs text-text/60 mt-1">{partner.representatives}</p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -305,7 +420,7 @@ function App() {
       </section>
 
       {/* Services Section - improved contrast and visual hierarchy */}
-      <section id="services" className="py-24 relative bg-white overflow-hidden">
+      <section id="services" className="py-32 relative bg-white overflow-hidden">
         {/* Add floating numbers and symbols */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-40 left-10 text-[120px] font-serif opacity-[0.03] rotate-[-12deg] text-accent">
@@ -324,12 +439,13 @@ function App() {
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <span className="inline-flex px-4 py-1.5 text-sm font-medium bg-accent/90 text-white rounded-full shadow-sm">
+          <div className="text-center mb-16">
+            <span className="inline-flex px-4 py-1.5 text-sm font-medium bg-accent text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
               {t.services.tag}
             </span>
-            <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl text-text font-serif">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl text-text font-serif relative">
               {t.services.title}
+              <div className="absolute -inset-1 bg-primary/5 blur-3xl rounded-full opacity-50"></div>
             </h2>
             <p className="mt-4 text-lg text-text/70 max-w-2xl mx-auto font-light">
               {t.services.description}
@@ -341,47 +457,36 @@ function App() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group relative bg-background/50 rounded-3xl p-8 hover:bg-background transition-all duration-500"
+                className="group relative bg-white rounded-3xl p-8 hover:bg-white hover:shadow-xl transition-all duration-500 border border-[#e4bfbf]/30 overflow-hidden"
               >
-                {/* Organic decorative element */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-
-                {/* Icon with organic animation */}
+                {/* Add a decorative element that appears on hover */}
+                <div className="absolute -right-20 -top-20 w-40 h-40 bg-accent/5 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-700"></div>
+                
+                {/* Card content */}
                 <div className="relative">
-                  <div className="absolute -inset-1 bg-accent/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                  <div className="relative inline-flex p-4 rounded-2xl bg-accent/10 text-accent group-hover:scale-110 transition-all duration-500">
+                  <div className="inline-flex p-4 rounded-2xl bg-[#657c62]/10 text-[#657c62] group-hover:scale-110 transition-all duration-500">
                     {service.icon}
                   </div>
                 </div>
-
-                <h3 className="mt-6 text-2xl font-semibold text-text group-hover:text-accent transition-colors duration-300 font-serif">
+                
+                <h3 className="mt-6 text-2xl font-semibold text-[#3e3b3e] group-hover:text-[#657c62] transition-colors duration-300 font-serif">
                   {service.title}
                 </h3>
-                <p className="mt-4 text-text/70 font-light leading-relaxed">
+                
+                <p className="mt-4 text-[#3e3b3e]/70">
                   {service.description}
                 </p>
-
-                {/* Features list with organic hover effect */}
-                <ul className="mt-8 space-y-4">
+                
+                <ul className="mt-6 space-y-3">
                   {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center text-text/70 group/item">
-                      <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent group-hover:bg-accent/20 transition-all duration-300">
-                        <Check className="h-4 w-4" />
+                    <li key={i} className="flex items-start">
+                      <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-accent/10 text-accent mt-0.5">
+                        <Check className="w-3 h-3" />
                       </div>
-                      <span className="ml-3 group-hover:text-text transition-all duration-300">
-                        {feature}
-                      </span>
+                      <span className="ml-3 text-sm text-[#3e3b3e]/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                {/* Learn more link with organic animation */}
-                <div className="mt-8 pt-6 border-t border-primary/10">
-                  <a href="#" className="inline-flex items-center text-accent group/link">
-                    {t.services.learnMore}
-                    <ChevronRight className="h-4 w-4 ml-2 transform group-hover/link:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </div>
               </div>
             ))}
           </div>
@@ -389,7 +494,7 @@ function App() {
       </section>
 
       {/* About Section with modern office background */}
-      <section id="about" className="py-24 relative bg-background overflow-hidden">
+      <section id="about" className="py-32 relative bg-background overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(232,189,230,0.2)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
           <div className="absolute top-20 right-20 w-96 h-96 opacity-[0.02]">
@@ -409,22 +514,23 @@ function App() {
             <p className="text-lg text-text/70 max-w-2xl mx-auto">
               {t.about.description}
             </p>
-          </div>
+            </div>
 
           {/* Stats section without zoom effect */}
-          <div className="grid gap-6 sm:grid-cols-2">
-            {[
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-16">
+              {[
               t.about.stats.experience,
               t.about.stats.countries,
               t.about.stats.clients,
               t.about.stats.savings,
-            ].map((stat, index) => (
+              ].map((stat, index) => (
               <div key={index} className="group relative overflow-hidden">
-                <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 transition-all duration-300">
-                  <div className="text-5xl font-bold text-accent font-serif">
-                    {stat.number}
-                  </div>
-                  <div className="mt-2 text-sm font-medium text-text/70 uppercase tracking-wider">
+                <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                  <div className="text-5xl font-bold text-accent font-serif relative">
+                    <span className="relative z-10">{stat.number}</span>
+                    <div className="absolute inset-0 bg-primary/5 blur-2xl rounded-full"></div>
+                    </div>
+                  <div className="mt-2 text-text/70">
                     {stat.label}
                   </div>
                 </div>
@@ -432,60 +538,7 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Insights Section with cityscape background */}
-      <section id="insights" className="py-24 relative bg-gradient-to-b from-background to-white">
-        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <span className="inline-block px-4 py-1 rounded-full bg-primary/30 text-text text-sm font-medium mb-3">
-              {t.insights.tag}
-            </span>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
-              {t.insights.title}
-            </h2>
-            <p className="text-lg text-text/70 max-w-2xl mx-auto">
-              {t.insights.description}
-            </p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-3">
-            {[t.insights.articles.sustainable, t.insights.articles.crossBorder, t.insights.articles.social].map((article, index) => (
-              <div
-                key={index}
-                className="group bg-white/50 backdrop-blur-sm rounded-xl shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden animate-slide-up border border-primary/10 hover:border-accent/20"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="aspect-w-16 aspect-h-9 relative overflow-hidden">
-                  <img
-                    src={insightImages[Object.keys(t.insights.articles)[index]]}
-                    alt={article.title}
-                    className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-text/90 via-text/50 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="inline-block px-3 py-1 text-xs font-medium text-background bg-accent/90 backdrop-blur-sm rounded-full shadow-lg">
-                      {article.category}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-text group-hover:text-accent transition-colors duration-300">
-                    {article.title}
-                  </h3>
-                  <p className="text-text/70">{article.description}</p>
-                  <a
-                    href="#"
-                    className="inline-flex items-center text-accent hover:text-primary font-medium group/link"
-                  >
-                    {t.insights.readMore}
-                    <ChevronRight className="h-4 w-4 ml-1 transform group-hover/link:translate-x-1 transition-transform duration-300" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-[#657c62]/5 blur-3xl"></div>
       </section>
 
       {/* Testimonials with modern workspace background */}
@@ -506,29 +559,29 @@ function App() {
           <div className="grid gap-8 md:grid-cols-3">
             {[t.testimonials.quotes.first, t.testimonials.quotes.second, t.testimonials.quotes.third].map((testimonial, index) => (
               <div key={index} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
-                <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-primary/10 hover:border-accent/20 transition-all duration-500">
-                  <div className="absolute -top-4 -left-4">
-                    <div className="w-8 h-8 bg-accent shadow-lg rounded-full flex items-center justify-center">
-                      <span className="text-background text-xl">"</span>
-                    </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#e4bfbf]/5 via-[#657c62]/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
+                <div className="relative bg-white rounded-xl p-8 border border-[#e4bfbf]/20 hover:border-[#657c62]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                  <div className="absolute -top-4 -left-4 transform group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-8 h-8 bg-[#657c62] shadow-lg rounded-full flex items-center justify-center">
+                      <span className="text-white text-xl">"</span>
                   </div>
-                  <blockquote className="relative">
+                </div>
+                <blockquote className="relative">
                     <p className="text-lg text-text/80 italic leading-relaxed">{testimonial.quote}</p>
                     <footer className="mt-6">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all duration-300">
                           <span className="text-text font-serif text-xl">
-                            {testimonial.author[0]}
-                          </span>
-                        </div>
-                        <div>
+                        {testimonial.author[0]}
+                      </span>
+                    </div>
+                    <div>
                           <cite className="not-italic font-medium text-text block">{testimonial.author}</cite>
                           <span className="text-sm text-text/60">{testimonial.position}</span>
                         </div>
-                      </div>
-                    </footer>
-                  </blockquote>
+                    </div>
+                  </footer>
+                </blockquote>
                 </div>
               </div>
             ))}
@@ -536,46 +589,117 @@ function App() {
         </div>
       </section>
 
-      {/* FAQ Section - improved readability */}
-      <section className="py-24 relative bg-white">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.1)_1.5px,transparent_1.5px),linear-gradient(90deg,rgba(232,189,230,0.1)_1.5px,transparent_1.5px)] bg-[size:32px_32px]"></div>
-        </div>
+      {/* Partners Section */}
+     
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 relative bg-white">
+        <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-accent font-medium">{t.faq.tag}</span>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
-              {t.faq.title}
+          <div className="text-center mb-16 animate-on-scroll">
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-text text-sm font-medium mb-3">
+              {t.nav.contact}
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text font-serif">
+              Get in Touch
             </h2>
             <p className="text-lg text-text/70 max-w-2xl mx-auto">
-              {t.faq.description}
+              Have questions or want to discuss how we can help with your tax needs? Reach out to us.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            {[t.faq.questions.sustainable, t.faq.questions.industries, t.faq.questions.updates, t.faq.questions.scope]
-              .map((faq, index) => (
-                <div key={index} className="bg-white/50 backdrop-blur-sm p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-primary/20 hover:border-accent/20">
-                  <h3 className="text-lg font-semibold mb-2 text-text">{faq.question}</h3>
-                  <p className="text-text/70">{faq.answer}</p>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid gap-8 md:grid-cols-5">
+              <div className="md:col-span-2 bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-primary/10 shadow-lg">
+                <h3 className="text-xl font-medium mb-6 text-text">Contact Information</h3>
+                <ul className="space-y-6">
+                  <li className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-text">Email</p>
+                      <a href="mailto:contact@taxandpurpose.com" className="text-text/70 hover:text-accent transition-colors">
+                        contact@taxandpurpose.com
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-text">Phone</p>
+                      <a href="tel:+4915144508604" className="text-text/70 hover:text-accent transition-colors">
+                        +49 151 4450 8604
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-4 h-4">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-text">Address</p>
+                      <p className="text-text/70">
+                        Jülicher Straße 72a<br />
+                        52070 Aachen<br />
+                        Germany
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                
+                <div className="mt-8 pt-8 border-t border-primary/10">
+                  <h4 className="text-lg font-medium mb-4 text-text">Schedule a Consultation</h4>
+                  <a
+                    href="https://calendly.com/contact-taxandpurpose/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-md bg-accent w-full px-6 py-3 text-base font-medium text-white hover:bg-accent/90 transition-all duration-300 shadow-md hover:shadow-xl"
+                  >
+                    {t.nav.schedule}
+                  </a>
                 </div>
-              ))}
+              </div>
+              
+              <div className="md:col-span-3 rounded-xl overflow-hidden h-[400px] shadow-lg">
+                {/* Add a map or image of Aachen */}
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.3846910328835!2d6.0772!3d50.7753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995d4a4a1b1d%3A0x9b1fd1e6d3f3b5b0!2sJ%C3%BClicher%20Str.%2072a%2C%2052070%20Aachen%2C%20Germany!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy"
+                  title="Office Location"
+                ></iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section with impactful background */}
-      <section className="py-24 relative bg-primary">
-        <div className="absolute inset-0 bg-[radial-gradient(#eb98e2_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
+      <section className="py-24 relative bg-[#e4bfbf]/30">
+        <div className="absolute inset-0 bg-[radial-gradient(#657c62_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl mb-4">{t.cta.title}</h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-text/80 mb-8">
+          <h2 className="text-3xl font-bold tracking-tight text-[#3e3b3e] sm:text-4xl mb-4">{t.cta.title}</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-[#3e3b3e]/80 mb-8">
             {t.cta.description}
           </p>
           <a
             href="https://calendly.com/contact-taxandpurpose/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-medium text-white hover:bg-primary transition-all duration-300 shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center rounded-md bg-[#657c62] px-8 py-4 text-base font-medium text-white hover:bg-[#657c62]/90 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-1"
           >
             {t.cta.button}
           </a>
@@ -583,15 +707,21 @@ function App() {
       </section>
 
       {/* Footer - add subtle texture and improve contrast */}
-      <footer className="relative bg-text text-background">
-        <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:32px_32px] opacity-10"></div>
-        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <footer className="relative bg-[#3e3b3e] text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(#e4bfbf_1px,transparent_1px)] [background-size:32px_32px] opacity-5"></div>
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="space-y-4">
-              <h3 className="text-lg font-medium text-primary">tax & purpose</h3>
-              <p className="text-sm text-secondary">
+              <h3 className="text-2xl font-serif font-medium text-primary">tax & purpose</h3>
+              <p className="text-sm text-secondary/80 max-w-md">
                 {t.footer.description}
               </p>
+              <div className="flex space-x-4 pt-4">
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary/20 transition-colors duration-300">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                {/* Add other social media icons as needed */}
+              </div>
             </div>
             <div className="lg:col-span-2 grid gap-8 sm:grid-cols-2">
               <div className="space-y-4">
@@ -613,15 +743,15 @@ function App() {
                     </a>
                   </li>
                   <li>
-                    <a href="#insights" className="hover:text-primary transition-colors">
-                      {t.nav.insights}
+                    <a href="#partners" className="hover:text-primary transition-colors">
+                      {t.nav.partners}
                     </a>
                   </li>
                   <li>
                     <a href="#contact" className="hover:text-primary transition-colors">
                       {t.nav.contact}
-                    </a>
-                  </li>
+                      </a>
+                    </li>
                 </ul>
               </div>
               <div className="space-y-4">
@@ -636,16 +766,21 @@ function App() {
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:contact@tax4purpose.com" className="hover:text-primary transition-colors">
-                      contact@tax4purpose.com
+                    <a href="mailto:contact@taxandpurpose.com" className="hover:text-primary transition-colors">
+                      contact@taxandpurpose.com
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="mt-8 border-t border-primary/20 pt-8 text-center text-sm text-secondary">
+          <div className="mt-12 border-t border-[#e4bfbf]/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-[#f3e7e7]/60">
             © {new Date().getFullYear()} tax & purpose. {t.footer.rights}
+            <div className="mt-4 md:mt-0">
+              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+              <span className="mx-2">|</span>
+              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
       </footer>
