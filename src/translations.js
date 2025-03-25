@@ -12,7 +12,7 @@ export const translations = {
       tag: "International Tax Consulting",
       title: {
         line1: "Empowering Social &",
-        line2: "Sustainable Business",
+        line2: "Sustainable Businesses",
         line3: "Through Expert Tax Advice"
       },
       description: "Combining 30 years of international tax expertise with a passion for social entrepreneurship and sustainability to drive meaningful change.",
@@ -28,7 +28,7 @@ export const translations = {
       cards: {
         social: {
           title: "Social Entrepreneurship",
-          description: "Tax expertise for social and non-profit organizations, and businesses combining profit with social entrepreneurship.",
+          description: "Tax expertise for social and non-profit organizations, and businesses combining profit with social entrepreneurship. Social entrepreneurship also considers environmental aspects that are addressed under Sustainability.",
           features: [
             "Non-profit tax compliance",
             "Alternative legal forms (trust ownership, cooperatives, foundations)",
@@ -39,7 +39,7 @@ export const translations = {
           title: "Sustainability",
           description: "Tax advice for environmental projects, eco-friendly technologies, and sustainable infrastructure.",
           features: [
-            "Green tax incentives and funding",
+            "Green tax incentives, tax subsidies and funding",
             "Income tax peculiarities",
             "Sustainability tax reporting"
           ]
@@ -59,7 +59,7 @@ export const translations = {
     about: {
       tag: "About Me",
       title: "Expertise Meets Purpose",
-      description: "With nearly 30 years of experience in international tax consulting, including two-thirds of my career with the 'Big Four' and one-third in large companies and corporations, I bring deep expertise to help businesses achieve economic success and social impact.",
+      description: "With nearly 30 years of experience in international tax consulting, including two-thirds of my career with the \"Big Four\" and one-third in large companies and corporations, accompanied by continuous social engagement in organizations and long-standing expertise in Sustainable Finance, ESG (tax), and non-profit tax law, I bring deep tax expertise to help businesses combine economic success with social purpose and achieve significant social and sustainable impact.",
       stats: {
         experience: {
           number: "28+",
@@ -70,40 +70,40 @@ export const translations = {
           label: "Countries Involved"
         },
         clients: {
-          number: "100+",
+          number: "500+",
           label: "Satisfied Clients"
         },
         savings: {
-          number: "100+",
+          number: "1000+",
           label: "Projects and Special Topics"
         }
       }
     },
     testimonials: {
       tag: "Testimonials",
-      title: "What Our Clients Say",
-      description: "Hear from organizations we've helped achieve their sustainable and social impact goals",
+      title: "What My Clients Say",
+      description: "Learn how I help organizations achieve their sustainable and social goals",
       quotes: {
         first: {
-          quote: "tax & purpose has been instrumental in helping us navigate complex international tax issues while maintaining our commitment to social responsibility.",
-          author: "Jane Doe",
-          position: "CEO, GreenTech Innovations"
+          quote: "tax & purpose helps our startups solve specialized tax issues and provides guidance on important tax matters.",
+          author: "Iris Wilhelmi / Udo Glaser",
+          position: "DigitalHUB Aachen e.V."
         },
         second: {
-          quote: "Their expertise in sustainable tax practices has allowed us to maximize our impact while staying compliant. Highly recommended!",
-          author: "John Smith",
-          position: "CFO, EcoSolutions Inc."
+          quote: "Tax & purpose will introduce our model to the (practical) tax world.",
+          author: "Representative",
+          position: "Stiftung Verantwortungseigentum"
         },
         third: {
-          quote: "Working with tax & purpose has been a game-changer for our non-profit. They truly understand the unique challenges we face.",
-          author: "Emily Brown",
-          position: "Executive Director, Global Change Foundation"
+          quote: "tax & purpose will advise us on important tax incentives for solar technology.",
+          author: "Representative",
+          position: "Qualitec"
         }
       }
     },
     cta: {
       title: "Ready to make an impact?",
-      description: "Let's work together to create sustainable value for your business and society.",
+      description: "Let's create social and sustainable change for / through your business and for society together.",
       button: "Schedule a Consultation"
     },
     footer: {
@@ -119,6 +119,11 @@ export const translations = {
       description: "Working with organizations committed to sustainable and social impact",
       workspace: "Workspace",
       logoAlt: "Partner logo"
+    },
+    contact: {
+      tag: "Contact",
+      title: "Schedule a Meeting With Me",
+      description: "Have a question? Schedule an initial consultation – I'm here to listen!"
     }
   },
   de: {
@@ -150,7 +155,7 @@ export const translations = {
       cards: {
         social: {
           title: "Soziales Unternehmertum",
-          description: "Steuerexpertise für soziale und gemeinnützige Unternehmen und die Unternehmen, die Gewinnorientierung mit sozialem Unternehmertum kombinieren wollen.",
+          description: "Steuerexpertise für soziale und gemeinnützige Unternehmen und Unternehmen, die Gewinnorientierung mit sozialem Unternehmertum kombinieren wollen. Soziales Unternehmertum berücksichtigt auch Umweltaspekte, die unter Nachhaltigkeit aufgegriffen werden.",
           features: [
             "Gemeinnützigkeits(steuer)recht",
             "Alternative Rechtsformen (treuhänderisches Eigentum, Genossenschaften, Stiftungen)",
@@ -161,7 +166,7 @@ export const translations = {
           title: "Nachhaltigkeit",
           description: "Steuerberatung für Umweltprojekte, umweltfreundlichen Technologien und nachhaltige Infrastruktur.",
           features: [
-            "Grüne Steueranreize und steuerliche Fördermittel",
+            "Grüne Steueranreize, steuerliche Förderungen und Fördermittel",
             "Ertragsteuerliche Besonderheiten",
             "Steuerliche Nachhaltigkeitsberichtserstattung"
           ]
@@ -180,8 +185,8 @@ export const translations = {
     },
     about: {
       tag: "Über mich",
-      title: "Expertise trifft Sinn",
-      description: "Mit fast 30 Jahren Erfahrung in der internationalen Steuerberatung, davon 2/3 der Berufsjahre bei den 'Big Four' und 1/3 in großen Unternehmen und Konzernen, bringe ich fundierte Expertise mit, um Unternehmen dabei zu helfen, wirtschaftlichen Erfolg mit gesellschaftlicher Sinnstiftung zu kombinieren und soziale und nachhaltige Wirkung zu erzielen.",
+      title: "Expertise trifft Purpose",
+      description: "Mit fast 30 Jahren Erfahrung in der internationalen Steuerberatung, davon zwei Drittel der Berufsjahre bei den \"Big Four\" und ein Drittel in großen Unternehmen und Konzernen, begleitet von kontinuierlichem gesellschaftlichem Engagement in Organisationen sowie langjähriger Expertise in den Themen Sustainable Finance und ESG (tax) und Gemeinnützigkeitsrecht, bringe ich fundierte steuerliche Expertise mit, um Unternehmen dabei zu helfen, wirtschaftlichen Erfolg mit gesellschaftlicher Sinnstiftung zu kombinieren und bedeutende soziale und nachhaltige Wirkung zu erzielen.",
       stats: {
         experience: {
           number: "28+",
@@ -192,40 +197,40 @@ export const translations = {
           label: "Staaten involviert"
         },
         clients: {
-          number: "100+",
+          number: "500+",
           label: "Zufriedene Kunden"
         },
         savings: {
-          number: "100+",
+          number: "1000+",
           label: "Projekte und Spezialthemen"
         }
       }
     },
     testimonials: {
       tag: "Referenzen",
-      title: "Was unsere Kunden sagen",
-      description: "Erfahren Sie, wie wir Organisationen bei der Erreichung ihrer nachhaltigen und sozialen Ziele unterstützen",
+      title: "Was meine Kunden sagen",
+      description: "Erfahre, wie ich Organisationen bei der Erreichung ihrer nachhaltigen und sozialen Ziele unterstütze",
       quotes: {
         first: {
-          quote: "tax & purpose war maßgeblich daran beteiligt, uns durch komplexe internationale Steuerfragen zu navigieren und dabei unser Engagement für soziale Verantwortung aufrechtzuerhalten.",
-          author: "Jane Doe",
-          position: "CEO, GreenTech Innovations"
+          quote: "tax & purpose hilft unseren Start Ups steuerliche Spezialfragen zu lösen und guidance zu wichtigen steuerlichen Themen zu geben.",
+          author: "Iris Wilhelmi / Udo Glaser",
+          position: "DigitalHUB Aachen e.V."
         },
         second: {
-          quote: "Ihre Expertise in nachhaltigen Steuerpraktiken hat es uns ermöglicht, unsere Wirkung zu maximieren und dabei compliant zu bleiben. Sehr empfehlenswert!",
-          author: "John Smith",
-          position: "CFO, EcoSolutions Inc."
+          quote: "Tax & purpose wird unser Modell in die (praktische) Steuerwelt einführen.",
+          author: "Vertreter",
+          position: "Stiftung Verantwortungseigentum"
         },
         third: {
-          quote: "Die Zusammenarbeit mit tax & purpose war ein Game-Changer für unsere Non-Profit-Organisation. Sie verstehen wirklich die einzigartigen Herausforderungen, denen wir gegenüberstehen.",
-          author: "Emily Brown",
-          position: "Geschäftsführerin, Global Change Foundation"
+          quote: "tax & purpose wird uns bei wichtigen steuerlichen Fördermöglichkeiten für Solartechnologie beraten.",
+          author: "Vertreter",
+          position: "Qualitec"
         }
       }
     },
     cta: {
       title: "Bereit, etwas zu bewirken?",
-      description: "Lassen Sie uns / Lass' uns gemeinsam nachhaltigen Wert für Ihr Unternehmen und die Gesellschaft schaffen.",
+      description: "Lass uns gemeinsam soziale und nachhaltige Veränderungen für / durch Dein Unternehmen und für die Gesellschaft schaffen.",
       button: "Beratungstermin vereinbaren"
     },
     footer: {
@@ -241,6 +246,11 @@ export const translations = {
       description: "Zusammenarbeit mit Organisationen, die sich für Nachhaltigkeit und soziale Wirkung einsetzen",
       workspace: "Arbeitsbereich",
       logoAlt: "Partner Logo"
+    },
+    contact: {
+      tag: "Kontakt",
+      title: "Vereinbare einen Termin mit mir",
+      description: "Du hast eine Frage? Vereinbare einen Ersttermin – ich höre Dir zu!"
     }
   }
 } 

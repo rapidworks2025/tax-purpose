@@ -8,11 +8,11 @@ import { translations } from './translations'
 console.log('Image path:', bigFourImage);
 
 const colors = {
-  background: "#f3e7e7",
-  text: "#3e3b3e",
-  primary: "#e4bfbf",
-  secondary: "#efd8d8",
-  accent: "#657c62"
+  background: "#f9e9ea",
+  text: "#393639",
+  primary: "#dcafa5",
+  secondary: "#ebcfc8",
+  accent: "#478841"
 };
 
 function App() {
@@ -73,7 +73,6 @@ function App() {
     { name: "Home", href: "#" },
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
-    { name: "Partners", href: "#partners" },
     { name: "Contact", href: "#contact" },
   ]
 
@@ -194,7 +193,7 @@ function App() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 items-center justify-between">
             {/* Logo */}
-            <a href="#" className="font-serif text-2xl font-bold text-text tracking-tight">
+            <a href="#" className="font-serif text-2xl font-extrabold text-text tracking-tight">
               tax & purpose
             </a>
 
@@ -315,27 +314,33 @@ function App() {
                   {t.hero.tag}
                 </span>
                 <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
-                  <span className="block text-[#3e3b3e] font-serif leading-tight">
+                  <span className="block text-[#393639] font-serif leading-tight">
                     {t.hero.title.line1}
                   </span>
-                  <span className="block text-[#657c62] font-serif leading-tight">
+                  <span className="block text-[#478841] font-serif leading-tight">
                     {t.hero.title.line2}
                   </span>
-                  <span className="block mt-6 text-[#3e3b3e]/80 text-2xl sm:text-3xl font-sans font-light leading-relaxed">
+                  <span className="block mt-6 text-[#393639]/90 text-2xl sm:text-3xl font-sans font-light leading-relaxed">
                     {t.hero.title.line3}
                   </span>
                 </h1>
-                <p className="text-xl text-[#3e3b3e]/70 max-w-2xl font-light leading-relaxed">
+                <p className="text-xl text-[#393639]/90 max-w-2xl font-light leading-relaxed">
                   {lang === 'de' ? (
                     <>
                       30 Jahre internationale Steuerexpertise kombiniert mit der Leidenschaft für 
-                      <span className="text-[#e4bfbf] font-medium"> soziales </span> 
+                      <span className="text-[#dcafa5] font-medium"> soziales </span> 
                       Unternehmertum und 
-                      <span className="text-[#657c62] font-medium"> Nachhaltigkeit</span>, 
+                      <span className="text-[#478841] font-medium"> Nachhaltigkeit</span>, 
                       um bedeutsame gesellschaftliche Veränderungen zu bewirken.
                     </>
                   ) : (
-                    t.hero.description
+                    <>
+                      Combining 30 years of international tax expertise with a passion for 
+                      <span className="text-[#dcafa5] font-medium"> social entrepreneurship </span> 
+                      and 
+                      <span className="text-[#478841] font-medium"> sustainability </span> 
+                      to drive meaningful change.
+                    </>
                   )}
                 </p>
               </div>
@@ -376,41 +381,27 @@ function App() {
         <div className="absolute bottom-1/4 right-10 w-64 h-64 rounded-full bg-accent/10 mix-blend-multiply blur-3xl animate-blob animation-delay-2000"></div>
       </section>
 
-      {/* Client Logos - darker background */}
+      {/* Simplified Partners Section */}
       <section className="py-24 relative bg-background">
         <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
-            <span className="inline-flex items-center px-3 py-1 text-sm font-medium text-background bg-accent/90 rounded-full backdrop-blur-sm shadow-lg">
-              {t.partners.tag}
-            </span>
-            <h2 className="mt-6 text-4xl font-bold tracking-tight sm:text-5xl text-text font-serif">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text font-serif">
               {t.partners.title}
             </h2>
-            <p className="mt-4 text-lg text-text/70 max-w-2xl mx-auto font-light">
-              {t.partners.description}
-            </p>
           </div>
 
-          {/* Updated partner grid with better hover effects */}
+          {/* Simple logo grid with no descriptions or names */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
             {partners.map((partner, i) => (
               <div key={i} className="w-full relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
                 <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 transition-all duration-500 hover:shadow-lg">
-                  <div className="absolute top-0 left-0 h-full w-1 bg-accent/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-                  <div className="h-16 flex items-center justify-center mb-3">
+                  <div className="h-16 flex items-center justify-center">
                     <img
                       src={partner.logo || bigFourImage}
                       alt={`${partner.name} logo`}
                       className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
                     />
-                  </div>
-                  <div className="text-center">
-                    <h4 className="font-medium text-text">{partner.name}</h4>
-                    {partner.representatives && (
-                      <p className="text-xs text-text/60 mt-1">{partner.representatives}</p>
-                    )}
                   </div>
                 </div>
               </div>
@@ -447,7 +438,7 @@ function App() {
               {t.services.title}
               <div className="absolute -inset-1 bg-primary/5 blur-3xl rounded-full opacity-50"></div>
             </h2>
-            <p className="mt-4 text-lg text-text/70 max-w-2xl mx-auto font-light">
+            <p className="mt-4 text-lg text-text/90 max-w-2xl mx-auto font-light">
               {t.services.description}
             </p>
           </div>
@@ -464,16 +455,16 @@ function App() {
                 
                 {/* Card content */}
                 <div className="relative">
-                  <div className="inline-flex p-4 rounded-2xl bg-[#657c62]/10 text-[#657c62] group-hover:scale-110 transition-all duration-500">
+                  <div className="inline-flex p-4 rounded-2xl bg-[#478841]/10 text-[#478841] group-hover:scale-110 transition-all duration-500">
                     {service.icon}
                   </div>
                 </div>
                 
-                <h3 className="mt-6 text-2xl font-semibold text-[#3e3b3e] group-hover:text-[#657c62] transition-colors duration-300 font-serif">
+                <h3 className="mt-6 text-2xl font-semibold text-[#393639] group-hover:text-[#478841] transition-colors duration-300 font-serif">
                   {service.title}
                 </h3>
                 
-                <p className="mt-4 text-[#3e3b3e]/70">
+                <p className="mt-4 text-[#393639]/70">
                   {service.description}
                 </p>
                 
@@ -483,7 +474,7 @@ function App() {
                       <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-accent/10 text-accent mt-0.5">
                         <Check className="w-3 h-3" />
                       </div>
-                      <span className="ml-3 text-sm text-[#3e3b3e]/80">{feature}</span>
+                      <span className="ml-3 text-sm text-[#393639]/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -511,7 +502,7 @@ function App() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
               {t.about.title}
             </h2>
-            <p className="text-lg text-text/70 max-w-2xl mx-auto">
+            <p className="text-lg text-text/90 max-w-2xl mx-auto">
               {t.about.description}
             </p>
             </div>
@@ -538,7 +529,7 @@ function App() {
             ))}
           </div>
         </div>
-        <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-[#657c62]/5 blur-3xl"></div>
+        <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-[#478841]/5 blur-3xl"></div>
       </section>
 
       {/* Testimonials with modern workspace background */}
@@ -552,45 +543,48 @@ function App() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
               {t.testimonials.title}
             </h2>
-            <p className="text-lg text-text/70 max-w-2xl mx-auto">
+            <p className="text-lg text-text/90 max-w-2xl mx-auto">
               {t.testimonials.description}
             </p>
+            
+            {/* Optional: Add a notice about pending approval */}
+            {/* <p className="text-sm text-accent italic mt-2">
+              * Testimonials pending approval
+            </p> */}
           </div>
+          
           <div className="grid gap-8 md:grid-cols-3">
             {[t.testimonials.quotes.first, t.testimonials.quotes.second, t.testimonials.quotes.third].map((testimonial, index) => (
               <div key={index} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#e4bfbf]/5 via-[#657c62]/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
-                <div className="relative bg-white rounded-xl p-8 border border-[#e4bfbf]/20 hover:border-[#657c62]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#dcafa5]/5 via-[#478841]/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
+                <div className="relative bg-white rounded-xl p-8 border border-[#dcafa5]/20 hover:border-[#478841]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
                   <div className="absolute -top-4 -left-4 transform group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-8 h-8 bg-[#657c62] shadow-lg rounded-full flex items-center justify-center">
+                    <div className="w-8 h-8 bg-[#478841] shadow-lg rounded-full flex items-center justify-center">
                       <span className="text-white text-xl">"</span>
+                    </div>
                   </div>
-                </div>
-                <blockquote className="relative">
+                  <blockquote className="relative">
                     <p className="text-lg text-text/80 italic leading-relaxed">{testimonial.quote}</p>
                     <footer className="mt-6">
                       <div className="flex items-center gap-4">
                         <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all duration-300">
                           <span className="text-text font-serif text-xl">
-                        {testimonial.author[0]}
-                      </span>
-                    </div>
-                    <div>
+                            {testimonial.author.split(' ')[0][0]}
+                          </span>
+                        </div>
+                        <div>
                           <cite className="not-italic font-medium text-text block">{testimonial.author}</cite>
                           <span className="text-sm text-text/60">{testimonial.position}</span>
                         </div>
-                    </div>
-                  </footer>
-                </blockquote>
+                      </div>
+                    </footer>
+                  </blockquote>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Partners Section */}
-     
 
       {/* Contact Section */}
       <section id="contact" className="py-24 relative bg-white">
@@ -603,7 +597,7 @@ function App() {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text font-serif">
               Get in Touch
             </h2>
-            <p className="text-lg text-text/70 max-w-2xl mx-auto">
+            <p className="text-lg text-text/90 max-w-2xl mx-auto">
               Have questions or want to discuss how we can help with your tax needs? Reach out to us.
             </p>
           </div>
@@ -691,15 +685,15 @@ function App() {
       <section className="py-24 relative bg-[#e4bfbf]/30">
         <div className="absolute inset-0 bg-[radial-gradient(#657c62_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#3e3b3e] sm:text-4xl mb-4">{t.cta.title}</h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-[#3e3b3e]/80 mb-8">
+          <h2 className="text-3xl font-bold tracking-tight text-[#393639] sm:text-4xl mb-4">{t.cta.title}</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-[#393639]/90 mb-8">
             {t.cta.description}
           </p>
           <a
             href="https://calendly.com/contact-taxandpurpose/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-[#657c62] px-8 py-4 text-base font-medium text-white hover:bg-[#657c62]/90 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center rounded-md bg-[#478841] px-8 py-4 text-base font-medium text-white hover:bg-[#478841]/90 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-1"
           >
             {t.cta.button}
           </a>
@@ -707,7 +701,7 @@ function App() {
       </section>
 
       {/* Footer - add subtle texture and improve contrast */}
-      <footer className="relative bg-[#3e3b3e] text-white">
+      <footer className="relative bg-[#393639] text-white">
         <div className="absolute inset-0 bg-[radial-gradient(#e4bfbf_1px,transparent_1px)] [background-size:32px_32px] opacity-5"></div>
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-3">
@@ -743,15 +737,10 @@ function App() {
                     </a>
                   </li>
                   <li>
-                    <a href="#partners" className="hover:text-primary transition-colors">
-                      {t.nav.partners}
-                    </a>
-                  </li>
-                  <li>
                     <a href="#contact" className="hover:text-primary transition-colors">
                       {t.nav.contact}
-                      </a>
-                    </li>
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div className="space-y-4">
