@@ -122,8 +122,17 @@ export const translations = {
     },
     contact: {
       tag: "Contact",
-      title: "Schedule a Meeting With Me",
-      description: "Have a question? Schedule an initial consultation – I'm here to listen!"
+      title: "Get in Touch",
+      description: "Have questions or want to discuss how we can help with your tax needs? Reach out to us.",
+      info: {
+        title: "Contact Information",
+        email: "Email",
+        phone: "Phone",
+        address: "Address"
+      },
+      schedule: {
+        title: "Schedule a Consultation"
+      }
     }
   },
   de: {
@@ -249,8 +258,17 @@ export const translations = {
     },
     contact: {
       tag: "Kontakt",
-      title: "Vereinbare einen Termin mit mir",
-      description: "Du hast eine Frage? Vereinbare einen Ersttermin – ich höre Dir zu!"
+      title: "Kontakt aufnehmen",
+      description: "Haben Sie Fragen oder möchten Sie besprechen, wie wir bei Ihren Steuerangelegenheiten helfen können? Kontaktieren Sie uns.",
+      info: {
+        title: "Kontaktinformationen",
+        email: "E-Mail",
+        phone: "Telefon",
+        address: "Adresse"
+      },
+      schedule: {
+        title: "Beratungstermin vereinbaren"
+      }
     }
   }
 } 

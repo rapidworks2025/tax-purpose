@@ -595,17 +595,17 @@ function App() {
               {t.nav.contact}
             </span>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text font-serif">
-              Get in Touch
+              {t.contact.title}
             </h2>
             <p className="text-lg text-text/90 max-w-2xl mx-auto">
-              Have questions or want to discuss how we can help with your tax needs? Reach out to us.
+              {t.contact.description}
             </p>
           </div>
           
           <div className="max-w-6xl mx-auto">
             <div className="grid gap-8 md:grid-cols-5">
               <div className="md:col-span-2 bg-white/50 backdrop-blur-sm rounded-xl p-8 border border-primary/10 shadow-lg">
-                <h3 className="text-xl font-medium mb-6 text-text">Contact Information</h3>
+                <h3 className="text-xl font-medium mb-6 text-text">{t.contact.info.title}</h3>
                 <ul className="space-y-6">
                   <li className="flex items-start">
                     <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-accent/10 text-accent">
@@ -614,7 +614,7 @@ function App() {
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-text">Email</p>
+                      <p className="text-sm font-medium text-text">{t.contact.info.email}</p>
                       <a href="mailto:contact@taxandpurpose.com" className="text-text/70 hover:text-accent transition-colors">
                         contact@taxandpurpose.com
                       </a>
@@ -627,7 +627,7 @@ function App() {
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-text">Phone</p>
+                      <p className="text-sm font-medium text-text">{t.contact.info.phone}</p>
                       <a href="tel:+4915144508604" className="text-text/70 hover:text-accent transition-colors">
                         +49 151 4450 8604
                       </a>
@@ -641,7 +641,7 @@ function App() {
                       </svg>
                     </div>
                     <div className="ml-3">
-                      <p className="text-sm font-medium text-text">Address</p>
+                      <p className="text-sm font-medium text-text">{t.contact.info.address}</p>
                       <p className="text-text/70">
                         Jülicher Straße 72a<br />
                         52070 Aachen<br />
@@ -652,7 +652,7 @@ function App() {
                 </ul>
                 
                 <div className="mt-8 pt-8 border-t border-primary/10">
-                  <h4 className="text-lg font-medium mb-4 text-text">Schedule a Consultation</h4>
+                  <h4 className="text-lg font-medium mb-4 text-text">{t.contact.schedule.title}</h4>
                   <a
                     href="https://calendly.com/contact-taxandpurpose/30min"
                     target="_blank"
