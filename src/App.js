@@ -1,8 +1,12 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check } from "lucide-react"
+import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check, ChevronDown } from "lucide-react"
 import bigFourImage from './images/big4.png'
+import leilaHeroImage from './images/leila1.jpeg'
+import leilaLogo from './images/leilalogo.png'
+import leilaAbout1 from './images/leila2.jpeg'
+import leilaAbout2 from './images/leila3.jpeg'
 import { translations } from './translations'
 
 console.log('Image path:', bigFourImage);
@@ -12,7 +16,7 @@ const colors = {
   text: "#393639",
   primary: "#dcafa5",
   secondary: "#ebcfc8",
-  accent: "#478841"
+  accent: "#8f9a7a"
 };
 
 function App() {
@@ -97,24 +101,6 @@ function App() {
     },
   ]
 
-  const testimonials = [
-    {
-      quote: "tax & purpose has been instrumental in helping us navigate complex international tax issues while maintaining our commitment to social responsibility.",
-      author: "Jane Doe",
-      position: "CEO, GreenTech Innovations",
-    },
-    {
-      quote: "Their expertise in sustainable tax practices has allowed us to maximize our impact while staying compliant. Highly recommended!",
-      author: "John Smith",
-      position: "CFO, EcoSolutions Inc.",
-    },
-    {
-      quote: "Working with tax & purpose has been a game-changer for our non-profit. They truly understand the unique challenges we face.",
-      author: "Emily Brown",
-      position: "Executive Director, Global Change Foundation",
-    },
-  ]
-
   const services = [
     {
       icon: <Users className="h-6 w-6" />,
@@ -142,48 +128,48 @@ function App() {
     social: "https://images.unsplash.com/photo-1434626881859-194d67b2b86f"
   }
 
-  const partners = [
-    { 
-      name: "DigitalHUB Aachen e.V.", 
-      representatives: "Iris Wilhelmi, Udo Glaser",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("DigitalHUB")}` 
+  // Define new testimonials data structure
+  const newTestimonials = [
+    {
+      quote_de: "Dank des engagierten Einsatzes von Leila Momen im digitalHUB konnten zahlreiche spannende und nachhaltige Projekte umgesetzt werden. Startups profitierten dabei von wertvollem Support in steuerlichen Spezialfragen und bekamen hilfreiche Orientierung bei wichtigen steuerlichen Themen.",
+      quote_en: "Thanks to Leila Momen's dedicated commitment at digitalHUB, numerous exciting and sustainable projects were implemented. Startups benefited from valuable support on special tax issues and received helpful guidance on important tax matters.",
+      author: "Iris Wilhelmi",
+      position_de: "Geschäftsführerin vom digitalHUB Aachen e.V.",
+      position_en: "Managing Director of digitalHUB Aachen e.V.",
+      logo: null // Replace null with imported logo variable, e.g., digitalHubLogo
     },
-    { 
-      name: "ecoHUB Aachen", 
-      representatives: "",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("ecoHUB")}` 
+    {
+      quote_de: "tax&purpose wird uns bei steuerlichen Fördermöglichkeiten für Solartechnologie beraten. Wir freuen uns auf die kompetente Unterstützung von tax&purpose.",
+      quote_en: "tax&purpose will advise us on tax incentives for solar technology. We look forward to the competent support from tax&purpose.",
+      author: "Tanju Doganay",
+      position_de: "Geschäftsführer von QUALITEC Solutions GmbH & Co. KG",
+      position_en: "Managing Director of QUALITEC Solutions GmbH & Co. KG",
+      logo: null // Replace null with imported logo variable, e.g., qualitecLogo
     },
-    { 
-      name: "Zakat Deutschland e.V.", 
-      representatives: "Khurrem",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Zakat")}` 
+    {
+      quote_de: "Leila hat Zakat Deutschland e.V. als Mitgründerin aufgebaut und steuerlich auf stabile Beine gestellt. Ihre Leidenschaft, Projekte durch ihre umfassende steuerliche Expertise zum Fliegen zu bringen ist, ist beispielhaft. Tax&purpose wird unsere gemeinnützige Organisation mit großem Engagement weiterhin steuerlich begleiten.",
+      quote_en: "As a co-founder, Leila built Zakat Deutschland e.V. and put it on a stable tax footing. Her passion for getting projects off the ground with her comprehensive tax expertise is exemplary. Tax&purpose will continue to provide tax support to our non-profit organization with great commitment.",
+      author: "Khurrem Akhtar",
+      position_de: "Vorstandsvorsitzender von Zakat Deutschland e.V.",
+      position_en: "Chairman of the Board of Zakat Deutschland e.V.",
+      logo: null // Replace null with imported logo variable, e.g., zakatLogo
     },
-    { 
-      name: "Bischöfliche Akademie Aachen", 
-      representatives: "Angela Reinders",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Bischöfliche Akademie")}` 
-    },
-    { 
-      name: "Stiftung Verantwortungseigentum", 
-      representatives: "",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Stiftung")}` 
-    },
-    { 
-      name: "PwC", 
-      representatives: "Rainer Kroker",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("PwC")}` 
-    },
-    { 
-      name: "Qualitec", 
-      representatives: "",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Qualitec")}` 
-    },
-    { 
-      name: "Inaia", 
-      representatives: "",
-      logo: `https://placehold.co/200x100/f3e7e7/3e3b3e?text=${encodeURIComponent("Inaia")}` 
+    {
+      quote_de: "Leila hat mit großer Leidenschaft und Engagement für und mit INAIA ein Produkt für die islamkonforme Investition und Finanzierung von Immobilien entwickelt und steuerlich optimiert. Wir freuen uns mit tax&purpose islamkonforme und damit ethische und nachhaltige Finanzprodukte steuerlich beraten zu lassen.",
+      quote_en: "With great passion and commitment, Leila developed and tax-optimized a product for Islamic-compliant investment and financing of real estate for and with INAIA. We look forward to having tax&purpose advise us on tax matters for Islamic-compliant and thus ethical and sustainable financial products.",
+      author: "Emre Akye",
+      position_de: "Geschäftsführer der INAIA GmbH",
+      position_en: "Managing Director of INAIA GmbH",
+      logo: null // Replace null with imported logo variable, e.g., inaiaLogo
     }
   ];
+
+  // Dynamically select quote and position based on language
+  const currentTestimonials = newTestimonials.map(testimonial => ({
+    ...testimonial,
+    quote: lang === 'de' ? testimonial.quote_de : testimonial.quote_en,
+    position: lang === 'de' ? testimonial.position_de : testimonial.position_en,
+  }));
 
   return (
     <div className="min-h-screen font-sans text-text bg-background">
@@ -193,8 +179,8 @@ function App() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-24 items-center justify-between">
             {/* Logo */}
-            <a href="#" className="font-serif text-2xl font-extrabold text-text tracking-tight">
-              tax & purpose
+            <a href="#" className="flex items-center">
+              <img src={leilaLogo} alt="tax & purpose logo" className="h-12 w-auto" />
             </a>
 
             {/* Desktop Navigation */}
@@ -365,8 +351,8 @@ function App() {
             {/* Right side - temporary placeholder using the coffee workspace image */}
             <div className="relative aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1497215842964-222b430dc094"
-                alt={t.partners.workspace}
+                src={leilaHeroImage}
+                alt={t.hero.imageAlt || "Dr. Leila Momen in her office"}
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent mix-blend-multiply"></div>
@@ -379,35 +365,6 @@ function App() {
         {/* Add decorative elements to the hero section */}
         <div className="absolute top-1/4 left-10 w-64 h-64 rounded-full bg-primary/10 mix-blend-multiply blur-3xl animate-blob"></div>
         <div className="absolute bottom-1/4 right-10 w-64 h-64 rounded-full bg-accent/10 mix-blend-multiply blur-3xl animate-blob animation-delay-2000"></div>
-      </section>
-
-      {/* Simplified Partners Section */}
-      <section className="py-24 relative bg-background">
-        <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text font-serif">
-              {t.partners.title}
-            </h2>
-          </div>
-
-          {/* Simple logo grid with no descriptions or names */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            {partners.map((partner, i) => (
-              <div key={i} className="w-full relative group">
-                <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 transition-all duration-500 hover:shadow-lg">
-                  <div className="h-16 flex items-center justify-center">
-                    <img
-                      src={partner.logo || bigFourImage}
-                      alt={`${partner.name} logo`}
-                      className="max-h-12 w-auto object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Services Section - improved contrast and visual hierarchy */}
@@ -505,16 +462,84 @@ function App() {
             <p className="text-lg text-text/90 max-w-2xl mx-auto">
               {t.about.description}
             </p>
+          </div>
+
+          {/* NEW: Value Proposition & Mindset Section */}
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            {/* Value Proposition Card */}
+            <div className="bg-white/40 backdrop-blur-sm p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-xl font-semibold text-accent mb-4">{t.about.valueProposition.title}</h3>
+              <ul className="space-y-3">
+                {t.about.valueProposition.points.map((point, i) => (
+                  <li key={i} className="flex items-start">
+                    <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-accent/10 text-accent mt-0.5">
+                      {/* You can use a different icon if preferred */}
+                      <Check className="w-3 h-3" />
+                    </div>
+                    <span className="ml-3 text-sm text-text/80">{point}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
+            {/* Mindset Change Card */}
+            <div className="bg-white/40 backdrop-blur-sm p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow duration-300">
+              <h3 className="text-xl font-semibold text-accent mb-4">{t.about.mindsetChange.title}</h3>
+               <p className="text-sm text-text/70 italic mb-3">{t.about.mindsetChange.intro}</p>
+              <ul className="space-y-3">
+                {t.about.mindsetChange.points.map((point, i) => (
+                  <li key={i} className="flex items-start">
+                     <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-accent/10 text-accent mt-0.5">
+                      <Check className="w-3 h-3" />
+                    </div>
+                    <span className="ml-3 text-sm text-text/80">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          {/* END NEW Section */}
+
+          {/* Grid for the two images of Dr. Momen */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img
+                src={leilaAbout1}
+                alt={t.about.imageAlt1 || "Dr. Leila Momen in a professional setting"}
+                className="w-full h-full object-cover aspect-[4/3]"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <img
+                src={leilaAbout2}
+                alt={t.about.imageAlt2 || "Dr. Leila Momen outdoors"}
+                className="w-full h-full object-cover aspect-[4/3]"
+              />
+            </div>
+          </div>
+
+          {/* NEW: Core Principles Section */}
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            {/* Optional Title */}
+            {/* <h3 className="text-xl font-semibold text-accent mb-6">{t.about.corePrinciples.title}</h3> */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {t.about.corePrinciples.items.map((principle, index) => (
+                <span key={index} className="inline-block bg-white/50 backdrop-blur-sm text-text text-sm font-medium px-4 py-2 rounded-full border border-primary/20 shadow-sm hover:border-accent/40 transition-colors duration-200">
+                  {principle}
+                </span>
+              ))}
+            </div>
+          </div>
+          {/* END NEW Core Principles */}
+
           {/* Stats section without zoom effect */}
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-16">
-              {[
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-16">
+            {[
               t.about.stats.experience,
               t.about.stats.countries,
               t.about.stats.clients,
               t.about.stats.savings,
-              ].map((stat, index) => (
+            ].map((stat, index) => (
               <div key={index} className="group relative overflow-hidden">
                 <div className="relative bg-white/50 backdrop-blur-sm rounded-xl p-6 border border-primary/10 hover:border-accent/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   <div className="text-5xl font-bold text-accent font-serif relative">
@@ -532,55 +557,92 @@ function App() {
         <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-[#478841]/5 blur-3xl"></div>
       </section>
 
-      {/* Testimonials with modern workspace background */}
+      {/* Updated Testimonials Section */}
       <section className="py-24 relative bg-background">
         <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
-            <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-text text-sm font-medium mb-3">
-              {t.testimonials.tag}
-            </span>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text">
+            {/* Use updated title and description from translations */}
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text font-serif">
               {t.testimonials.title}
             </h2>
-            <p className="text-lg text-text/90 max-w-2xl mx-auto">
+            <p className="text-lg text-text/90 max-w-3xl mx-auto">
               {t.testimonials.description}
             </p>
-            
-            {/* Optional: Add a notice about pending approval */}
-            {/* <p className="text-sm text-accent italic mt-2">
-              * Testimonials pending approval
-            </p> */}
           </div>
-          
-          <div className="grid gap-8 md:grid-cols-3">
-            {[t.testimonials.quotes.first, t.testimonials.quotes.second, t.testimonials.quotes.third].map((testimonial, index) => (
-              <div key={index} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#dcafa5]/5 via-[#478841]/5 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-xl"></div>
-                <div className="relative bg-white rounded-xl p-8 border border-[#dcafa5]/20 hover:border-[#478841]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
-                  <div className="absolute -top-4 -left-4 transform group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-8 h-8 bg-[#478841] shadow-lg rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl">"</span>
-                    </div>
+
+          {/* Updated grid using newTestimonials */}
+          <div className="grid gap-12 md:grid-cols-2 lg:gap-16">
+            {currentTestimonials.map((testimonial, index) => (
+              <div key={index} className="group relative flex flex-col sm:flex-row items-start gap-6">
+                {/* Optional Logo Placeholder */}
+                {testimonial.logo && (
+                   <div className="flex-shrink-0 w-24 h-24 sm:w-16 sm:h-16 rounded-full bg-white border border-primary/10 flex items-center justify-center overflow-hidden shadow-md p-2">
+                    <img src={testimonial.logo} alt={`${testimonial.author} logo`} className="max-w-full max-h-full object-contain" />
                   </div>
-                  <blockquote className="relative">
-                    <p className="text-lg text-text/80 italic leading-relaxed">{testimonial.quote}</p>
-                    <footer className="mt-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all duration-300">
-                          <span className="text-text font-serif text-xl">
-                            {testimonial.author.split(' ')[0][0]}
-                          </span>
-                        </div>
-                        <div>
-                          <cite className="not-italic font-medium text-text block">{testimonial.author}</cite>
-                          <span className="text-sm text-text/60">{testimonial.position}</span>
-                        </div>
-                      </div>
+                )}
+                {/* Placeholder if no logo */}
+                 {!testimonial.logo && (
+                   <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center group-hover:bg-primary/30 transition-all duration-300">
+                     <span className="text-text font-serif text-xl">
+                       {/* Initials from Author */}
+                       {testimonial.author.split(' ').map(n => n[0]).join('')}
+                     </span>
+                   </div>
+                 )}
+
+                <div className="flex-1 relative bg-white rounded-xl p-6 border border-primary/10 hover:border-accent/20 hover:shadow-lg transition-all duration-300">
+                   <div className="absolute -top-3 left-6 transform group-hover:scale-110 transition-transform duration-300">
+                     <div className="w-8 h-8 bg-accent shadow-lg rounded-full flex items-center justify-center">
+                       <span className="text-white text-2xl font-serif -mt-1">“</span>
+                     </div>
+                   </div>
+                  <blockquote className="relative pt-4">
+                    <p className="text-base text-text/80 italic leading-relaxed mb-4">
+                      {testimonial.quote}
+                    </p>
+                    <footer className="mt-4 text-right">
+                      <cite className="not-italic font-medium text-text block">{testimonial.author}</cite>
+                      <span className="text-sm text-text/60">{testimonial.position}</span>
                     </footer>
                   </blockquote>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-24 relative bg-white">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(232,189,230,0.15)_1px,transparent_1px)] bg-[size:32px_32px] opacity-50"></div>
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-on-scroll">
+            <span className="inline-block px-4 py-1 rounded-full bg-primary/20 text-text text-sm font-medium mb-3">
+              {t.faq.tag}
+            </span>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4 text-text font-serif">
+              {t.faq.title}
+            </h2>
+            <p className="text-lg text-text/90 max-w-2xl mx-auto">
+              {t.faq.description}
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {t.faq.items.map((item, index) => (
+              <details key={index} className="group bg-white/70 backdrop-blur-sm p-6 rounded-xl border border-primary/20 shadow-sm transition-all duration-300 hover:border-accent/30 open:ring-1 open:ring-accent/20 open:shadow-md">
+                <summary className="flex justify-between items-center cursor-pointer list-none font-medium text-text hover:text-accent">
+                  {item.question}
+                  <ChevronDown className="w-5 h-5 text-accent/70 transition-transform duration-300 group-open:rotate-180" />
+                </summary>
+                {/* Use dangerouslySetInnerHTML to render the HTML string from translations */}
+                {/* Be cautious with this if the source isn't fully trusted, but okay here as it's from your translations file */}
+                <div
+                   className="mt-4 text-text/80 space-y-4 faq-answer" // Add faq-answer class for potential specific styling
+                   dangerouslySetInnerHTML={{ __html: item.answer }}
+                 />
+              </details>
             ))}
           </div>
         </div>
@@ -764,8 +826,14 @@ function App() {
             </div>
           </div>
           <div className="mt-12 border-t border-[#e4bfbf]/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-[#f3e7e7]/60">
-            © {new Date().getFullYear()} tax & purpose. {t.footer.rights}
-            <div className="mt-4 md:mt-0">
+            <div className="flex-1 text-center md:text-left mb-4 md:mb-0">
+              © {new Date().getFullYear()} tax & purpose. {t.footer.rights}
+              {/* Conditionally render the "Du" explanation for German */}
+              {lang === 'de' && t.footer.duExplanation && (
+                <p className="text-xs mt-2 text-secondary/60 italic max-w-lg mx-auto md:mx-0">{t.footer.duExplanation}</p>
+              )}
+            </div>
+            <div className="mt-4 md:mt-0 text-center md:text-right">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <span className="mx-2">|</span>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.faq-answer ul {
+  list-style: disc;
+  padding-left: 1.5rem; /* Indent list */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer li {
+  margin-bottom: 0.25rem;
+}
+
+.faq-answer a {
+  /* Styles already applied via class in translation string, but you could override or add more here */
+  /* Example: font-weight: 500; */
+}
+
+.faq-answer p {
+    margin-bottom: 1rem; /* Add space between paragraphs */
+}
+
+.faq-answer strong, .faq-answer b { /* Style bold text if needed */
+    font-weight: 600;
+    color: #5a634d; /* Slightly darker accent for emphasis maybe? */
+}
