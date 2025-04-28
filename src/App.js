@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check, ChevronDown } from "lucide-react"
+import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check, ChevronDown, BookOpen, ArrowUpRight } from "lucide-react"
 import bigFourImage from './images/big4.png'
 import leilaHeroImage from './images/leila1.jpeg'
 import leilaLogo from './images/leilalogo.png'
@@ -25,6 +25,8 @@ const colors = {
 
 // Component for the main page content
 const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages }) => {
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
+
   return (
     <>
       {/* Hero Section */}
@@ -388,8 +390,59 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
               </details>
             ))}
           </div>
+
+          <div className="mt-12 text-center">
+            <button
+              onClick={() => setIsTermsModalOpen(true)}
+              className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-medium text-accent border-2 border-accent/30 hover:bg-accent/5 transition-all duration-300 group"
+            >
+              <BookOpen className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+              {t.faq.showTermsButton}
+              <ArrowUpRight className="w-4 h-4 opacity-70 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </button>
+          </div>
         </div>
       </section>
+
+      {/* Terms Explanation Modal */}
+      {isTermsModalOpen && (
+        <div className="fixed inset-0 z-[60] bg-black/40 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] flex flex-col">
+             <div className="flex justify-between items-center p-6 border-b border-primary/20">
+               <h3 className="text-xl font-semibold text-text font-serif">{t.faq.showTermsButton}</h3>
+               <button
+                 onClick={() => setIsTermsModalOpen(false)}
+                 className="p-2 rounded-full hover:bg-primary/10 text-text"
+                 aria-label="Close modal"
+               >
+                 <X className="w-6 h-6" />
+               </button>
+             </div>
+             <div className="p-6 space-y-6 overflow-y-auto">
+               {t.faq.purposeEconomyTerms.map((item, index) => (
+                 <details key={index} className="group bg-background/50 p-4 rounded-lg border border-primary/10">
+                   <summary className="flex justify-between items-center cursor-pointer list-none font-medium text-text hover:text-accent">
+                     {item.question}
+                     <ChevronDown className="w-5 h-5 text-accent/70 transition-transform duration-300 group-open:rotate-180" />
+                   </summary>
+                   <div
+                      className="mt-3 text-text/80 faq-answer prose prose-sm max-w-none prose-a:text-accent hover:prose-a:underline prose-ul:list-disc prose-ul:pl-5 prose-li:my-1"
+                      dangerouslySetInnerHTML={{ __html: item.answer }}
+                    />
+                 </details>
+               ))}
+             </div>
+             <div className="p-4 border-t border-primary/10 text-right">
+               <button
+                 onClick={() => setIsTermsModalOpen(false)}
+                 className="px-4 py-2 rounded-md bg-accent text-white hover:bg-accent/90 transition-colors"
+               >
+                 Close
+               </button>
+             </div>
+           </div>
+         </div>
+       )}
 
       {/* Contact Section */}
       <section id="contact" className="py-24 relative bg-white">
