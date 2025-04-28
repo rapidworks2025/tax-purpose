@@ -173,7 +173,7 @@ export const translations = {
     faq: {
       tag: "Frequently Asked Questions",
       title: "Answers to Your Questions",
-      description: "Find answers to common questions about my services and approach.",
+      description: "Find answers to common questions about my services, my approach, and relevant concepts.",
       items: [
         {
           question: "What distinguishes tax & purpose from traditional tax advisors?",
@@ -471,7 +471,7 @@ export const translations = {
     faq: {
       tag: "FAQ",
       title: "Antworten auf deine Fragen",
-      description: "Hier findest Du Antworten auf häufig gestellte Fragen zu meinen Dienstleistungen und meinem Ansatz.",
+      description: "Hier findest Du Antworten auf häufig gestellte Fragen zu meinen Dienstleistungen, meinem Ansatz und relevanten Begriffen.",
       items: [
         {
           question: "Wie unterscheidet sich tax&purpose von traditionellen Steuerberatern?",
