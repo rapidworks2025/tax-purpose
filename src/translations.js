@@ -13,7 +13,7 @@ export const translations = {
       title: {
         line1: "Tax & Purpose",
         line2: "Aligned.",
-        line3: "Strategic tax consulting for a better world.",
+        line3: "Sustainable tax consulting for sustainable companies.",
       },
       description: "Combining 30 years of international tax expertise with a passion for social entrepreneurship and sustainability to drive meaningful change.",
       cta: {
@@ -23,48 +23,48 @@ export const translations = {
       imageAlt: "Dr. Leila Momen in her office"
     },
     services: {
-      tag: "Our Expertise",
-      title: "Tailored Tax Solutions",
-      description: "We support companies and organizations in mastering tax challenges while pursuing their social and environmental goals.",
+      tag: "My Expertise",
+      title: "Sustainable Tax Solutions with a Holistic View",
+      description: "I support companies and organizations in mastering their tax challenges while pursuing their economic, social, and sustainable goals.",
       cards: {
         social: {
-          title: "Social Enterprises & NPOs",
-          description: "Optimizing tax strategy for non-profit organizations and social enterprises.",
+          title: "Taxes for Social Enterprises & NPOs",
+          description: "Specialized tax consulting for social enterprises and non-profit organizations.",
           features: [
-            "Foundation consulting & choice of legal form",
+            "Foundation consulting & choice of legal form & restructuring",
+            "Alternative and sustainable legal forms (e.g., Steward Ownership)",
+            "Reinvestment of profits in social projects",
             "Non-profit tax law",
-            "Tax returns for NPOs",
-            "VAT optimization",
             "Donations & Sponsoring"
           ]
         },
         sustainability: {
           title: "Sustainability Tax Law",
-          description: "Advice on tax aspects of ESG criteria and sustainable investments.",
+          description: "Advice on tax aspects of ESG and sustainable investments (environmental projects, eco-friendly technologies, sustainable infrastructure).",
           features: [
             "Taxation of renewable energies",
-            "Funding advice",
+            "Green tax incentives and tax subsidies",
             "Carbon pricing & emissions trading",
-            "Sustainability reporting (Taxonomy)",
-            "Income tax specialities for green financial products"
+            "Tax sustainability reporting",
+            "Tax specialties for green financial products"
           ]
         },
         international: {
           title: "International Tax Law",
           description: "Comprehensive advice for globally operating companies with a focus on social and environmental responsibility.",
           features: [
-            "Transfer pricing",
-            "International tax planning",
-            "Double taxation agreements",
-            "Permanent establishment taxation",
-            "Global Mobility & Expat Services"
+            "International sustainable tax planning",
+            "Double taxation agreements, foreign tax law, permanent establishments",
+            "Choice of legal form and restructuring for inbound and outbound investments",
+            "Cross-border transactions (due diligence, structuring, contract reviews)",
+            "Cross-border financing"
           ]
         }
       },
       learnMore: "Learn more"
     },
     about: {
-      tag: "The Visionary Behind It",
+      tag: "My Vision",
       title: "Driving Change Through Tax Expertise",
       description: "Founded by Dr. Leila Momen, tax & purpose combines decades of international tax consulting experience with a strong commitment to social and ecological responsibility and impact.",
       imageAlt1: "Dr. Leila Momen in a professional setting",
@@ -74,30 +74,35 @@ export const translations = {
         points: [
           "Comprehensive tax expertise",
           "International focus & network",
-          "Understanding of social & sustainable business models",
-          "Individual & strategic advice",
-          "Proactive solution finding"
+          "Passion and understanding for social and sustainable business models",
+          "Sustainable tax planning",
+          "Individual & strategic advice with a holistic view",
+          "Proactive and optimal solutions instead of standard"
         ]
       },
       mindsetChange: {
         title: "Perspective Shift: Tax as a Creative Tool",
         intro: "I see taxes not just as an obligation, but as an opportunity:",
         points: [
-          "From reactive to proactive",
-          "From cost to strategic investment",
-          "From complexity to clarity",
+          "From cost to investment in meaningful projects",
           "From burden to positive impact",
-          "Optimal solutions instead of standard"
+          "From complexity to clarity",
+          "From tax avoidance models to responsible tax policy and transparency",
+          "From artificial structuring to tax design of sustainable business models",
+          "From shareholder value maximization to sustainable corporate forms"
         ]
       },
       corePrinciples: {
         items: [
-          "Integrity",
           "Sustainability",
           "Social Responsibility",
-          "Excellence",
-          "Partnership",
-          "Innovation"
+          "Integrity",
+          "Expertise",
+          "Transparency",
+          "Balance",
+          "Perspective Shift",
+          "Innovation",
+          "Partnership"
         ]
       },
       stats: {
@@ -140,6 +145,7 @@ export const translations = {
       contact: "Contact",
       rights: "All rights reserved.",
       duExplanation: null,
+      privacyLink: "Privacy Policy",
       imprintLink: "Imprint"
     },
     partners: {
@@ -167,27 +173,27 @@ export const translations = {
     faq: {
       tag: "Frequently Asked Questions",
       title: "Answers to Your Questions",
-      description: "Find answers to common questions about our services and approach.",
+      description: "Find answers to common questions about my services and approach.",
       items: [
         {
           question: "What distinguishes tax & purpose from traditional tax advisors?",
-          answer: "We combine top-tier tax consulting with a deep understanding of social and environmental challenges. Our goal is not only to optimize your tax burden but also to maximize your positive impact. We think strategically and view taxes as a tool for shaping a better future."
+          answer: "I combine top-tier tax consulting with a deep understanding of social and environmental challenges. My goal is sustainable tax consulting and tax planning for sustainable companies – tax optimization for your sustainable business model and maximizing your positive societal impact. At the same time, I advise on sustainable corporate forms: structures where profit maximization for founders, shareholders, and investors is not the priority, and profits remain within the company to be invested in social and sustainable projects. My consulting aims to help companies find the balance between a responsible and transparent tax strategy on one hand, and tax-optimized solutions for sustainable business models on the other."
         },
         {
           question: "What type of organizations is tax & purpose suitable for?",
-          answer: "We work with a wide range of organizations, including:<br/><ul><li>Social enterprises</li><li>Non-profit organizations (NPOs)</li><li>Companies with a strong focus on sustainability (ESG)</li><li>International companies with social responsibility</li><li>Startups in the green or social sector</li></ul>"
+          answer: "I work with a wide range of organizations, including:<br/><ul><li>Social enterprises</li><li>Non-profit organizations (NPOs)</li><li>Companies with a strong focus on sustainability (ESG)</li><li>International companies with an ESG focus</li><li>Startups in the green or social sector</li></ul>"
         },
         {
           question: "Do you also offer classic tax consulting services?",
-          answer: "Yes, absolutely. In addition to our special focus, we offer comprehensive tax consulting services, including financial accounting, payroll accounting, preparation of annual financial statements, and tax returns. Our unique approach always integrates considerations of sustainability and social impact."
+          answer: "Alongside my specialized tax consulting, I offer comprehensive tax services including financial accounting, payroll accounting, preparation of annual financial statements, and tax return preparation through cooperation partners with whom I work closely. This allows me to have a complete overview of the client's tax situation."
         },
         {
           question: "How does a collaboration work?",
-          answer: "The process begins with a non-binding initial consultation where we understand your needs and goals. We then develop a customized strategy. We value a collaborative, transparent, and proactive partnership."
+          answer: "The process begins with a non-binding initial consultation where you explain your ideas and goals. We decide if we find a common ground for collaboration. I place great value on a collaborative, transparent, and proactive partnership."
         },
         {
           question: "What role does international experience play?",
-          answer: "With over 30 years of experience in international tax law, particularly in the Big Four context, we can effectively manage complex cross-border issues and develop global tax strategies that are both compliant and impact-oriented."
+          answer: "With over 30 years of experience in international tax law, particularly in the context of the Big Four and international companies, I am familiar with complex cross-border issues and can develop global tax strategies that are tax compliant and, at the same time, impact-oriented for your company."
         }
       ]
     },
@@ -305,7 +311,7 @@ export const translations = {
       title: {
         line1: "Steuern & Purpose",
         line2: "im Einklang.",
-        line3: "Strategische Steuerberatung für eine bessere Welt.",
+        line3: "Nachhaltige Steuerberatung für nachhaltige Unternehmen",
       },
       description: "30 Jahre internationale Steuerexpertise kombiniert mit der Leidenschaft für soziales Unternehmertum und Nachhaltigkeit, um bedeutsame gesellschaftliche Veränderungen zu bewirken.",
       cta: {
@@ -315,29 +321,29 @@ export const translations = {
       imageAlt: "Dr. Leila Momen in ihrem Büro"
     },
     services: {
-      tag: "Unsere Expertise",
-      title: "Maßgeschneiderte Steuerlösungen",
-      description: "Wir unterstützen Unternehmen und Organisationen dabei, steuerliche Herausforderungen zu meistern und gleichzeitig ihre sozialen und ökologischen Ziele zu verfolgen.",
+      tag: "Meine Expertise",
+      title: "Nachhaltige Steuerlösungen mit ganzheitlichem Blick",
+      description: "Ich unterstütze Unternehmen und Organisationen dabei, ihre steuerlichen Herausforderungen zu meistern und gleichzeitig ihre wirtschaftlichen, sozialen und nachhaltigen Ziele zu verfolgen.",
       cards: {
         social: {
-          title: "Sozialunternehmen & NPOs",
-          description: "Optimierung der Steuerstrategie für gemeinnützige Organisationen und Sozialunternehmen.",
+          title: "Steuern für Sozialunternehmen & NPO's",
+          description: "Steuerliche Spezialberatung für Sozialunternehmen und gemeinnützige Organisationen",
           features: [
-            "Gründungsberatung & Rechtsformwahl",
+            "Gründungsberatung & Rechtsformwahl & Restrukturierung",
+            "Alternative und nachhaltige Rechtsformen (z.B. Verantwortungseigentum)",
+            "Reinvestition von Gewinnen in soziale Projekte",
             "Gemeinnützigkeitsrecht",
-            "Steuererklärungen für NPOs",
-            "Umsatzsteueroptimierung",
             "Spenden & Sponsoring"
           ]
         },
         sustainability: {
           title: "Nachhaltigkeits-Steuerrecht",
-          description: "Beratung zu steuerlichen Aspekten von ESG-Kriterien und nachhaltigen Investitionen.",
+          description: "Beratung zu steuerlichen Aspekten von ESG und nachhaltigen Investitionen (Umweltprojekte, umweltfreundliche Technologien, nachhaltige Infrastruktur)",
           features: [
             "Besteuerung erneuerbarer Energien",
-            "Fördermittelberatung",
+            "Grüne Steueranreize und steuerliche Fördermittel",
             "CO2-Bepreisung & Emissionshandel",
-            "Nachhaltigkeitsberichterstattung (Taxonomie)",
+            "Steuerliche Nachhaltigkeitsberichtserstattung",
             "Steuerliche Besonderheiten grüner Finanzprodukte"
           ]
         },
@@ -345,18 +351,18 @@ export const translations = {
           title: "Internationales Steuerrecht",
           description: "Umfassende Beratung für global agierende Unternehmen mit Fokus auf soziale und ökologische Verantwortung.",
           features: [
-            "Verrechnungspreise",
-            "Internationale Steuerplanung",
-            "Doppelbesteuerungsabkommen",
-            "Betriebsstättenbesteuerung",
-            "Global Mobility & Expat Services"
+            "Internationale nachhaltige Steuerplanung",
+            "Doppelbesteuerungsabkommen, Außensteuerrecht, Betriebsstätten",
+            "Rechtsformwahl und Restrukturierung bei Inbound und Outbound Investitionen",
+            "Transaktionen mit grenzüberschreitendem Bezug (Due Diligence, Strukturierung, Vertragsreviews)",
+            "Grenzüberschreitende Finanzierungen"
           ]
         }
       },
       learnMore: "Mehr erfahren"
     },
     about: {
-      tag: "Die Visionärin dahinter",
+      tag: "Meine Vision",
       title: "Wandel durch Steuerexpertise bewirken",
       description: "Gegründet von Dr. Leila Momen, vereint tax & purpose jahrzehntelange internationale Steuerberatungserfahrung mit einem starken Engagement für soziale und ökologische Verantwortung und Wirkung.",
       imageAlt1: "Dr. Leila Momen in professioneller Umgebung",
@@ -366,30 +372,35 @@ export const translations = {
         points: [
           "Umfassende steuerliche Expertise",
           "Internationaler Fokus & Netzwerk",
-          "Verständnis für soziale & sustainable business models",
-          "Individuelle & strategische Beratung",
-          "Proaktive Lösungsfindung"
+          "Leidenschaft und Verständnis für soziale und nachhaltige Geschäftsmodelle",
+          "Nachhaltige Steuerplanung",
+          "Individuelle & strategische Beratung mit ganzheitlichem Blick",
+          "Proaktive und optimale Lösungen statt Standard"
         ]
       },
       mindsetChange: {
-        title: "Perspektivwechsel: Steuern als Gestaltungsmittel",
+        title: "Perspektivwechsel zu Steuern",
         intro: "Ich sehe Steuern nicht nur als Pflicht, sondern als Chance:",
         points: [
-          "Von reaktiv zu proaktiv",
-          "Von Kosten zu strategischer Investition",
-          "Von Komplexität zu Klarheit",
+          "Von Kosten zu Investition in sinnstiftende Projekte",
           "Von Belastung zu positiver Wirkung",
-          "Optimale Lösungen statt Standard"
+          "Von Komplexität zu Klarheit",
+          "Von Steuersparmodellen zu verantwortungsvoller Steuerpolitik und -transparenz",
+          "Von künstlicher Gestaltung zu steuerlicher Gestaltung von nachhaltigen Geschäftsmodellen",
+          "Von Shareholder-Value Maximierung zu nachhaltigen Gesellschaftsformen"
         ]
       },
       corePrinciples: {
         items: [
-          "Integrität",
           "Nachhaltigkeit",
           "Soziale Verantwortung",
-          "Exzellenz",
-          "Partnerschaft",
-          "Innovation"
+          "Integrität",
+          "Expertise",
+          "Transparenz",
+          "Balance",
+          "Perspektivwechsel",
+          "Innovation",
+          "Partnerschaft"
         ]
       },
       stats: {
@@ -432,6 +443,7 @@ export const translations = {
       contact: "Kontakt",
       rights: "Alle Rechte vorbehalten.",
       duExplanation: "Auf dieser Webseite wird bewusst das 'Du' verwendet, um eine partnerschaftliche und zugängliche Atmosphäre zu schaffen. Selbstverständlich können wir im professionellen Kontext gerne zum 'Sie' wechseln.",
+      privacyLink: "Datenschutz",
       imprintLink: "Impressum"
     },
     partners: {
@@ -459,27 +471,27 @@ export const translations = {
     faq: {
       tag: "FAQ",
       title: "Antworten auf deine Fragen",
-      description: "Hier findest du Antworten auf häufig gestellte Fragen zu meinen Dienstleistungen und meinem Ansatz.",
+      description: "Hier findest Du Antworten auf häufig gestellte Fragen zu meinen Dienstleistungen und meinem Ansatz.",
       items: [
         {
-          question: "Was unterscheidet tax & purpose von traditionellen Steuerberatern?",
-          answer: "Ich kombiniere erstklassige Steuerberatung mit einem tiefen Verständnis für soziale und ökologische Herausforderungen. Mein Ziel ist es, nicht nur deine Steuerlast zu optimieren, sondern auch deine positive Wirkung zu maximieren. Ich denke strategisch und sehe Steuern als Instrument zur Gestaltung einer besseren Zukunft."
+          question: "Wie unterscheidet sich tax&purpose von traditionellen Steuerberatern?",
+          answer: "Ich kombiniere erstklassige Steuerberatung mit einem tiefen Verständnis für soziale und ökologische Herausforderungen. Mein Ziel ist nachhaltige Steuerberatung und Steuerplanung für nachhaltige Unternehmen – Steuerliche Optimierung für Dein nachhaltiges Geschäftsmodell und Maximierung Deiner positiven gesellschaftlichen Wirkung. Gleichzeitig berate ich zu nachhaltigen Gesellschaftsformen: Strukturen, bei denen die Gewinnmaximierung der Gründer, Gesellschafter und Investoren nicht im Vordergrund steht und Gewinne im Unternehmen bleiben, um in soziale und nachhaltige Projekte investiert zu werden. Meine Beratung soll Unternehmen helfen, die Balance zu finden zwischen einer verantwortungsvollen und transparenten Steuerstrategie einerseits und steueroptimierten Lösungen für nachhaltige Geschäftsmodelle andererseits."
         },
         {
-          question: "Für welche Art von Organisationen ist tax & purpose geeignet?",
-          answer: "Ich arbeite mit einer breiten Palette von Organisationen zusammen, darunter:<br/><ul><li>Sozialunternehmen</li><li>Gemeinnützige Organisationen (NPOs)</li><li>Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Internationale Unternehmen mit sozialer Verantwortung</li><li>Startups im grünen oder sozialen Sektor</li></ul>"
+          question: "Für welche Unternehmen ist tax&purpose geeignet?",
+          answer: "Ich arbeite mit einer breiten Palette von Organisationen zusammen, darunter:<br/><ul><li>Sozialunternehmen</li><li>Gemeinnützige Organisationen (NPOs)</li><li>Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Internationale Unternehmen mit ESG Bezug</li><li>Startups im grünen oder sozialen Sektor</li></ul>"
         },
         {
           question: "Bietest du auch klassische Steuerberatungsleistungen an?",
-          answer: "Ja, absolut. Neben meinem Spezialfokus biete ich umfassende Steuerberatungsleistungen an, einschließlich Finanzbuchhaltung, Lohnbuchhaltung, Jahresabschlusserstellung und Steuererklärungen. Mein einzigartiger Ansatz integriert dabei stets Überlegungen zur Nachhaltigkeit und sozialen Wirkung."
+          answer: "Neben meiner steuerlichen Spezialberatung biete ich umfassende Steuerberatungsleistungen inklusive der Finanzbuchhaltung, Lohnbuchhaltung, Jahresabschlusserstellung und die Erstellung von Steuererklärungen über Kooperationspartner an, mit denen ich selbst eng zusammenarbeite. Damit habe ich die gesamte steuerliche Situation des jeweiligen Mandanten im Blick."
         },
         {
-          question: "Wie läuft eine Zusammenarbeit ab?",
-          answer: "Der Prozess beginnt mit einem unverbindlichen Erstgespräch, in dem wir deine Bedürfnisse und Ziele verstehen. Anschließend entwickle ich eine maßgeschneiderte Strategie. Ich lege Wert auf eine partnerschaftliche, transparente und proaktive Zusammenarbeit."
+          question: "Wie gestaltet sich unsere Zusammenarbeit?",
+          answer: "Der Prozess beginnt mit einem unverbindlichen Erstgespräch, indem Du mir Deine Vorstellungen und Ziele erläuterst. Wir entscheiden, ob wir eine gemeinsame Basis für eine Zusammenarbeit finden. Ich lege sehr viel Wert auf partnerschaftliche, transparente und proaktive Zusammenarbeit."
         },
         {
-          question: "Welche Rolle spielt die internationale Erfahrung?",
-          answer: "Mit über 30 Jahren Erfahrung im internationalen Steuerrecht, insbesondere im Kontext der Big Four, kann ich komplexe grenzüberschreitende Sachverhalte effektiv managen und globale Steuerstrategien entwickeln, die sowohl konform als auch wirkungsorientiert sind."
+          question: "Welche Rolle spielt meine internationale Erfahrung?",
+          answer: "Mit über 30 Jahren Erfahrung im internationalen Steuerrecht, insbesondere im Kontext der Big Four und internationaler Unternehmen, bin ich mit komplexen grenzüberschreitenden Sachverhalten vertraut und kann globale Steuerstrategien entwickeln, die steuerlich compliant und gleichzeitig für dein Unternehmen wirkungsorientiert sind."
         }
       ]
     },
