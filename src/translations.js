@@ -140,7 +140,6 @@ export const translations = {
       button: "Schedule a Call"
     },
     footer: {
-      description: "Tax consulting that goes beyond numbers – for a sustainable and just future.",
       quickLinks: "Quick Links",
       contact: "Contact",
       rights: "All rights reserved.",
@@ -497,7 +496,7 @@ export const translations = {
             "Gründungsberatung & Rechtsformwahl & Restrukturierung",
             "Alternative und nachhaltige Rechtsformen (z.B. Verantwortungseigentum)",
             "Reinvestition von Gewinnen in soziale Projekte",
-            "Gemeinnützigkeitsrecht",
+            "Gemeinnützigkeitssteuerrecht",
             "Spenden & Sponsoring"
           ]
         },
@@ -517,7 +516,7 @@ export const translations = {
           description: "Umfassende Beratung für global agierende Unternehmen mit Fokus auf soziale und ökologische Verantwortung.",
           features: [
             "Internationale nachhaltige Steuerplanung",
-            "Doppelbesteuerungsabkommen, Außensteuerrecht, Betriebsstätten",
+            "Doppelbesteuerungsabkommen, Außensteuerrecht, EU Recht",
             "Rechtsformwahl und Restrukturierung bei Inbound und Outbound Investitionen",
             "Transaktionen mit grenzüberschreitendem Bezug (Due Diligence, Strukturierung, Vertragsreviews)",
             "Grenzüberschreitende Finanzierungen"
@@ -540,7 +539,7 @@ export const translations = {
           "Leidenschaft und Verständnis für soziale und nachhaltige Geschäftsmodelle",
           "Nachhaltige Steuerplanung",
           "Individuelle & strategische Beratung mit ganzheitlichem Blick",
-          "Proaktive und optimale Lösungen statt Standard"
+          "Proaktive und optimale Lösungen"
         ]
       },
       mindsetChange: {
@@ -603,7 +602,6 @@ export const translations = {
       button: "Gespräch vereinbaren"
     },
     footer: {
-      description: "Steuerberatung, die über Zahlen hinausgeht – für eine nachhaltige und gerechte Zukunft.",
       quickLinks: "Schnellzugriff",
       contact: "Kontakt",
       rights: "Alle Rechte vorbehalten.",
@@ -637,15 +635,15 @@ export const translations = {
       tag: "FAQ",
       title: "Antworten auf deine Fragen",
       description: "Hier findest Du Antworten auf häufig gestellte Fragen zu meinen Dienstleistungen und meinem Ansatz.",
-      showTermsButton: "Begriffserklärungen zu relevanten Begriffen der Purpose Economy",
+      showTermsButton: "Erläuterungen zu relevanten Begriffen im Rahmen meiner Beratung",
       items: [
         {
           question: "Wie unterscheidet sich tax&purpose von traditionellen Steuerberatern?",
-          answer: "Ich kombiniere erstklassige Steuerberatung mit einem tiefen Verständnis für soziale und ökologische Herausforderungen. Mein Ziel ist nachhaltige Steuerberatung und Steuerplanung für nachhaltige Unternehmen – Steuerliche Optimierung für Dein nachhaltiges Geschäftsmodell und Maximierung Deiner positiven gesellschaftlichen Wirkung. Gleichzeitig berate ich zu nachhaltigen Gesellschaftsformen: Strukturen, bei denen die Gewinnmaximierung der Gründer, Gesellschafter und Investoren nicht im Vordergrund steht und Gewinne im Unternehmen bleiben, um in soziale und nachhaltige Projekte investiert zu werden. Meine Beratung soll Unternehmen helfen, die Balance zu finden zwischen einer verantwortungsvollen und transparenten Steuerstrategie einerseits und steueroptimierten Lösungen für nachhaltige Geschäftsmodelle andererseits."
+          answer: "Ich kombiniere erstklassige Steuerberatung mit einem tiefen Verständnis für soziale und ökologische Herausforderungen. Mein Ziel ist nachhaltige Steuerberatung und Steuerplanung für nachhaltige Unternehmen – Steuerliche Optimierung für dein nachhaltiges Geschäftsmodell und Maximierung deiner positiven gesellschaftlichen Wirkung. Gleichzeitig berate ich zu nachhaltigen Gesellschaftsformen: Strukturen, bei denen die Gewinnmaximierung der Gründer, Gesellschafter und Investoren nicht im Vordergrund steht und Gewinne im Unternehmen bleiben, um in soziale und nachhaltige Projekte investiert zu werden. Meine Beratung soll Unternehmen helfen, die Balance zu finden zwischen einer verantwortungsvollen und transparenten Steuerstrategie einerseits und steueroptimierten Lösungen für nachhaltige Geschäftsmodelle andererseits."
         },
         {
           question: "Für welche Unternehmen ist tax&purpose geeignet?",
-          answer: "Ich arbeite mit einer breiten Palette von Organisationen zusammen, darunter:<br/><ul><li>Sozialunternehmen</li><li>Gemeinnützige Organisationen (NPOs)</li><li>Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Internationale Unternehmen mit ESG Bezug</li><li>Startups im grünen oder sozialen Sektor</li></ul>"
+          answer: "Ich arbeite mit einer breiten Palette von Organisationen zusammen, darunter:<br/><ul><li>Sozialunternehmen</li><li>Non-profit organizations (NPOs)</li><li>Companies with a strong focus on sustainability (ESG)</li><li>International companies with an ESG focus</li><li>Startups im grünen oder sozialen Sektor</li></ul>"
         },
         {
           question: "Bietest du auch klassische Steuerberatungsleistungen an?",
@@ -653,7 +651,7 @@ export const translations = {
         },
         {
           question: "Wie gestaltet sich unsere Zusammenarbeit?",
-          answer: "Der Prozess beginnt mit einem unverbindlichen Erstgespräch, indem Du mir Deine Vorstellungen und Ziele erläuterst. Wir entscheiden, ob wir eine gemeinsame Basis für eine Zusammenarbeit finden. Ich lege sehr viel Wert auf partnerschaftliche, transparente und proaktive Zusammenarbeit."
+          answer: "Der Prozess beginnt mit einem unverbindlichen Erstgespräch, indem du mir deine Vorstellungen und Ziele erläuterst. Wir entscheiden, ob wir eine gemeinsame Basis für eine Zusammenarbeit finden. Ich lege sehr viel Wert auf partnerschaftliche, transparente und proaktive Zusammenarbeit."
         },
         {
           question: "Welche Rolle spielt meine internationale Erfahrung?",
@@ -835,7 +833,7 @@ export const translations = {
         },
         {
           title: "2. Verantwortlicher",
-          content: "Verantwortlicher gemäß Art. 4 DSGVO:\ntax&purpose\nDr. Leila Momen\nJülicher Straße 72a\n52070 Aachen\nE-Mail: contact@taxandpurpose.de\nTelefon: +49 151 44508604\n\nHinweis zum Datenschutzbeauftragten:\nGemäß § 38 BDSG besteht für mich als Steuerberaterin in einer Einzelkanzlei mit weniger als 20 Angestellten keine gesetzliche Pflicht zur Bestellung eines Datenschutzbeauftragten."
+          content: "Verantwortlicher gemäß Art. 4 DSGVO:\ntax&purpose\nDr. Leila Momen\nJülicher Straße 72a\n52070 Aachen\nEmail: contact@taxandpurpose.de\nTelefon: +49 151 44508604\n\nHinweis zum Datenschutzbeauftragten:\nGemäß § 38 BDSG besteht für mich als Steuerberaterin in einer Einzelkanzlei mit weniger als 20 Angestellten keine gesetzliche Pflicht zur Bestellung eines Datenschutzbeauftragten."
         },
         {
           title: "3. Datenverarbeitung auf der Website",

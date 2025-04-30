@@ -6,6 +6,7 @@ import { Menu, X, Leaf, Users, Globe, Linkedin, ChevronRight, Check, ChevronDown
 import bigFourImage from './images/big4.png'
 import leilaHeroImage from './images/leila1.jpeg'
 import leilaLogo from './images/leilalogo.png'
+import leilaLogoWhite from './images/leilalogo_filled_white.png'
 import leilaAbout1 from './images/leila2.jpeg'
 import leilaAbout2 from './images/leila3.jpeg'
 import { translations } from './translations'
@@ -831,10 +832,9 @@ function App() {
         <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="space-y-4">
-              <h3 className="text-2xl font-serif font-medium text-primary">tax & purpose</h3>
-              <p className="text-sm text-secondary/80 max-w-md">
-                {t.footer.description}
-              </p>
+              <Link to="/" className="inline-block">
+                <img src={leilaLogoWhite} alt="tax & purpose logo" className="h-12 w-auto" />
+              </Link>
               <div className="flex space-x-4 pt-4">
                 <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary/20 transition-colors duration-300">
                   <Linkedin className="w-5 h-5" />
