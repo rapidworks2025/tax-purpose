@@ -488,7 +488,7 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
                     <div className="ml-3">
                       <p className="text-sm font-medium text-text">{t.contact.info.phone}</p>
                       <a href="tel:+4915144508604" className="text-text/70 hover:text-accent transition-colors">
-                        +49 151 4450 8604
+                        +49 1514 4508604 
                       </a>
                     </div>
                   </li>
@@ -862,7 +862,7 @@ function App() {
                   <li>52070 Aachen</li>
                   <li>
                     <a href="tel:+4915144508604" className="hover:text-primary transition-colors">
-                      +49 151 4450 8604
+                      +49 1514 4508604 
                     </a>
                   </li>
                   <li>

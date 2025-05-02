@@ -422,7 +422,7 @@ export const translations = {
       },
       contact: {
         title: "Contact:",
-        phone: "Phone: 0151/44508604",
+        phone: "Phone: +49 1514 4508604",
         email: "Email: leila.momen@taxandpurpose.com"
       },
       professionalInfo: {
@@ -643,7 +643,7 @@ export const translations = {
         },
         {
           question: "Für welche Unternehmen ist tax&purpose geeignet?",
-          answer: "Ich arbeite mit einer breiten Palette von Organisationen zusammen, darunter:<br/><ul><li>Sozialunternehmen</li><li>Non-profit organizations (NPOs)</li><li>Companies with a strong focus on sustainability (ESG)</li><li>International companies with an ESG focus</li><li>Startups im grünen oder sozialen Sektor</li></ul>"
+          answer: "Ich arbeite mit einer breiten Palette von Organisationen zusammen, darunter:<br/><ul><li>Sozialunternehmen</li><li>Gemeinnützige Organisationen (NPOs)</li><li>Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Internationale Unternehmen mit ESG Bezug</li><li>Startups im grünen oder sozialen Sektor</li></ul>"
         },
         {
           question: "Bietest du auch klassische Steuerberatungsleistungen an?",
@@ -884,7 +884,7 @@ export const translations = {
       },
       contact: {
         title: "Kontakt:",
-        phone: "Telefon: 0151/44508604",
+        phone: "Telefon: +49 1514 4508604",
         email: "Email: leila.momen@taxandpurpose.com"
       },
       professionalInfo: {
