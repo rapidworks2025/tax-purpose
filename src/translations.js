@@ -475,7 +475,7 @@ export const translations = {
       title: {
         line1: "Steuern & Purpose",
         line2: "im Einklang.",
-        line3: "Nachhaltige Steuerberatung für nachhaltige Unternehmen",
+        line3: "Nachhaltige Steuerberatung für nachhaltige Unternehmen.",
       },
       description: "30 Jahre internationale Steuerexpertise kombiniert mit der Leidenschaft für soziales Unternehmertum und Nachhaltigkeit, um bedeutsame gesellschaftliche Veränderungen zu bewirken.",
       cta: {
@@ -491,7 +491,7 @@ export const translations = {
       cards: {
         social: {
           title: "Steuern für Sozialunternehmen & NPO's",
-          description: "Steuerliche Spezialberatung für Sozialunternehmen und gemeinnützige Organisationen",
+          description: "Steuerliche Spezialberatung für Sozialunternehmen und gemeinnützige Organisationen.",
           features: [
             "Gründungsberatung & Rechtsformwahl & Restrukturierung",
             "Alternative und nachhaltige Rechtsformen (z.B. Verantwortungseigentum)",
@@ -502,7 +502,7 @@ export const translations = {
         },
         sustainability: {
           title: "Nachhaltigkeits-Steuerrecht",
-          description: "Beratung zu steuerlichen Aspekten von ESG und nachhaltigen Investitionen (Umweltprojekte, umweltfreundliche Technologien, nachhaltige Infrastruktur)",
+          description: "Beratung zu steuerlichen Aspekten von ESG und nachhaltigen Investitionen (Umweltprojekte, umweltfreundliche Technologien, nachhaltige Infrastruktur).",
           features: [
             "Besteuerung erneuerbarer Energien",
             "Grüne Steueranreize und steuerliche Fördermittel",
