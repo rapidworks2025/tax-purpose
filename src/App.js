@@ -110,7 +110,7 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
             <div className="relative aspect-w-16 aspect-h-9 rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src={leilaHeroImage}
-                alt={t.hero.imageAlt || "Dr. Leila Momen in her office"}
+                alt="Dr. Leila Momen smiling at her desk in a modern office with plants and books"
                 className="object-cover w-full h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent mix-blend-multiply"></div>
@@ -261,14 +261,14 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
             <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 src={leilaAbout1}
-                alt={t.about.imageAlt1 || "Dr. Leila Momen in a professional setting"}
+                alt="Dr. Leila Momen in a professional setting, sitting at a desk with documents and a laptop"
                 className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
             <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <img
                 src={leilaAbout2}
-                alt={t.about.imageAlt2 || "Dr. Leila Momen outdoors"}
+                alt="Dr. Leila Momen outdoors, standing in front of greenery and smiling"
                 className="w-full h-full object-cover aspect-[4/3]"
               />
             </div>
@@ -328,7 +328,7 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
               <div key={index} className="group relative flex flex-col sm:flex-row items-start gap-6">
                 {testimonial.logo && (
                    <div className="flex-shrink-0 w-24 h-24 sm:w-16 sm:h-16 rounded-full bg-white border border-primary/10 flex items-center justify-center overflow-hidden shadow-md p-2">
-                    <img src={testimonial.logo} alt={`${testimonial.author} logo`} className="max-w-full max-h-full object-contain" />
+                    <img src={testimonial.logo} alt={`Logo of ${testimonial.author}'s organization`} className="max-w-full max-h-full object-contain" />
                   </div>
                 )}
                  {!testimonial.logo && (
@@ -699,7 +699,7 @@ function App() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-24 items-center justify-between">
               <Link to="/" className="flex items-center">
-                <img src={leilaLogo} alt="tax & purpose logo" className="h-12 w-auto" />
+                <img src={leilaLogo} alt="tax & purpose logo, stylized olive branch and text" className="h-12 w-auto" />
               </Link>
 
               <div className="hidden lg:flex lg:items-center lg:gap-8">
@@ -743,14 +743,14 @@ function App() {
                   {lang === 'de' ? (
                     <>
                       <span className="w-5 h-5 rounded-full overflow-hidden">
-                        <img src="https://flagcdn.com/de.svg" alt="Deutsch" className="w-full h-full object-cover" />
+                        <img src="https://flagcdn.com/de.svg" alt="German flag" className="w-full h-full object-cover" />
                       </span>
                       DE
                     </>
                   ) : (
                     <>
                       <span className="w-5 h-5 rounded-full overflow-hidden">
-                        <img src="https://flagcdn.com/gb.svg" alt="English" className="w-full h-full object-cover" />
+                        <img src="https://flagcdn.com/gb.svg" alt="United Kingdom flag" className="w-full h-full object-cover" />
                       </span>
                       EN
                     </>
@@ -833,7 +833,7 @@ function App() {
           <div className="grid gap-8 lg:grid-cols-3">
             <div className="space-y-4">
               <Link to="/" className="inline-block">
-                <img src={leilaLogoWhite} alt="tax & purpose logo" className="h-12 w-auto" />
+                <img src={leilaLogoWhite} alt="tax & purpose logo in white, stylized olive branch and text" className="h-12 w-auto" />
               </Link>
               <div className="flex space-x-4 pt-4">
                 <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary/20 transition-colors duration-300">

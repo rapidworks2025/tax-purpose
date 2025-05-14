@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        text: '#393639',
+        text: '#3C393A',
         background: '#f9e9ea',
-        primary: '#dcafa5',
-        secondary: '#ebcfc8',
-        accent: '#478841',
+        primary: '#798256',
+        secondary: '#D08C7C',
+        accent: '#7F2B3F',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
