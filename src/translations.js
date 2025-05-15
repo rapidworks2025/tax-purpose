@@ -478,7 +478,7 @@ export const translations = {
       references: "Referenzen"
     },
     hero: {
-      tag: "Steuerberatung mit sozialem & nachhaltigem Fokus",
+      tag: "Steuerberatung für Unternehmen mit Impaktfokus",
       title: {
         line1: "Steuern & Purpose",
         line2: "im Einklang.",
@@ -492,8 +492,8 @@ export const translations = {
       imageAlt: "Dr. Leila Momen in ihrem Büro"
     },
     services: {
-      tag: "Meine Expertise",
-      title: "Nachhaltige Steuerlösungen mit ganzheitlichem Blick",
+      tag: "Meine Steuerexpertise",
+      title: "Nachhaltige Steuerberatung mit ganzheitlichem Blick",
       description: "Ich unterstütze wertorientierte Unternehmen und Organisationen dabei, ihre steuerlichen Herausforderungen zu meistern und ihre wirtschaftlichen, sozialen und nachhaltigen Ziele zu erreichen.",
       cards: {
         social: {
