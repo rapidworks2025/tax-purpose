@@ -8,8 +8,8 @@ module.exports = {
       colors: {
         text: '#3C393A',
         background: '#f9e9ea',
-        primary: '#798256',
-        secondary: '#D08C7C',
+        primary: '#D08C7C',
+        secondary: '#ebcfc8',
         accent: '#7F2B3F',
       },
       fontFamily: {

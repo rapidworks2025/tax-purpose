@@ -6,7 +6,8 @@ export const translations = {
       about: "About",
       partners: "Partners",
       contact: "Contact",
-      schedule: "Schedule Consultation"
+      schedule: "Schedule Consultation",
+      references: "References"
     },
     hero: {
       tag: "Empowering Social & Sustainable Businesses Through Expert Tax Advice",
@@ -15,7 +16,7 @@ export const translations = {
         line2: "Aligned.",
         line3: "Sustainable tax consulting for sustainable companies.",
       },
-      description: "Combining 30 years of international tax expertise with a passion for social entrepreneurship and sustainability to drive meaningful change.",
+      description: "I am Dr. Leila Momen. With my 30 years of international tax expertise and my passion for social entrepreneurship and sustainability, I support you as a purpose-driven entrepreneur on the path to tax clarity, so your projects can unfold their societal impact.",
       cta: {
         schedule: "Schedule Initial Call",
         learn: "Learn More"
@@ -93,16 +94,20 @@ export const translations = {
         ]
       },
       corePrinciples: {
+        sectionTitle: "My Core Values:",
         items: [
-          "Sustainability",
-          "Social Responsibility",
-          "Integrity",
-          "Expertise",
-          "Transparency",
-          "Balance",
-          "Perspective Shift",
-          "Innovation",
-          "Partnership"
+          {
+            title: "Integrity",
+            description: "My maxim is transparent, honest, and responsible action, even when it's uncomfortable."
+          },
+          {
+            title: "Development",
+            description: "I support people who want to make a difference with their ideas. I aim to enable professional and personal development for my clients and myself, including through a shift in perspective in tax consulting."
+          },
+          {
+            title: "Reliability",
+            description: "I am there for my clients – present, attentive, and absolutely reliable."
+          }
         ]
       },
       stats: {
@@ -110,11 +115,12 @@ export const translations = {
         countries: { number: "60+", label: "Countries Involved in Advisory" },
         clients: { number: "100+", label: "Satisfied Clients (incl. Impact-Oriented)" },
         savings: { number: "500+", label: "Projects & Special Topics (incl. Social & Sustainable)" },
+        statsDescription: "These figures reflect the experience I have gained over many years in my corporate and consulting work, which I now bring to tax & purpose."
       }
     },
     testimonials: {
       tag: "Testimonials",
-      title: "Insights into my Work and Commitment",
+      title: "Insights into my Consulting and Commitment",
       description: "Learn how I support organizations, companies, and startups in achieving their sustainable and social goals through tax expertise.",
       quotes: {
         first: {
@@ -136,8 +142,8 @@ export const translations = {
     },
     cta: {
       title: "Ready to Rethink Tax?",
-      description: "Let's explore together how we can optimize your tax situation while enhancing your positive impact.",
-      button: "Schedule a Call"
+      description: "Let's explore together how we can create clarity for your tax situation while enhancing your positive impact.",
+      button: "Schedule Consultation"
     },
     footer: {
       quickLinks: "Quick Links",
@@ -158,7 +164,7 @@ export const translations = {
     contact: {
       tag: "Contact",
       title: "Get in Touch With Me",
-      description: "I look forward to hearing from you and learning how I can support you.",
+      description: "I look forward to hearing from you and learning how I can support you, so that your vision can become an impactful project.",
       info: {
         title: "Contact Information",
         email: "Email",
@@ -181,7 +187,7 @@ export const translations = {
         },
         {
           question: "What type of organizations is tax & purpose suitable for?",
-          answer: "I work with a wide range of organizations, including:<br/><ul><li>Social enterprises</li><li>Non-profit organizations (NPOs)</li><li>Companies with a strong focus on sustainability (ESG)</li><li>International companies with an ESG focus</li><li>Startups in the green or social sector</li></ul>"
+          answer: "I offer my consulting services to the following value-oriented companies and organizations:<ul><li>Social enterprises</li><li>Non-profit organizations (NPOs)</li><li>Established companies with a strong focus on sustainability (ESG)</li><li>Startups in the green or social sector</li></ul><p>Also, and especially for established companies aiming for a stronger purpose orientation, I am gladly and naturally available with my consulting services.</p>"
         },
         {
           question: "Do you also offer classic tax consulting services?",
@@ -189,7 +195,7 @@ export const translations = {
         },
         {
           question: "How does a collaboration work?",
-          answer: "The process begins with a non-binding initial consultation where you explain your ideas and goals. We decide if we find a common ground for collaboration. I place great value on a collaborative, transparent, and proactive partnership."
+          answer: "The process begins with a non-binding initial consultation in which you explain your ideas and goals. We then decide if we can find a common basis for collaboration. Subsequently, I will develop a concept paper for the strategy and structuring of your project, including all relevant tax aspects, based on a clear offer. I will also support you during implementation, including with cooperation partners."
         },
         {
           question: "What role does international experience play?",
@@ -468,7 +474,8 @@ export const translations = {
       about: "Über Mich",
       partners: "Partner",
       contact: "Kontakt",
-      schedule: "Gespräch vereinbaren"
+      schedule: "Gespräch vereinbaren",
+      references: "Referenzen"
     },
     hero: {
       tag: "Steuerberatung mit sozialem & nachhaltigem Fokus",
@@ -477,7 +484,7 @@ export const translations = {
         line2: "im Einklang.",
         line3: "Nachhaltige Steuerberatung für nachhaltige Unternehmen.",
       },
-      description: "30 Jahre internationale Steuerexpertise kombiniert mit der Leidenschaft für soziales Unternehmertum und Nachhaltigkeit, um bedeutsame gesellschaftliche Veränderungen zu bewirken.",
+      description: "Ich bin Dr. Leila Momen. Mit meinen 30 Jahren internationaler Steuerexpertise und meiner Leidenschaft für soziales Unternehmertum und Nachhaltigkeit, unterstütze ich dich als Sinnunternehmer/in auf dem Weg zu steuerlicher Klarheit, damit deine Projekte gesellschaftliche Wirkung entfalten können.",
       cta: {
         schedule: "Erstgespräch vereinbaren",
         learn: "Mehr erfahren",
@@ -487,7 +494,7 @@ export const translations = {
     services: {
       tag: "Meine Expertise",
       title: "Nachhaltige Steuerlösungen mit ganzheitlichem Blick",
-      description: "Ich unterstütze Unternehmen und Organisationen dabei, ihre steuerlichen Herausforderungen zu meistern und gleichzeitig ihre wirtschaftlichen, sozialen und nachhaltigen Ziele zu verfolgen.",
+      description: "Ich unterstütze wertorientierte Unternehmen und Organisationen dabei, ihre steuerlichen Herausforderungen zu meistern und ihre wirtschaftlichen, sozialen und nachhaltigen Ziele zu erreichen.",
       cards: {
         social: {
           title: "Steuern für Sozialunternehmen & NPO's",
@@ -527,19 +534,20 @@ export const translations = {
     },
     about: {
       tag: "Meine Vision",
-      title: "Wandel durch Steuerexpertise bewirken",
-      description: "Gegründet von Dr. Leila Momen, vereint tax & purpose jahrzehntelange internationale Steuerberatungserfahrung mit einem starken Engagement für soziale und ökologische Verantwortung und Wirkung.",
+      title: "Wandel durch nachhaltige Geschäftsmodelle",
+      description: "tax&purpose habe ich aus meinem tief verwurzelten Wunsch gegründet, die steuerliche Beratung für Sinnunternehmer/innen neu zu denken. Durch meine 30jährige internationale Steuerexpertise kenne ich klassische nationale und internationale Steuerstrukturen, Steueroptimierungsstrategien und deren Grenzen. Ich schaffe nachhaltige Strukturen mit Substanz und Sinn.",
       imageAlt1: "Dr. Leila Momen in professioneller Umgebung",
       imageAlt2: "Dr. Leila Momen im Freien",
       valueProposition: {
-        title: "Mein Leistungsversprechen",
+        title: "Mein Leistungsversprechen:",
+        intro: "Ich verbinde steuerliche Klarheit mit Leidenschaft, Verantwortung, Nachhaltigkeit und globalem Weitblick:",
         points: [
           "Umfassende steuerliche Expertise",
           "Internationaler Fokus & Netzwerk",
           "Leidenschaft und Verständnis für soziale und nachhaltige Geschäftsmodelle",
           "Nachhaltige Steuerplanung",
           "Individuelle & strategische Beratung mit ganzheitlichem Blick",
-          "Proaktive und optimale Lösungen"
+          "Proaktive und steuerlich sichere Lösungen"
         ]
       },
       mindsetChange: {
@@ -555,16 +563,20 @@ export const translations = {
         ]
       },
       corePrinciples: {
+        sectionTitle: "Meine Kernwerte:",
         items: [
-          "Nachhaltigkeit",
-          "Soziale Verantwortung",
-          "Integrität",
-          "Expertise",
-          "Transparenz",
-          "Balance",
-          "Perspektivwechsel",
-          "Innovation",
-          "Partnerschaft"
+          {
+            title: "Integrität",
+            description: "Meine Maxime ist transparentes, ehrliches und verantwortungsvolles Handeln, auch wenn es unbequem ist."
+          },
+          {
+            title: "Weiterentwicklung",
+            description: "Ich begleite Menschen, die mit Ihren Ideen etwas bewegen wollen. Ich will meinen Mandanten und mir selbst fachliche und persönliche Weiterentwicklung ermöglichen, auch durch einen Perspektivwechsel in der steuerlichen Beratung."
+          },
+          {
+            title: "Zuverlässigkeit",
+            description: "Ich bin für meine Mandanten da – präsent, aufmerksam und absolut zuverlässig."
+          }
         ]
       },
       stats: {
@@ -572,11 +584,12 @@ export const translations = {
         countries: { number: "60+", label: "In die Beratung involvierte Staaten" },
         clients: { number: "100+", label: "Zufriedene Mandanten, auch Wirkungsorientierte" },
         savings: { number: "500+", label: "Projekte und Spezialthemen inkl. sozialer und nachhaltiger Projekte" },
+        statsDescription: "Diese Zahlen spiegeln meine Erfahrung wider, die ich über viele Jahre in meiner Konzern- und Beratungstätigkeit gesammelt habe und nun in tax & purpose einbringe."
       }
     },
     testimonials: {
       tag: "Stimmen unserer Partner",
-      title: "Einblicke in meine Arbeit und mein Engagement",
+      title: "Einblicke in meine Beratung und mein Engagement",
       description: "Erfahre, wie ich Organisationen, Unternehmen und Startups bei der Erreichung ihrer nachhaltigen und sozialen Ziele steuerlich unterstütze.",
       quotes: {
         first: {
@@ -598,7 +611,7 @@ export const translations = {
     },
     cta: {
       title: "Bereit, Steuern neu zu denken?",
-      description: "Lass uns gemeinsam herausfinden, wie wir deine steuerliche Situation optimieren und gleichzeitig deine positive Wirkung verstärken können.",
+      description: "Lass uns gemeinsam herausfinden, wie wir Klarheit für deine steuerliche Situation schaffen und gleichzeitig deine positive Wirkung verstärken können.",
       button: "Gespräch vereinbaren"
     },
     footer: {
@@ -620,7 +633,7 @@ export const translations = {
     contact: {
       tag: "Kontakt",
       title: "Tritt mit mir in Kontakt",
-      description: "Ich freue mich darauf, von dir zu hören und zu erfahren, wie ich dich unterstützen kann.",
+      description: "Ich freue mich darauf, von dir zu hören und zu erfahren, wie ich dich unterstützen kann, damit aus deiner Vision ein wirksames Projekt wird.",
       info: {
         title: "Kontaktinformationen",
         email: "E-Mail",
@@ -643,7 +656,7 @@ export const translations = {
         },
         {
           question: "Für welche Unternehmen ist tax&purpose geeignet?",
-          answer: "Ich arbeite mit einer breiten Palette von Organisationen zusammen, darunter:<br/><ul><li>Sozialunternehmen</li><li>Gemeinnützige Organisationen (NPOs)</li><li>Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Internationale Unternehmen mit ESG Bezug</li><li>Startups im grünen oder sozialen Sektor</li></ul>"
+          answer: "Ich biete meine Beratung für folgende wertorientierte Unternehmen und Organisationen an:<ul><li>Sozialunternehmen</li><li>Gemeinnützige Organisationen (NPOs)</li><li>Etablierte Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Startups im grünen oder sozialen Sektor</li></ul><p>Auch und insbesondere für etablierte Unternehmen, die eine stärkere Sinnorientierung anstreben, stehe ich gerne und selbstverständlich mit meiner Beratung zur Verfügung.</p>"
         },
         {
           question: "Bietest du auch klassische Steuerberatungsleistungen an?",
@@ -651,7 +664,7 @@ export const translations = {
         },
         {
           question: "Wie gestaltet sich unsere Zusammenarbeit?",
-          answer: "Der Prozess beginnt mit einem unverbindlichen Erstgespräch, indem du mir deine Vorstellungen und Ziele erläuterst. Wir entscheiden, ob wir eine gemeinsame Basis für eine Zusammenarbeit finden. Ich lege sehr viel Wert auf partnerschaftliche, transparente und proaktive Zusammenarbeit."
+          answer: "Der Prozess beginnt mit einem unverbindlichen Erstgespräch, in dem du mir deine Vorstellungen und Ziele erläuterst. Wir entscheiden, ob wir eine gemeinsame Basis für eine Zusammenarbeit finden. Nachfolgend erarbeite ich ein Konzeptpapier für die Strategie und die Strukturierung deines Vorhabens mit allen relevanten steuerlichen Aspekten basierend auf einem klaren Angebot. Ich begleite dich ebenso bei der Umsetzung, auch mit Kooperationspartnern."
         },
         {
           question: "Welche Rolle spielt meine internationale Erfahrung?",
@@ -677,7 +690,7 @@ export const translations = {
         {
           question: "Was bedeutet Purpose Economy?",
           answer: `
-            <p>Purpose übersetzt bedeutet Zweck oder Sinn. Im unternehmerischen Kontext ist damit gemeint, dass sich Unternehmen einer tiefergehenden Unternehmensmission verpflichten. Im Gegensatz zum klassischen Shareholder-Ansatz steht bei Unternehmen der Purpose Economy Werteorientierung vor Profitorientierung.</p>
+            <p>"Purpose" übersetzt bedeutet Zweck oder Sinn. Im unternehmerischen Kontext ist damit gemeint, dass sich Unternehmen einer tiefergehenden Unternehmensmission verpflichten. Im Gegensatz zum klassischen Shareholder-Ansatz steht bei Unternehmen der Purpose Economy Werteorientierung vor Profitorientierung.</p>
             <p>Die Pioniere der nachhaltigen Wirtschaftsweise zeichnet aus, dass sie die drei Themen Umwelt, Soziales und Wirtschaftlichkeit als gleichberechtigt betrachten. Viele Unternehmen, die sich einem nachhaltigen Unternehmenszweck verschrieben haben, kehren dem rein kapitalistischen Wirtschaftsverständnis den Rücken zu und streben eine Transformation der Wirtschaft an, die den Menschen (Wohl der Allgemeinheit) und dem Planeten (Erhalt unserer natürlichen Lebensgrundlagen) besser dient, indem sie soziale und ökologische Werte vor die reine Profitmaximierung stellt.</p>
             <p>Weitere Informationen findet ihr unter folgenden Links:</p>
             <ul>
@@ -719,7 +732,7 @@ export const translations = {
             question: "Was bedeutet steuerliche Transparenz & Nachhaltigkeit?",
             answer: `
                 <p>Nachhaltigkeitsaspekte bestimmen zunehmend den steuerlichen und rechtlichen Rahmen, in dem Unternehmen agieren.</p>
-                <p>Steuerliche Nachhaltigkeitsberichterstattung bezieht sich auf die Offenlegung und Berichterstattung von steuerlichen Informationen durch Unternehmen im Rahmen ihrer Nachhaltigkeitssberichte. Unternehmen berichten z.B. über ihre Steuerstrategie, ihr Tax Risk Management System (TRMS), ihren Umgang mit Stakeholdern und legen steuerrelevante Kennzahlen offen.</p>
+                <p>Steuerliche Nachhaltigkeitsberichterstattung bezieht sich auf die Offenlegung und Berichterstattung von steuerlichen Informationen durch Unternehmen im Rahmen ihrer Nachhaltigkeitssberichte. Unternehmen berichten z.B. über ihre Steuerstrategie, ihr Tax Risk Management System (TRMS), ihren Umgang mit Stakeholdern (Einbeziehung der Stakeholder) und legen steuerrelevante Kennzahlen offen.</p>
                 <p>Die Bedeutung der steuerlichen Berichterstattung hat sich über viele Jahre hinweg entwickelt. Zuletzt wurde die Reporting-Landschaft stark von der EU geprägt, durch die Corporate Sustainability Reporting Directive (CSRD) und die public CbCR-Richtlinie.</p>
                 <p>Aber auch etablierte Standards wie die Global Reporting Initiative (GRI), das Standard&Poor's Global Corporate Sustainability Assessment, die OECD-Guidelines for Multinational Enterprises on Responsible Business Conduct und die WEF-Metrics spielen eine wichtige Rolle für die Berichterstattung rund um das Thema Steuern.</p>
                 <p>Weitere Informationen findet ihr unter folgendem Link:</p>
@@ -734,13 +747,13 @@ export const translations = {
                 <p>ESG ist steuerlich u.a. in folgenden Bereichen relevant:</p>
                 <ul>
                     <li><strong>Steuerliche Transparenz & Nachhaltigkeit:</strong> Siehe hierzu "Was bedeutet steuerliche Transparenz & Nachhaltigkeit"</li>
-                    <li><strong>Umsatzsteuer:</strong> Hier sind vielfältige Auswirkungen denkbar, von denen exemplarisch nur einige erwähnt werden: Bestimmte Produkte und Dienstleistungen werden umsatzsteuerlich z.B. über den Nullsteuersatz begünstigt (umsatzsteuerliche Förderung grüner Technologien). Im Zusammenhang mit der Kreislaufwirtschaft können bisherige Abfälle nun als Rohstoff qualifizieren - mit eventuell erforderlichen Anpassungen in der umsatzsteuerlichen Würdigung. Ein nachhaltiges Agieren am Markt kann zu neuen Geschäftsmodellen und neuen Angebotsstrukturen führen. Dies erfordert eine sorgsame Würdigung der zu Grunde liegenden Liefer- und Leistungsbeziehungen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/indirekte-steuern" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Indirekte Steuern</a>)</li>
+                    <li><strong>Umsatzsteuer (Mehrwertsteuer):</strong> Hier sind vielfältige Auswirkungen denkbar, von denen exemplarisch nur einige erwähnt werden: Bestimmte Produkte und Dienstleistungen werden umsatzsteuerlich z.B. über den Nullsteuersatz begünstigt (umsatzsteuerliche Förderung grüner Technologien). Im Zusammenhang mit der Kreislaufwirtschaft können bisherige Abfälle nun als Rohstoff qualifizieren - mit eventuell erforderlichen Anpassungen in der umsatzsteuerlichen Würdigung. Ein nachhaltiges Agieren am Markt kann zu neuen Geschäftsmodellen und neuen Angebotsstrukturen führen. Dies erfordert eine sorgsame Würdigung der zu Grunde liegenden Liefer- und Leistungsbeziehungen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/indirekte-steuern" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Indirekte Steuern</a>)</li>
                     <li><strong>Strom- & Energiesteuer:</strong> Die neue Energiesteuerrichtlinie der EU führt grundlegende Änderungen bei der Besteuerung von Energieprodukten ein, mit dem Ziel, den Übergang zu einer nachhaltigen und klimaneutralen Energieversorgung zu unterstützen. Anstatt Energieprodukte nach Volumen zu besteuern, wird die Besteuerung nach ihrem Energiegehalt und ihrer Umweltleistung erfolgen. Umweltschädlichere Brennstoffe werden höher besteuert. Die Richtlinie sieht steuerliche Anreize für erneuerbare Energien vor und fördert innovative Technologien wie grünen Wasserstoff und Energiespeicher. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/strom-energiesteuer" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Strom- & Energiesteuer</a>)</li>
                     <li><strong>Transaktionen und Strukturierungen im Bereich erneuerbare Energien:</strong> Die Umstellung auf erneuerbare Energien (PV, Wind), E-Mobilität oder Wärmeversorgung erfordern spezialisierte steuerliche Strukturierungs- und Transaktionsberatung für Energieunternehmen, Investoren etc. Aspekte umfassen Gesellschaftsstruktur, Finanzierung, Standortwahl und internationale Steuerplanung. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/energy-structuring-transactions" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Energy Structuring</a>)</li>
                     <li><strong>Verrechnungspreise:</strong> Im ESG-Kontext geht es darum, wer welche Funktionen übernimmt, Risiken trägt und Güter einsetzt bei grenzüberschreitenden, konzerninternen Transaktionen. Es stellt sich die Frage, ob neue Funktionen durch ESG-Anforderungen entstehen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/transfer-pricing" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Verrechnungspreise</a>)</li>
-                    <li><strong>HR und Vergütung / Steuern:</strong> ESG-konforme Vergütungsbestandteile (z.B. ÖPNV-Zuschuss, Fahrradleasing, Weiterbildung, Kinderbetreuung, faire Vergütung, Mitarbeiterbeteiligung) helfen, gesellschaftliche Verantwortung zu erfüllen, Mitarbeiterengagement zu fördern und Risiken zu minimieren. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/employment-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Employment Tax</a>)</li>
-                    <li><strong>Fördermittel:</strong> Bundesministerien und EU stellen Fördermittel für Klima-, Umwelt-, Nachhaltigkeitsvorhaben bereit. Identifizierung und strategische Beantragung von Fördermitteln (auch Steuervergünstigungen für Erneuerbare) sind Teil der Finanzierung (Green Finance) zur Realisierung von ESG-Zielen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/foerdermittel" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Fördermittel</a>)</li>
-                    <li><strong>Immobilien:</strong> ESG tax Aspekte umfassen steueroptimierte Nutzung erneuerbarer Energien auf Grundstücken, Tax Due Diligence mit ESG-Bezug bei Ankäufen zur Risikoidentifikation und ESG-/steueroptimierte Haltestrukturen zur Vermeidung von Preisabschlägen beim Exit. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/real-estate-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Real Estate Tax</a>)</li>
+                    <li><strong>Personalwesen und Vergütung / Steuern:</strong> ESG-konforme Vergütungsbestandteile (z.B. ÖPNV-Zuschuss, Fahrradleasing, Weiterbildung, Kinderbetreuung, faire Vergütung, Mitarbeiterbeteiligung) helfen, gesellschaftliche Verantwortung zu erfüllen, Mitarbeiterengagement zu fördern und Risiken zu minimieren. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/employment-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Employment Tax</a>)</li>
+                    <li><strong>Fördermittel:</strong> Bundesministerien und EU stellen Fördermittel für Klima-, Umwelt-, Nachhaltigkeitsvorhaben bereit. Identifizierung und strategische Beantragung von Fördermitteln (auch Steuervergünstigungen für Erneuerbare) sind Teil der Finanzierung (z.B. grüne Finanzierungen - Green Finance) zur Realisierung von ESG-Zielen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/foerdermittel" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Fördermittel</a>)</li>
+                    <li><strong>Immobilien:</strong> ESG tax Aspekte umfassen steueroptimierte Nutzung erneuerbarer Energien auf Grundstücken, steuerliche Due-Diligence-Prüfung mit ESG-Bezug bei Ankäufen zur Risikoidentifikation und ESG-/steueroptimierte Haltestrukturen zur Vermeidung von Preisabschlägen beim Exit. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/real-estate-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Real Estate Tax</a>)</li>
                 </ul>
             `
         },
@@ -883,8 +896,8 @@ export const translations = {
         address: "Jülicher Straße 72a\n52070 Aachen"
       },
       contact: {
-        title: "Kontakt:",
-        phone: "Telefon: +49 1514 4508604",
+        title: "Contact:",
+        phone: "Phone: +49 1514 4508604",
         email: "Email: leila.momen@taxandpurpose.com"
       },
       professionalInfo: {

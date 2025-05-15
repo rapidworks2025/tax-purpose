@@ -58,34 +58,18 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
                   {t.hero.tag}
                 </span>
                 <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
-                  <span className="block text-[#393639] font-serif leading-tight">
+                  <span className="block text-text font-serif leading-tight">
                     {t.hero.title.line1}
                   </span>
-                  <span className="block text-[#478841] font-serif leading-tight">
+                  <span className="block text-text font-serif leading-tight">
                     {t.hero.title.line2}
                   </span>
-                  <span className="block mt-6 text-[#393639]/90 text-2xl sm:text-3xl font-sans font-light leading-relaxed">
+                  <span className="block mt-6 text-text/90 text-2xl sm:text-3xl font-sans font-light leading-relaxed">
                     {t.hero.title.line3}
                   </span>
                 </h1>
-                <p className="text-xl text-[#393639]/90 max-w-2xl font-light leading-relaxed">
-                  {lang === 'de' ? (
-                    <>
-                      30 Jahre internationale Steuerexpertise kombiniert mit der Leidenschaft für 
-                      <span className="text-[#dcafa5] font-medium"> soziales </span> 
-                      Unternehmertum und 
-                      <span className="text-[#478841] font-medium"> Nachhaltigkeit</span>, 
-                      um bedeutsame gesellschaftliche Veränderungen zu bewirken.
-                    </>
-                  ) : (
-                    <>
-                      Combining 30 years of international tax expertise with a passion for 
-                      <span className="text-[#dcafa5] font-medium"> social entrepreneurship </span> 
-                      and 
-                      <span className="text-[#478841] font-medium"> sustainability </span> 
-                      to drive meaningful change.
-                    </>
-                  )}
+                <p className="text-xl text-text/90 max-w-2xl font-light leading-relaxed">
+                  {t.hero.description}
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -170,16 +154,16 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
                 
                 {/* Card content */}
                 <div className="relative">
-                  <div className="inline-flex p-4 rounded-2xl bg-[#478841]/10 text-[#478841] group-hover:scale-110 transition-all duration-500">
+                  <div className="inline-flex p-4 rounded-2xl bg-accent/10 text-accent group-hover:scale-110 transition-all duration-500">
                     {service.icon}
                   </div>
                 </div>
                 
-                <h3 className="mt-6 text-2xl font-semibold text-[#393639] group-hover:text-[#478841] transition-colors duration-300 font-serif">
+                <h3 className="mt-6 text-2xl font-semibold text-text group-hover:text-accent transition-colors duration-300 font-serif">
                   {service.title}
                 </h3>
                 
-                <p className="mt-4 text-[#393639]/70">
+                <p className="mt-4 text-text/70">
                   {service.description}
                 </p>
                 
@@ -189,7 +173,7 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
                       <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-accent/10 text-accent mt-0.5">
                         <Check className="w-3 h-3" />
                       </div>
-                      <span className="ml-3 text-sm text-[#393639]/80">{feature}</span>
+                      <span className="ml-3 text-sm text-text/80">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -227,6 +211,9 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
             {/* Value Proposition Card */}
             <div className="bg-white/40 backdrop-blur-sm p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow duration-300">
               <h3 className="text-xl font-semibold text-accent mb-4">{t.about.valueProposition.title}</h3>
+              {t.about.valueProposition.intro && (
+                <p className="text-sm text-text/80 mb-4">{t.about.valueProposition.intro}</p>
+              )}
               <ul className="space-y-3">
                 {t.about.valueProposition.points.map((point, i) => (
                   <li key={i} className="flex items-start">
@@ -275,12 +262,14 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
           </div>
 
           {/* Core Principles Section */}
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="flex flex-wrap justify-center gap-3">
+          <div className="max-w-4xl mx-auto text-left mb-16 bg-white/40 backdrop-blur-sm p-6 rounded-xl border border-primary/10 shadow-sm">
+            <h3 className="text-xl font-semibold text-accent mb-6">{t.about.corePrinciples.sectionTitle}</h3>
+            <div className="space-y-6">
               {t.about.corePrinciples.items.map((principle, index) => (
-                <span key={index} className="inline-block bg-white/50 backdrop-blur-sm text-text text-sm font-medium px-4 py-2 rounded-full border border-primary/20 shadow-sm hover:border-accent/40 transition-colors duration-200">
-                  {principle}
-                </span>
+                <div key={index}>
+                  <h4 className="text-lg font-medium text-text mb-1">{principle.title}:</h4>
+                  <p className="text-text/80">{principle.description}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -306,12 +295,17 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
               </div>
             ))}
           </div>
+          {t.about.stats.statsDescription && (
+            <p className="mt-8 text-center text-text/80 max-w-2xl mx-auto">
+              {t.about.stats.statsDescription}
+            </p>
+          )}
         </div>
-        <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-[#478841]/5 blur-3xl"></div>
+        <div className="absolute -bottom-16 -right-16 w-64 h-64 rounded-full bg-accent/5 blur-3xl"></div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 relative bg-background">
+      <section id="testimonials" className="py-24 relative bg-background">
         <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
@@ -543,15 +537,15 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
       <section className="py-24 relative bg-[#e4bfbf]/30">
         <div className="absolute inset-0 bg-[radial-gradient(#657c62_1px,transparent_1px)] [background-size:20px_20px] opacity-10"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-[#393639] sm:text-4xl mb-4">{t.cta.title}</h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-[#393639]/90 mb-8">
+          <h2 className="text-3xl font-bold tracking-tight text-text sm:text-4xl mb-4">{t.cta.title}</h2>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-text/90 mb-8">
             {t.cta.description}
           </p>
           <a
             href="https://calendly.com/contact-taxandpurpose/30min"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-md bg-[#478841] px-8 py-4 text-base font-medium text-white hover:bg-[#478841]/90 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-1"
+            className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-4 text-base font-medium text-white hover:bg-accent/90 transition-all duration-300 shadow-md hover:shadow-xl transform hover:-translate-y-1"
           >
             {t.cta.button}
           </a>
@@ -619,6 +613,7 @@ function App() {
     { name: "Home", href: "/" },
     { name: "Services", href: "/#services" },
     { name: "About", href: "/#about" },
+    { name: "References", href: "/#testimonials" },
     { name: "Contact", href: "/#contact" },
   ]
 
