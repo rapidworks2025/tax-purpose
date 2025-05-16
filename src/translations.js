@@ -14,7 +14,7 @@ export const translations = {
       title: {
         line1: "Tax & Purpose",
         line2: "Aligned.",
-        line3: "Sustainable tax consulting for sustainable companies.",
+        line3: "Do you need tax advice that understands your Impact Business?",
       },
       description: "I am Dr. Leila Momen. With my 30 years of international tax expertise and my passion for social entrepreneurship and sustainability, I support you as a purpose-driven entrepreneur on the path to tax clarity, so your projects can unfold their societal impact.",
       cta: {
@@ -831,18 +831,6 @@ export const translations = {
               <li><strong>Contract Clauses:</strong> Specific tax clauses can be included to minimize tax risks, clarify tax treatment, and optimize it for the respective party.</li>
               <li><strong>Documentation Requirements:</strong> Contracts should contain clear and necessary documentation and proof requirements to ensure compliance with tax regulations.</li>
               <li><strong>Abuse of Structuring Options:</strong> Contracts should be designed to avoid being considered an abuse of structuring options under § 42 AO (German Fiscal Code), which can carry significant tax risks.</li>
-            </ol>
-          `
-        },
-        {
-          question: "Wie können Verträge aus steuerlicher Sicht optimal gestaltet werden?",
-          answer: `
-            <p>Die Vertragsgestaltung aus steuerlicher Sicht zielt darauf ab, steuerliche Effizienz und (steuer)rechtliche Sicherheit zu gewährleisten. Zentrale Aspekte sind:</p>
-            <ol>
-              <li><strong>Steuerliche Auswirkungen</strong>: Jeder Vertrag hat steuerliche Konsequenzen, die sorgfältig analysiert werden müssen. Dies betrifft insbesondere die Ertragsteuern (Einkommensteuer, Körperschaftsteuer und Gewerbesteuer) und Verkehrssteuern (Umsatzsteuer und Grunderwerbsteuer bei Grundstücken und Gebäuden).</li>
-              <li><strong>Vertragsklauseln</strong>: Spezifische Steuerklauseln können in Verträgen aufgenommen werden, um steuerliche Risiken zu minimieren, Klarheit über die steuerliche Behandlung zu schaffen und die steuerliche Behandlung aus Sicht der jeweiligen Vertragspartei zu optimieren.</li>
-              <li><strong>Dokumentationspflichten</strong>: Verträge sollten klare und notwendige Dokumentations- und Nachweispflichten enthalten, um die Einhaltung der steuerlichen Vorschriften sicherzustellen.</li>
-              <li><strong>Gestaltungsmissbrauch</strong>: Verträge sollten so gestaltet werden, dass sie nicht als Gestaltungsmissbrauch im Sinne des § 42 AO angesehen werden können, was erhebliche steuerliche Risiken bergen kann.</li>
             </ol>
           `
         }
