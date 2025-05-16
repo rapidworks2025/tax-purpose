@@ -184,7 +184,7 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32 relative bg-background overflow-hidden">
+      <section id="about" className="pt-32 pb-12 relative bg-background overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(232,189,230,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(232,189,230,0.2)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
           <div className="absolute top-20 right-20 w-96 h-96 opacity-[0.02]">
@@ -212,7 +212,7 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
             <div className="bg-white/40 backdrop-blur-sm p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-shadow duration-300">
               <h3 className="text-xl font-semibold text-accent mb-4">{t.about.valueProposition.title}</h3>
               {t.about.valueProposition.intro && (
-                <p className="text-sm text-text/80 mb-4">{t.about.valueProposition.intro}</p>
+                <p className="text-sm text-text/80 mb-4 italic">{t.about.valueProposition.intro}</p>
               )}
               <ul className="space-y-3">
                 {t.about.valueProposition.points.map((point, i) => (
@@ -305,7 +305,7 @@ const HomePageContent = ({ t, lang, services, currentTestimonials, insightImages
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 relative bg-background">
+      <section id="testimonials" className="pt-12 pb-24 relative bg-background">
         <div className="absolute inset-0 bg-[radial-gradient(#e8bde6_1px,transparent_1px)] [background-size:20px_20px] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">

@@ -482,7 +482,7 @@ export const translations = {
       title: {
         line1: "Steuern & Purpose",
         line2: "im Einklang.",
-        line3: "Nachhaltige Steuerberatung für nachhaltige Unternehmen.",
+        line3: "Du brauchst Steuerberatung, die dein Impakt Business versteht?",
       },
       description: "Ich bin Dr. Leila Momen. Mit meinen 30 Jahren internationaler Steuerexpertise und meiner Leidenschaft für soziales Unternehmertum und Nachhaltigkeit, unterstütze ich dich als Sinnunternehmer/in auf dem Weg zu steuerlicher Klarheit, damit deine Projekte gesellschaftliche Wirkung entfalten können.",
       cta: {
@@ -571,7 +571,7 @@ export const translations = {
           },
           {
             title: "Weiterentwicklung",
-            description: "Ich begleite Menschen, die mit Ihren Ideen etwas bewegen wollen. Ich will meinen Mandanten und mir selbst fachliche und persönliche Weiterentwicklung ermöglichen, auch durch einen Perspektivwechsel in der steuerlichen Beratung."
+            description: "Ich begleite Menschen, die mit ihren Ideen etwas bewegen wollen. Ich will meinen Mandanten und mir selbst fachliche und persönliche Weiterentwicklung ermöglichen, auch durch einen Perspektivwechsel in der steuerlichen Beratung."
           },
           {
             title: "Zuverlässigkeit",
@@ -652,11 +652,11 @@ export const translations = {
       items: [
         {
           question: "Wie unterscheidet sich tax&purpose von traditionellen Steuerberatern?",
-          answer: "Ich kombiniere erstklassige Steuerberatung mit einem tiefen Verständnis für soziale und ökologische Herausforderungen. Mein Ziel ist nachhaltige Steuerberatung und Steuerplanung für nachhaltige Unternehmen – Steuerliche Optimierung für dein nachhaltiges Geschäftsmodell und Maximierung deiner positiven gesellschaftlichen Wirkung. Gleichzeitig berate ich zu nachhaltigen Gesellschaftsformen: Strukturen, bei denen die Gewinnmaximierung der Gründer, Gesellschafter und Investoren nicht im Vordergrund steht und Gewinne im Unternehmen bleiben, um in soziale und nachhaltige Projekte investiert zu werden. Meine Beratung soll Unternehmen helfen, die Balance zu finden zwischen einer verantwortungsvollen und transparenten Steuerstrategie einerseits und steueroptimierten Lösungen für nachhaltige Geschäftsmodelle andererseits."
+          answer: "Ich kombiniere erstklassige Steuerberatung mit einem tiefen Verständnis für soziale und ökologische Herausforderungen. Mein Ziel ist nachhaltige Steuerberatung und Steuerplanung für nachhaltige Unternehmen – steuerliche Optimierung für dein nachhaltiges Geschäftsmodell und Maximierung deiner positiven gesellschaftlichen Wirkung. Gleichzeitig berate ich zu nachhaltigen Gesellschaftsformen: Strukturen, bei denen die Gewinnmaximierung der Gründer, Gesellschafter und Investoren nicht im Vordergrund steht und Gewinne im Unternehmen bleiben, um in soziale und nachhaltige Projekte investiert zu werden. Meine Beratung soll Unternehmen helfen, die Balance zu finden zwischen einer verantwortungsvollen und transparenten Steuerstrategie einerseits und steueroptimierten Lösungen für nachhaltige Geschäftsmodelle andererseits."
         },
         {
           question: "Für welche Unternehmen ist tax&purpose geeignet?",
-          answer: "Ich biete meine Beratung für folgende wertorientierte Unternehmen und Organisationen an:<ul><li>Sozialunternehmen</li><li>Gemeinnützige Organisationen (NPOs)</li><li>Etablierte Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Startups im grünen oder sozialen Sektor</li></ul><p>Auch und insbesondere für etablierte Unternehmen, die eine stärkere Sinnorientierung anstreben, stehe ich gerne und selbstverständlich mit meiner Beratung zur Verfügung.</p>"
+          answer: "Ich biete meine Beratung für folgende wertorientierte Unternehmen und Organisationen an:<ul><li>Sozialunternehmen</li><li>Non-profit organizations (NPOs)</li><li>Established companies with a strong focus on sustainability (ESG)</li><li>Startups im grünen oder sozialen Sektor</li></ul><p>Auch und insbesondere für etablierte Unternehmen, die eine stärkere Sinnorientierung anstreben, stehe ich gerne und selbstverständlich mit meiner Beratung zur Verfügung.</p>"
         },
         {
           question: "Bietest du auch klassische Steuerberatungsleistungen an?",
@@ -762,75 +762,87 @@ export const translations = {
           answer: `
             <p>Das internationale Steuerrecht umfasst grundsätzlich die Gesamtheit der Normen des in Deutschland gültigen Steuerrechts mit grenzüberschreitendem Bezug. Wesentliche Bestandteile sind:</p>
             <ol>
-              <li><strong>Doppelbesteuerungsabkommen (DBA):</strong> Regeln, wie Einkünfte/Vermögen zwischen Staaten besteuert werden, um Doppel-/Minderbesteuerung zu vermeiden.</li>
+              <li><strong>Double Taxation Agreements (DTAs):</strong> Regeln, wie Einkünfte/Vermögen zwischen Staaten besteuert werden, um Doppel-/Minderbesteuerung zu vermeiden.</li>
               <li><strong>Nationale Vorschriften mit Auslandsbezug:</strong> Regeln zur Steuerpflicht bei grenzüberschreitenden Sachverhalten oder zur Vermeidung von Doppelbesteuerung.</li>
-              <li><strong>Außensteuergesetz (AStG):</strong> Spezielle Vorschriften zur Verhinderung von Steuerumgehungen durch Einkunftsverlagerung ins Ausland.</li>
-              <li><strong>EU-Recht:</strong> Steuerliche Regelungen/Richtlinien innerhalb der EU, die nationale Steuergesetze beeinflussen (z.B. Grundfreiheiten des AEUV).</li>
+              <li><strong>Foreign Tax Act (Außensteuergesetz - AStG):</strong> Contains specific provisions to prevent tax evasion through shifting income abroad.</li>
+              <li><strong>EU Law:</strong> Tax regulations and directives applicable within the EU, influencing member states' national tax laws, centered around the fundamental freedoms of the Treaty on the Functioning of the European Union (TFEU).</li>
             </ol>
           `
         },
         {
-          question: "Wo setzt Beratung im internationalen Steuerrecht an?",
+          question: "Where does consulting in international tax law apply?",
           answer: `
-            <p>Im internationalen Kontext kann es bei natürlichen Personen, Personengesellschaften oder Kapitalgesellschaften zu Doppelbesteuerungen kommen.</p>
-            <p>Sowohl bei "Inbound" -Investitionen (Steuerausländer in Deutschland) als auch bei "Outbound" -Investitionen (Steuerinländer im Ausland) sind unterschiedliche Steuersysteme/Steuersätze Eckpunkte für die Steuerbelastung.</p>
-            <p>Bei der Planung grenzüberschreitender Investitionen sollte frühzeitig untersucht werden, wie sich diese auf die Steuerbelastung auswirken und welche Alternativen sich (z.B. durch Strukturierung) bieten.</p>
-            <p>Die Beratung umfasst u.a.:</p>
+            <p>In the international context, double taxation can occur for individuals, partnerships, or corporations when the same income or assets are taxed in two or more countries.</p>
+            <p>For both "inbound" investments (foreigners investing in Germany) and "outbound" investments (residents investing abroad), different tax systems and rates are key factors for the tax burden of internationally operating companies.</p>
+            <p>When planning cross-border investments, it's crucial to examine early how these investments affect the tax burden and what alternatives exist, e.g., through appropriate structuring.</p>
+            <p>Consulting in international tax law includes areas like:</p>
             <ol>
-              <li><strong>Vermeidung von Doppelbesteuerung:</strong> Anwendung von DBA und nationalen Regeln.</li>
-              <li><strong>Analyse und Bewertung von Risiken:</strong> Identifizierung steuerlicher Risiken und Entwicklung von Minimierungsstrategien.</li>
-              <li><strong>Beratung bei grenzüberschreitenden Transaktionen:</strong> Steuerliche Beratung bei Inbound/Outbound Investitionen, Käufen/Verkäufen, Restrukturierungen. Inklusive steuerlicher Strukturierungsberatung zur Optimierung und Sicherstellung rechtlicher Sicherheit.</li>
+              <li><strong>Avoiding Double Taxation:</strong> Central focus using DTAs and national rules.</li>
+              <li><strong>Risk Analysis and Assessment:</strong> Identifying, evaluating, and developing strategies to minimize tax risks associated with international activities.</li>
+              <li><strong>Cross-Border Transaction Advisory:</strong> Tax advice for inbound/outbound investments and other cross-border activities, including M&A and restructurings. This involves tax structuring advice to optimize tax burden while ensuring legal certainty.</li>
             </ol>
           `
         },
         {
-          question: "Was umfasst die steuerliche Transaktionsberatung?",
+          question: "What does tax transaction advisory cover?",
           answer: `
-            <p>Steuerliche Transaktionsberatung umfasst die steuerliche Begleitung und Optimierung von Unternehmenstransaktionen. Zentrale Aspekte sind:</p>
+            <p>Tax transaction advisory involves the tax support and optimization of corporate transactions. Key aspects include:</p>
             <ol>
-              <li><strong>Tax Due Diligence:</strong> Prüfung steuerlicher Verhältnisse vor einer Transaktion zur Risikoidentifizierung.</li>
-              <li><strong>Tax Structuring:</strong> Entwicklung steuerlich optimaler Strukturen für Kauf/Verkauf, Umwandlungen, Umstrukturierungen.</li>
-              <li><strong>Contract Negotiations:</strong> Unterstützung bei steuerlicher Gestaltung/Verhandlung von Kaufverträgen zur Erzielung von Vorteilen und Minimierung von Risiken (Verhandlung steueroptimierter Steuerklauseln).</li>
-              <li><strong>Post-Transaction Advisory:</strong> Beratung nach Abschluss zur Sicherstellung der effektiven Umsetzung steuerlicher Strukturen und Erfüllung aller Verpflichtungen.</li>
+              <li><strong>Tax Due Diligence:</strong> Thorough examination of a company's tax situation before a transaction to identify potential tax risks.</li>
+              <li><strong>Tax Structuring:</strong> Developing tax-optimal structures for acquisitions, sales, conversions, or restructurings.</li>
+              <li><strong>Contract Negotiations:</strong> Assisting in the tax-related drafting and negotiation of purchase agreements to achieve tax advantages and minimize risks (negotiating tax-optimized clauses).</li>
+              <li><strong>Post-Transaction Advisory:</strong> Advice after the transaction closes to ensure effective implementation of tax structures and fulfillment of all tax obligations.</li>
             </ol>
-            <p>Hilft Unternehmen, steuerliche Effizienz zu erreichen und Sicherheit bei Transaktionen zu gewährleisten.</p>
+            <p>This helps companies achieve tax efficiency and ensure tax certainty (minimizing tax risks) during transactions.</p>
           `
         },
         {
-          question: "Was ist Tax Risk Management und ein Tax Risk Management System?",
+          question: "What is Tax Risk Management and a Tax Risk Management System (TRMS)?",
           answer: `
-            <p>Tax Risk Management bezieht sich auf den Prozess der Identifizierung, Bewertung, Minderung und Überwachung von steuerlichen Risiken.</p>
-            <p>Ein Tax Risk Management System (TRMS) ist ein strukturiertes Verfahren dafür. Wesentliche Komponenten sind:</p>
+            <p>Tax Risk Management refers to the process of identifying, assessing, mitigating, and monitoring tax risks affecting businesses and individuals.</p>
+            <p>A Tax Risk Management System (TRMS) is a structured procedure helping companies identify, assess, mitigate, and continuously monitor tax risks. Key components are:</p>
             <ol>
-              <li><strong>Risikobewertung:</strong> Identifizierung/Analyse steuerlicher Risiken aus Geschäftstätigkeit/Verpflichtungen; Bewertung potenzieller Auswirkungen.</li>
-              <li><strong>Risikominderung:</strong> Entwicklung/Implementierung von Strategien zur Minimierung identifizierter Risiken.</li>
-              <li><strong>Überwachung und Anpassung:</strong> Regelmäßige Überprüfung/Anpassung der Strategien zur Sicherstellung von Effektivität/Compliance.</li>
-              <li><strong>Compliance:</strong> Sicherstellung der Einhaltung aller relevanten Steuergesetze zur Vermeidung von Problemen.</li>
+              <li><strong>Risk Assessment:</strong> Identifying and analyzing tax risks arising from business operations and tax obligations. Assessing their potential impact on financial and (tax) legal situations.</li>
+              <li><strong>Risk Mitigation:</strong> Developing and implementing strategies to minimize identified tax risks.</li>
+              <li><strong>Monitoring and Adaptation:</strong> Regularly reviewing and adjusting risk management strategies to ensure ongoing effectiveness and compliance with current legal requirements.</li>
+              <li><strong>Compliance:</strong> Ensuring adherence to all relevant tax laws and regulations to avoid tax issues.</li>
             </ol>
-            <p>Ein effektives TRMS hilft, Compliance sicherzustellen und Reputation zu schützen.</p>
+            <p>An effective TRMS helps companies ensure tax compliance and protect their reputation.</p>
           `
         },
         {
-          question: "Wie kann bei Finanzierungen steuerlich beraten werden?",
+          question: "How can tax advice be provided for financing?",
           answer: `
-            <p>Die steuerliche Beratung von Finanzierungen zielt auf steuerliche Effizienz und (steuer)rechtliche Sicherheit ab. Zentrale Punkte sind:</p>
+            <p>Tax advisory for financing covers aspects aimed at ensuring tax efficiency and (tax) legal certainty. Key points include:</p>
             <ol>
-              <li><strong>Strukturierung der Finanzierung:</strong> Prüfung/Wahl zwischen Eigen-, Fremdkapital oder Mezzanine-Finanzierungen für eine steuerlich optimale Struktur.</li>
-              <li><strong>Tax Implications:</strong> Prüfung der steuerlichen Konsequenzen verschiedener Optionen (inkl. Abzugsfähigkeit der Finanzierungsentgelte).</li>
-              <li><strong>Risikomanagement:</strong> Identifizierung/Minimierung steuerlicher Risiken im Zusammenhang mit Finanzierungen.</li>
-              <li><strong>Compliance, Contracts, and Reporting:</strong> Sicherstellung der Einhaltung von Steuervorschriften; Unterstützung bei Erstellung von Verträgen/Dokumentationen.</li>
+              <li><strong>Financing Structure:</strong> Achieving a tax-optimal structure requires examining and choosing between equity, debt, or mezzanine financing.</li>
+              <li><strong>Tax Implications:</strong> Assessing the tax consequences of various financing options, including the tax deductibility of financing costs.</li>
+              <li><strong>Risk Management:</strong> Identifying and minimizing tax risks associated with financing.</li>
+              <li><strong>Compliance, Contracts, and Reporting:</strong> Ensuring compliance with all relevant tax regulations and assisting with the preparation of financing agreements and other documentation.</li>
+            </ol>
+          `
+        },
+        {
+          question: "How can contracts be optimally designed from a tax perspective?",
+          answer: `
+            <p>Contract design from a tax perspective aims to ensure tax efficiency and (tax) legal certainty. Key aspects include:</p>
+            <ol>
+              <li><strong>Tax Implications:</strong> Every contract has tax consequences (especially income taxes like income, corporate, trade tax, and transaction taxes like VAT, real estate transfer tax) that need careful analysis.</li>
+              <li><strong>Contract Clauses:</strong> Specific tax clauses can be included to minimize tax risks, clarify tax treatment, and optimize it for the respective party.</li>
+              <li><strong>Documentation Requirements:</strong> Contracts should contain clear and necessary documentation and proof requirements to ensure compliance with tax regulations.</li>
+              <li><strong>Abuse of Structuring Options:</strong> Contracts should be designed to avoid being considered an abuse of structuring options under § 42 AO (German Fiscal Code), which can carry significant tax risks.</li>
             </ol>
           `
         },
         {
           question: "Wie können Verträge aus steuerlicher Sicht optimal gestaltet werden?",
           answer: `
-            <p>Die Vertragsgestaltung aus steuerlicher Sicht zielt auf Effizienz und Sicherheit ab. Zentrale Aspekte sind:</p>
+            <p>Die Vertragsgestaltung aus steuerlicher Sicht zielt darauf ab, steuerliche Effizienz und (steuer)rechtliche Sicherheit zu gewährleisten. Zentrale Aspekte sind:</p>
             <ol>
-              <li><strong>Tax Implications:</strong> Analyse der Konsequenzen (Ertragsteuern, Verkehrssteuern).</li>
-              <li><strong>Vertragsklauseln:</strong> Aufnahme spezifischer Steuerklauseln zur Risikominimierung, Klarheit und Optimierung für die Vertragspartei.</li>
-              <li><strong>Dokumentationspflichten:</strong> Klare Definition zur Sicherstellung der Compliance.</li>
-              <li><strong>Gestaltungsmissbrauch:</strong> Gestaltung vermeiden, die als Missbrauch nach § 42 AO angesehen werden könnte (erhebliche Risiken).</li>
+              <li><strong>Steuerliche Auswirkungen</strong>: Jeder Vertrag hat steuerliche Konsequenzen, die sorgfältig analysiert werden müssen. Dies betrifft insbesondere die Ertragsteuern (Einkommensteuer, Körperschaftsteuer und Gewerbesteuer) und Verkehrssteuern (Umsatzsteuer und Grunderwerbsteuer bei Grundstücken und Gebäuden).</li>
+              <li><strong>Vertragsklauseln</strong>: Spezifische Steuerklauseln können in Verträgen aufgenommen werden, um steuerliche Risiken zu minimieren, Klarheit über die steuerliche Behandlung zu schaffen und die steuerliche Behandlung aus Sicht der jeweiligen Vertragspartei zu optimieren.</li>
+              <li><strong>Dokumentationspflichten</strong>: Verträge sollten klare und notwendige Dokumentations- und Nachweispflichten enthalten, um die Einhaltung der steuerlichen Vorschriften sicherzustellen.</li>
+              <li><strong>Gestaltungsmissbrauch</strong>: Verträge sollten so gestaltet werden, dass sie nicht als Gestaltungsmissbrauch im Sinne des § 42 AO angesehen werden können, was erhebliche steuerliche Risiken bergen kann.</li>
             </ol>
           `
         }
