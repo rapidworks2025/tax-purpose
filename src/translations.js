@@ -364,6 +364,57 @@ export const translations = {
               <li><strong>Abuse of Structuring Options:</strong> Contracts should be designed to avoid being considered an abuse of structuring options under § 42 AO (German Fiscal Code), which can carry significant tax risks.</li>
             </ol>
           `
+        },
+        {
+          question: "Was umfasst die steuerliche Transaktionsberatung?",
+          answer: `
+            <p>Die steuerliche Transaktionsberatung umfasst die steuerliche Unterstützung und Optimierung von Unternehmenstransaktionen. Zu den wichtigsten Aspekten gehören:</p>
+            <ol>
+              <li><strong>Tax Due Diligence:</strong> Gründliche Prüfung der steuerlichen Situation eines Unternehmens vor einer Transaktion, um potenzielle Steuerrisiken zu identifizieren.</li>
+              <li><strong>Steuerliche Strukturierung:</strong> Entwicklung steueroptimaler Strukturen für Akquisitionen, Verkäufe, Umwandlungen oder Restrukturierungen.</li>
+              <li><strong>Vertragsverhandlungen:</strong> Unterstützung bei der steuerlichen Gestaltung und Verhandlung von Kaufverträgen, um steuerliche Vorteile zu erzielen und Risiken zu minimieren (Verhandlung steueroptimierter Klauseln).</li>
+              <li><strong>Nachträgliche Beratung:</strong> Beratung nach Abschluss der Transaktion, um die effektive Umsetzung der Steuerstrukturen und die Erfüllung aller steuerlichen Pflichten sicherzustellen.</li>
+            </ol>
+            <p>Dies hilft Unternehmen, Steuereffizienz zu erreichen und Steuersicherheit (Minimierung von Steuerrisiken) bei Transaktionen zu gewährleisten.</p>
+          `
+        },
+        {
+          question: "Was ist Tax Risk Management und ein Tax Risk Management System (TRMS)?",
+          answer: `
+            <p>Tax Risk Management bezeichnet den Prozess der Identifizierung, Bewertung, Minderung und Überwachung von Steuerrisiken, die Unternehmen und Einzelpersonen betreffen.</p>
+            <p>Ein Tax Risk Management System (TRMS) ist ein strukturiertes Verfahren, das Unternehmen hilft, Steuerrisiken zu identifizieren, zu bewerten, zu mindern und kontinuierlich zu überwachen. Wichtige Komponenten sind:</p>
+            <ol>
+              <li><strong>Risikobewertung:</strong> Identifizierung und Analyse von Steuerrisiken, die sich aus der Geschäftstätigkeit und steuerlichen Verpflichtungen ergeben. Bewertung ihrer potenziellen Auswirkungen auf die finanzielle und (steuer-) rechtliche Situation.</li>
+              <li><strong>Risikominderung:</strong> Entwicklung und Umsetzung von Strategien zur Minimierung identifizierter Steuerrisiken.</li>
+              <li><strong>Überwachung und Anpassung:</strong> Regelmäßige Überprüfung und Anpassung der Risikomanagementstrategien, um die fortlaufende Wirksamkeit und Compliance mit aktuellen rechtlichen Anforderungen sicherzustellen.</li>
+              <li><strong>Compliance:</strong> Sicherstellung der Einhaltung aller relevanten Steuergesetze und -vorschriften, um steuerliche Probleme zu vermeiden.</li>
+            </ol>
+            <p>Ein effektives TRMS hilft Unternehmen, die steuerliche Compliance sicherzustellen und ihren Ruf zu schützen.</p>
+          `
+        },
+        {
+          question: "Wie kann steuerliche Beratung bei Finanzierungen erfolgen?",
+          answer: `
+            <p>Die steuerliche Beratung bei Finanzierungen umfasst Aspekte, die auf die Sicherstellung von Steuereffizienz und (steuer-)rechtlicher Sicherheit abzielen. Zu den wichtigsten Punkten gehören:</p>
+            <ol>
+              <li><strong>Finanzierungsstruktur:</strong> Um eine steueroptimale Struktur zu erreichen, ist eine Prüfung und Auswahl zwischen Eigenkapital-, Fremdkapital- oder Mezzanine-Finanzierung erforderlich.</li>
+              <li><strong>Steuerliche Auswirkungen:</strong> Bewertung der steuerlichen Folgen verschiedener Finanzierungsoptionen, einschließlich der steuerlichen Abzugsfähigkeit von Finanzierungskosten.</li>
+              <li><strong>Risikomanagement:</strong> Identifizierung und Minimierung von Steuerrisiken im Zusammenhang mit der Finanzierung.</li>
+              <li><strong>Compliance, Verträge und Berichterstattung:</strong> Sicherstellung der Einhaltung aller relevanten Steuervorschriften und Unterstützung bei der Erstellung von Finanzierungsverträgen und anderer Dokumentation.</li>
+            </ol>
+          `
+        },
+        {
+          question: "Wie können Verträge aus steuerlicher Sicht optimal gestaltet werden?",
+          answer: `
+            <p>Die Vertragsgestaltung aus steuerlicher Sicht zielt darauf ab, Steuereffizienz und (steuer-)rechtliche Sicherheit zu gewährleisten. Zu den wichtigsten Aspekten gehören:</p>
+            <ol>
+              <li><strong>Steuerliche Auswirkungen:</strong> Jeder Vertrag hat steuerliche Folgen (insbesondere Ertragsteuern wie Einkommens-, Körperschaft-, Gewerbesteuer sowie Verkehrsteuern wie Umsatzsteuer, Grunderwerbsteuer), die einer sorgfältigen Analyse bedürfen.</li>
+              <li><strong>Vertragsklauseln:</strong> Spezifische Steuerklauseln können aufgenommen werden, um Steuerrisiken zu minimieren, die steuerliche Behandlung zu klären und für die jeweilige Partei zu optimieren.</li>
+              <li><strong>Dokumentationsanforderungen:</strong> Verträge sollten klare und notwendige Dokumentations- und Nachweisanforderungen enthalten, um die Einhaltung steuerlicher Vorschriften zu gewährleisten.</li>
+              <li><strong>Missbrauch von Gestaltungsmöglichkeiten:</strong> Verträge sollten so gestaltet sein, dass sie nicht als Missbrauch von Gestaltungsmöglichkeiten nach § 42 AO (Abgabenordnung) angesehen werden, was erhebliche steuerliche Risiken mit sich bringen kann.</li>
+            </ol>
+          `
         }
        ]
     },
@@ -432,35 +483,35 @@ export const translations = {
         email: "Email: leila.momen@taxandpurpose.com"
       },
       professionalInfo: {
-        title: "Job title and professional regulations:",
-        jobTitle: "Job title: Tax Advisor",
-        chamber: "Responsible Chamber of Tax Consultants: Cologne",
-        chamberAddressInfo: "The address of the Chamber can be found at www.bstbk.de/en/ and https://www.stbk-koeln.de/",
-        regulationsTitle: "The relevant professional regulations are:",
+        title: "Berufsbezeichnung und berufsrechtliche Regelungen:",
+        jobTitle: "Berufsbezeichnung: Steuerberaterin",
+        chamber: "Zuständige Steuerberaterkammer: Köln",
+        chamberAddressInfo: "Die Anschrift der Kammer finden Sie unter www.bstbk.de/ und unter https://www.stbk-koeln.de/",
+        regulationsTitle: "Die maßgeblichen berufsrechtlichen Regelungen sind:",
         regulations: [
-          "the Tax Advisory Act (Steuerberatungsgesetz - StBerG)",
-          "the Implementing Regulation to the Tax Advisory Act (Durchführungsverordnung zum Steuerberatungsgesetz - DVStB)",
-          "the Professional Code of Conduct for Tax Consultants (Berufsordnung der Bundessteuerberaterkammer - BOStB)",
-          "the Tax Consultant Fees Regulation (Steuerberatervergütungsverordnung - StBVV)"
+          "das Steuerberatungsgesetz (StBerG)",
+          "die Durchführungsverordnung zum Steuerberatungsgesetz (DVStB)",
+          "die Berufsordnung der Bundessteuerberaterkammer (BOStB)",
+          "die Steuerberatervergütungsverordnung (StBVV)"
         ],
-        regulationsLinkInfo: "The texts can be found at https://www.bstbk.de/en/topics/professional-law"
+        regulationsLinkInfo: "Die Texte finden Sie unter www. https://www.bstbk.de/de/themen/berufsrecht"
       },
       disclaimer: {
-        title: "Disclaimer",
-        general: "The information on this website is of a general nature and is intended solely to introduce tax&purpose to interested internet users. Tax&purpose assumes liability for the content of its websites in accordance with legal provisions. The information has been compiled with due care.",
-        noResponsibility: "Tax&Purpose assumes no responsibility for decisions made by the user based on the aforementioned information. This content does not constitute individual legal, accounting, tax, or other professional advice or recommendations, and is not intended to replace individual consultation by a qualified professional, taking into account the specific circumstances of the individual case. Tax&Purpose reserves the right to change or update the information, products, or services offered on this website at any time without prior notice.",
-        externalLinks: "This website contains links to websites maintained by third parties. Tax&purpose has no control or influence over the content of third-party websites linked to these websites. References and links to third-party websites do not imply that Tax&purpose endorses the content of the reference or link. Tax&purpose is therefore not liable for illegal, incorrect, or incomplete content, or for damages resulting from the use of content linked to these websites.",
-        copyright: "The content of these pages created by tax&purpose itself is protected by copyright. This information is intended for personal use only. Any use of any content of this website that violates the provisions of copyright law—in particular, further use such as publication, reproduction, and any form of commercial use, as well as the transfer to third parties, even in part or in revised form—without the express consent of tax&purpose is prohibited.",
-        internetRisk: "Use of the Internet is at the user's own risk. Tax&Purpose is not liable for any technical failure of the Internet or access to the Internet.",
-        lawAndJurisdiction: "Any existing or future legal relationships shall be governed exclusively by German law and only German courts shall have jurisdiction."
+        title: "Haftungsausschluss",
+        general: "Die Informationen auf dieser Website sind allgemeiner Art und dienen lediglich dazu, tax&purpose interessierten Internetnutzern vorzustellen. Für die Inhalte ihrer Websites haftet tax&purpose nach den gesetzlichen Bestimmungen. Die Zusammenstellung der Informationen erfolgte mit der gebotenen Sorgfalt.",
+        noResponsibility: "Für Entscheidungen, die der Verwender aufgrund der vorgenannten Informationen trifft, übernimmt tax&Purpose keine Verantwortung. Dieser Inhalt stellt keine individuelle rechtliche, buchführungstechnische, steuerliche oder sonstige fachliche Auskunft oder Empfehlung dar und ist nicht geeignet, eine individuelle Beratung durch fachkundige Personen unter Berücksichtigung der konkreten Umstände des Einzelfalles zu ersetzen. Tax&Purpose behält sich das Recht vor, die auf dieser Website angebotenen Informationen, Produkte oder Dienstleistungen ohne gesonderte Ankündigung jederzeit zu ändern oder zu aktualisieren.",
+        externalLinks: "Diese Website enthält Verweise auf Websites, die von Dritten eingerichtet wurden. tax&purpose hat keinerlei Kontrolle oder Einfluss auf die Inhalte von Websites Dritter, auf die diese Webseiten verweisen. Durch die Verweise und Links auf die Websites Dritter wird nicht zum Ausdruck gebracht, dass sich tax&purpose die Inhalte der Verweise bzw. Links zu Eigen macht. Tax&purpose haftet daher nicht für rechtswidrige, fehlerhafte oder unvollständige Inhalte und für Schäden, die aufgrund der Nutzung von einem hinter dem Verweis oder Link liegenden Inhalt verursacht worden sind.",
+        copyright: "Der Inhalt dieser von tax&purpose selbst erstellten Seiten ist urheberrechtlich geschützt. Diese Informationen sind nur für die persönliche Verwendung bestimmt. Jede den Bestimmungen des Urheberrechtsgesetzes widersprechende Verwendung jeglicher Inhalte dieser Webseiten – insbesondere die weitergehende Nutzung wie beispielsweise die Veröffentlichung, Vervielfältigung und jede Form von gewerblicher Nutzung sowie die Weitergabe an Dritte – auch in Teilen oder in überarbeiteter Form – ohne ausdrückliche Zustimmung von tax&purpose ist untersagt.",
+        internetRisk: "Die Nutzung des Internets erfolgt auf eigene Gefahr des Nutzers. Tax&Purpose haftet vor allem nicht für den technisch bedingten Ausfall des Internets bzw. des Zugangs zum Internet.",
+        lawAndJurisdiction: "Für gegebenenfalls bestehende oder künftig entstehende Rechtsverhältnisse ist ausschließlich deutsches Recht anwendbar und sind nur deutsche Gerichte zuständig."
       },
       insurance: {
-        title: "Information on Professional Liability Insurance",
+        title: "Angaben zur Berufshaftpflichtversicherung",
         name: "Ergo Versicherung AG",
         address: "ERGO-Platz 1\n40477 Düsseldorf"
       },
       contentResponsible: {
-        title: "Responsible for Content",
+        title: "Verantwortlich für den Inhalt",
         name: "tax&purpose",
         person: "Dr. Leila Momen",
         address: "Jülicher Straße 72a\n52070 Aachen"
@@ -641,7 +692,7 @@ export const translations = {
         address: "Adresse"
       },
       schedule: {
-        title: "Vereinbaren Sie ein Gespräch"
+        title: "Vereinbare ein Gespräch"
       }
     },
     faq: {
@@ -656,7 +707,7 @@ export const translations = {
         },
         {
           question: "Für welche Unternehmen ist tax&purpose geeignet?",
-          answer: "Ich biete meine Beratung für folgende wertorientierte Unternehmen und Organisationen an:<ul><li>Sozialunternehmen</li><li>Non-profit organizations (NPOs)</li><li>Established companies with a strong focus on sustainability (ESG)</li><li>Startups im grünen oder sozialen Sektor</li></ul><p>Auch und insbesondere für etablierte Unternehmen, die eine stärkere Sinnorientierung anstreben, stehe ich gerne und selbstverständlich mit meiner Beratung zur Verfügung.</p>"
+          answer: "Ich biete meine Beratung für folgende wertorientierte Unternehmen und Organisationen an:<ul><li>Sozialunternehmen</li><li>Non-profit organizations (NPOs)</li><li>Etablierte Unternehmen mit starkem Fokus auf Nachhaltigkeit (ESG)</li><li>Startups im grünen oder sozialen Sektor</li></ul><p>Auch und insbesondere für etablierte Unternehmen, die eine stärkere Sinnorientierung anstreben, stehe ich gerne und selbstverständlich mit meiner Beratung zur Verfügung.</p>"
         },
         {
           question: "Bietest du auch klassische Steuerberatungsleistungen an?",
@@ -764,22 +815,22 @@ export const translations = {
             <ol>
               <li><strong>Double Taxation Agreements (DTAs):</strong> Regeln, wie Einkünfte/Vermögen zwischen Staaten besteuert werden, um Doppel-/Minderbesteuerung zu vermeiden.</li>
               <li><strong>Nationale Vorschriften mit Auslandsbezug:</strong> Regeln zur Steuerpflicht bei grenzüberschreitenden Sachverhalten oder zur Vermeidung von Doppelbesteuerung.</li>
-              <li><strong>Foreign Tax Act (Außensteuergesetz - AStG):</strong> Contains specific provisions to prevent tax evasion through shifting income abroad.</li>
-              <li><strong>EU Law:</strong> Tax regulations and directives applicable within the EU, influencing member states' national tax laws, centered around the fundamental freedoms of the Treaty on the Functioning of the European Union (TFEU).</li>
+              <li><strong>Foreign Tax Act (Außensteuergesetz - AStG):</strong> Enthält spezielle Vorschriften zur Verhinderung von Steuerumgehung durch Verlagerung von Einkünften ins Ausland.</li>
+              <li><strong>EU Law:</strong> Steuerverordnungen und -richtlinien, die innerhalb der EU gelten und die nationalen Steuergesetze der Mitgliedstaaten beeinflussen, ausgerichtet an den Grundfreiheiten des Vertrags über die Arbeitsweise der Europäischen Union (AEUV).</li>
             </ol>
           `
         },
         {
-          question: "Where does consulting in international tax law apply?",
+          question: "Wo findet die Beratung im internationalen Steuerrecht Anwendung?",
           answer: `
-            <p>In the international context, double taxation can occur for individuals, partnerships, or corporations when the same income or assets are taxed in two or more countries.</p>
-            <p>For both "inbound" investments (foreigners investing in Germany) and "outbound" investments (residents investing abroad), different tax systems and rates are key factors for the tax burden of internationally operating companies.</p>
-            <p>When planning cross-border investments, it's crucial to examine early how these investments affect the tax burden and what alternatives exist, e.g., through appropriate structuring.</p>
-            <p>Consulting in international tax law includes areas like:</p>
+            <p>Im internationalen Kontext kann es für natürliche Personen, Personengesellschaften oder Kapitalgesellschaften zu einer Doppelbesteuerung kommen, wenn dieselben Einkünfte oder Vermögenswerte in zwei oder mehr Ländern besteuert werden.</p>
+            <p>Sowohl bei "Inbound"-Investitionen (Ausländer investieren in Deutschland) als auch bei "Outbound"-Investitionen (Inländer investieren im Ausland) sind unterschiedliche Steuersysteme und -sätze entscheidende Faktoren für die Steuerbelastung international tätiger Unternehmen.</p>
+            <p>Bei der Planung grenzüberschreitender Investitionen ist es entscheidend, frühzeitig zu prüfen, wie sich diese Investitionen auf die Steuerlast auswirken und welche Alternativen beispielsweise durch eine entsprechende Strukturierung bestehen.</p>
+            <p>Die Beratung im internationalen Steuerrecht umfasst Bereiche wie:</p>
             <ol>
-              <li><strong>Avoiding Double Taxation:</strong> Central focus using DTAs and national rules.</li>
-              <li><strong>Risk Analysis and Assessment:</strong> Identifying, evaluating, and developing strategies to minimize tax risks associated with international activities.</li>
-              <li><strong>Cross-Border Transaction Advisory:</strong> Tax advice for inbound/outbound investments and other cross-border activities, including M&A and restructurings. This involves tax structuring advice to optimize tax burden while ensuring legal certainty.</li>
+              <li><strong>Vermeidung der Doppelbesteuerung:</strong> Zentraler Fokus unter Anwendung von DBAs und nationalen Vorschriften.</li>
+              <li><strong>Risikoanalyse und -bewertung:</strong> Identifizierung, Bewertung und Entwicklung von Strategien zur Minimierung steuerlicher Risiken im Zusammenhang mit internationalen Aktivitäten.</li>
+              <li><strong>Beratung bei grenzüberschreitenden Transaktionen:</strong> Steuerliche Beratung bei Inbound-/Outbound-Investitionen und anderen grenzüberschreitenden Aktivitäten, einschließlich M&A und Umstrukturierungen. Dies beinhaltet die steuerliche Strukturierungsberatung zur Optimierung der Steuerbelastung bei gleichzeitiger Gewährleistung der Rechtssicherheit.</li>
             </ol>
           `
         },
@@ -831,6 +882,57 @@ export const translations = {
               <li><strong>Contract Clauses:</strong> Specific tax clauses can be included to minimize tax risks, clarify tax treatment, and optimize it for the respective party.</li>
               <li><strong>Documentation Requirements:</strong> Contracts should contain clear and necessary documentation and proof requirements to ensure compliance with tax regulations.</li>
               <li><strong>Abuse of Structuring Options:</strong> Contracts should be designed to avoid being considered an abuse of structuring options under § 42 AO (German Fiscal Code), which can carry significant tax risks.</li>
+            </ol>
+          `
+        },
+        {
+          question: "Was umfasst die steuerliche Transaktionsberatung?",
+          answer: `
+            <p>Die steuerliche Transaktionsberatung umfasst die steuerliche Unterstützung und Optimierung von Unternehmenstransaktionen. Zu den wichtigsten Aspekten gehören:</p>
+            <ol>
+              <li><strong>Tax Due Diligence:</strong> Gründliche Prüfung der steuerlichen Situation eines Unternehmens vor einer Transaktion, um potenzielle Steuerrisiken zu identifizieren.</li>
+              <li><strong>Steuerliche Strukturierung:</strong> Entwicklung steueroptimaler Strukturen für Akquisitionen, Verkäufe, Umwandlungen oder Restrukturierungen.</li>
+              <li><strong>Vertragsverhandlungen:</strong> Unterstützung bei der steuerlichen Gestaltung und Verhandlung von Kaufverträgen, um steuerliche Vorteile zu erzielen und Risiken zu minimieren (Verhandlung steueroptimierter Klauseln).</li>
+              <li><strong>Nachträgliche Beratung:</strong> Beratung nach Abschluss der Transaktion, um die effektive Umsetzung der Steuerstrukturen und die Erfüllung aller steuerlichen Pflichten sicherzustellen.</li>
+            </ol>
+            <p>Dies hilft Unternehmen, Steuereffizienz zu erreichen und Steuersicherheit (Minimierung von Steuerrisiken) bei Transaktionen zu gewährleisten.</p>
+          `
+        },
+        {
+          question: "Was ist Tax Risk Management und ein Tax Risk Management System (TRMS)?",
+          answer: `
+            <p>Tax Risk Management bezeichnet den Prozess der Identifizierung, Bewertung, Minderung und Überwachung von Steuerrisiken, die Unternehmen und Einzelpersonen betreffen.</p>
+            <p>Ein Tax Risk Management System (TRMS) ist ein strukturiertes Verfahren, das Unternehmen hilft, Steuerrisiken zu identifizieren, zu bewerten, zu mindern und kontinuierlich zu überwachen. Wichtige Komponenten sind:</p>
+            <ol>
+              <li><strong>Risikobewertung:</strong> Identifizierung und Analyse von Steuerrisiken, die sich aus der Geschäftstätigkeit und steuerlichen Verpflichtungen ergeben. Bewertung ihrer potenziellen Auswirkungen auf die finanzielle und (steuer-) rechtliche Situation.</li>
+              <li><strong>Risikominderung:</strong> Entwicklung und Umsetzung von Strategien zur Minimierung identifizierter Steuerrisiken.</li>
+              <li><strong>Überwachung und Anpassung:</strong> Regelmäßige Überprüfung und Anpassung der Risikomanagementstrategien, um die fortlaufende Wirksamkeit und Compliance mit aktuellen rechtlichen Anforderungen sicherzustellen.</li>
+              <li><strong>Compliance:</strong> Sicherstellung der Einhaltung aller relevanten Steuergesetze und -vorschriften, um steuerliche Probleme zu vermeiden.</li>
+            </ol>
+            <p>Ein effektives TRMS hilft Unternehmen, die steuerliche Compliance sicherzustellen und ihren Ruf zu schützen.</p>
+          `
+        },
+        {
+          question: "Wie kann steuerliche Beratung bei Finanzierungen erfolgen?",
+          answer: `
+            <p>Die steuerliche Beratung bei Finanzierungen umfasst Aspekte, die auf die Sicherstellung von Steuereffizienz und (steuer-)rechtlicher Sicherheit abzielen. Zu den wichtigsten Punkten gehören:</p>
+            <ol>
+              <li><strong>Finanzierungsstruktur:</strong> Um eine steueroptimale Struktur zu erreichen, ist eine Prüfung und Auswahl zwischen Eigenkapital-, Fremdkapital- oder Mezzanine-Finanzierung erforderlich.</li>
+              <li><strong>Steuerliche Auswirkungen:</strong> Bewertung der steuerlichen Folgen verschiedener Finanzierungsoptionen, einschließlich der steuerlichen Abzugsfähigkeit von Finanzierungskosten.</li>
+              <li><strong>Risikomanagement:</strong> Identifizierung und Minimierung von Steuerrisiken im Zusammenhang mit der Finanzierung.</li>
+              <li><strong>Compliance, Verträge und Berichterstattung:</strong> Sicherstellung der Einhaltung aller relevanten Steuervorschriften und Unterstützung bei der Erstellung von Finanzierungsverträgen und anderer Dokumentation.</li>
+            </ol>
+          `
+        },
+        {
+          question: "Wie können Verträge aus steuerlicher Sicht optimal gestaltet werden?",
+          answer: `
+            <p>Die Vertragsgestaltung aus steuerlicher Sicht zielt darauf ab, Steuereffizienz und (steuer-)rechtliche Sicherheit zu gewährleisten. Zu den wichtigsten Aspekten gehören:</p>
+            <ol>
+              <li><strong>Steuerliche Auswirkungen:</strong> Jeder Vertrag hat steuerliche Folgen (insbesondere Ertragsteuern wie Einkommens-, Körperschaft-, Gewerbesteuer sowie Verkehrsteuern wie Umsatzsteuer, Grunderwerbsteuer), die einer sorgfältigen Analyse bedürfen.</li>
+              <li><strong>Vertragsklauseln:</strong> Spezifische Steuerklauseln können aufgenommen werden, um Steuerrisiken zu minimieren, die steuerliche Behandlung zu klären und für die jeweilige Partei zu optimieren.</li>
+              <li><strong>Dokumentationsanforderungen:</strong> Verträge sollten klare und notwendige Dokumentations- und Nachweisanforderungen enthalten, um die Einhaltung steuerlicher Vorschriften zu gewährleisten.</li>
+              <li><strong>Missbrauch von Gestaltungsmöglichkeiten:</strong> Verträge sollten so gestaltet sein, dass sie nicht als Missbrauch von Gestaltungsmöglichkeiten nach § 42 AO (Abgabenordnung) angesehen werden, was erhebliche steuerliche Risiken mit sich bringen kann.</li>
             </ol>
           `
         }
