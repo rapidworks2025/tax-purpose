@@ -366,54 +366,16 @@ export const translations = {
           `
         },
         {
-          question: "Was umfasst die steuerliche Transaktionsberatung?",
+          question: "What does tax transaction advisory cover?",
           answer: `
-            <p>Die steuerliche Transaktionsberatung umfasst die steuerliche Unterstützung und Optimierung von Unternehmenstransaktionen. Zu den wichtigsten Aspekten gehören:</p>
+            <p>Tax transaction advisory involves the tax support and optimization of corporate transactions. Key aspects include:</p>
             <ol>
-              <li><strong>Tax Due Diligence:</strong> Gründliche Prüfung der steuerlichen Situation eines Unternehmens vor einer Transaktion, um potenzielle Steuerrisiken zu identifizieren.</li>
-              <li><strong>Steuerliche Strukturierung:</strong> Entwicklung steueroptimaler Strukturen für Akquisitionen, Verkäufe, Umwandlungen oder Restrukturierungen.</li>
-              <li><strong>Vertragsverhandlungen:</strong> Unterstützung bei der steuerlichen Gestaltung und Verhandlung von Kaufverträgen, um steuerliche Vorteile zu erzielen und Risiken zu minimieren (Verhandlung steueroptimierter Klauseln).</li>
-              <li><strong>Nachträgliche Beratung:</strong> Beratung nach Abschluss der Transaktion, um die effektive Umsetzung der Steuerstrukturen und die Erfüllung aller steuerlichen Pflichten sicherzustellen.</li>
+              <li><strong>Tax Due Diligence:</strong> Thorough examination of a company's tax situation before a transaction to identify potential tax risks.</li>
+              <li><strong>Tax Structuring:</strong> Developing tax-optimal structures for acquisitions, sales, conversions, or restructurings.</li>
+              <li><strong>Contract Negotiations:</strong> Assisting in the tax-related drafting and negotiation of purchase agreements to achieve tax advantages and minimize risks (negotiating tax-optimized clauses).</li>
+              <li><strong>Post-Transaction Advisory:</strong> Advice after the transaction closes to ensure effective implementation of tax structures and fulfillment of all tax obligations.</li>
             </ol>
-            <p>Dies hilft Unternehmen, Steuereffizienz zu erreichen und Steuersicherheit (Minimierung von Steuerrisiken) bei Transaktionen zu gewährleisten.</p>
-          `
-        },
-        {
-          question: "Was ist Tax Risk Management und ein Tax Risk Management System (TRMS)?",
-          answer: `
-            <p>Tax Risk Management bezeichnet den Prozess der Identifizierung, Bewertung, Minderung und Überwachung von Steuerrisiken, die Unternehmen und Einzelpersonen betreffen.</p>
-            <p>Ein Tax Risk Management System (TRMS) ist ein strukturiertes Verfahren, das Unternehmen hilft, Steuerrisiken zu identifizieren, zu bewerten, zu mindern und kontinuierlich zu überwachen. Wichtige Komponenten sind:</p>
-            <ol>
-              <li><strong>Risikobewertung:</strong> Identifizierung und Analyse von Steuerrisiken, die sich aus der Geschäftstätigkeit und steuerlichen Verpflichtungen ergeben. Bewertung ihrer potenziellen Auswirkungen auf die finanzielle und (steuer-) rechtliche Situation.</li>
-              <li><strong>Risikominderung:</strong> Entwicklung und Umsetzung von Strategien zur Minimierung identifizierter Steuerrisiken.</li>
-              <li><strong>Überwachung und Anpassung:</strong> Regelmäßige Überprüfung und Anpassung der Risikomanagementstrategien, um die fortlaufende Wirksamkeit und Compliance mit aktuellen rechtlichen Anforderungen sicherzustellen.</li>
-              <li><strong>Compliance:</strong> Sicherstellung der Einhaltung aller relevanten Steuergesetze und -vorschriften, um steuerliche Probleme zu vermeiden.</li>
-            </ol>
-            <p>Ein effektives TRMS hilft Unternehmen, die steuerliche Compliance sicherzustellen und ihren Ruf zu schützen.</p>
-          `
-        },
-        {
-          question: "Wie kann steuerliche Beratung bei Finanzierungen erfolgen?",
-          answer: `
-            <p>Die steuerliche Beratung bei Finanzierungen umfasst Aspekte, die auf die Sicherstellung von Steuereffizienz und (steuer-)rechtlicher Sicherheit abzielen. Zu den wichtigsten Punkten gehören:</p>
-            <ol>
-              <li><strong>Finanzierungsstruktur:</strong> Um eine steueroptimale Struktur zu erreichen, ist eine Prüfung und Auswahl zwischen Eigenkapital-, Fremdkapital- oder Mezzanine-Finanzierung erforderlich.</li>
-              <li><strong>Steuerliche Auswirkungen:</strong> Bewertung der steuerlichen Folgen verschiedener Finanzierungsoptionen, einschließlich der steuerlichen Abzugsfähigkeit von Finanzierungskosten.</li>
-              <li><strong>Risikomanagement:</strong> Identifizierung und Minimierung von Steuerrisiken im Zusammenhang mit der Finanzierung.</li>
-              <li><strong>Compliance, Verträge und Berichterstattung:</strong> Sicherstellung der Einhaltung aller relevanten Steuervorschriften und Unterstützung bei der Erstellung von Finanzierungsverträgen und anderer Dokumentation.</li>
-            </ol>
-          `
-        },
-        {
-          question: "Wie können Verträge aus steuerlicher Sicht optimal gestaltet werden?",
-          answer: `
-            <p>Die Vertragsgestaltung aus steuerlicher Sicht zielt darauf ab, Steuereffizienz und (steuer-)rechtliche Sicherheit zu gewährleisten. Zu den wichtigsten Aspekten gehören:</p>
-            <ol>
-              <li><strong>Steuerliche Auswirkungen:</strong> Jeder Vertrag hat steuerliche Folgen (insbesondere Ertragsteuern wie Einkommens-, Körperschaft-, Gewerbesteuer sowie Verkehrsteuern wie Umsatzsteuer, Grunderwerbsteuer), die einer sorgfältigen Analyse bedürfen.</li>
-              <li><strong>Vertragsklauseln:</strong> Spezifische Steuerklauseln können aufgenommen werden, um Steuerrisiken zu minimieren, die steuerliche Behandlung zu klären und für die jeweilige Partei zu optimieren.</li>
-              <li><strong>Dokumentationsanforderungen:</strong> Verträge sollten klare und notwendige Dokumentations- und Nachweisanforderungen enthalten, um die Einhaltung steuerlicher Vorschriften zu gewährleisten.</li>
-              <li><strong>Missbrauch von Gestaltungsmöglichkeiten:</strong> Verträge sollten so gestaltet sein, dass sie nicht als Missbrauch von Gestaltungsmöglichkeiten nach § 42 AO (Abgabenordnung) angesehen werden, was erhebliche steuerliche Risiken mit sich bringen kann.</li>
-            </ol>
+            <p>This helps companies achieve tax efficiency and ensure tax certainty (minimizing tax risks) during transactions.</p>
           `
         }
        ]
@@ -483,35 +445,35 @@ export const translations = {
         email: "Email: leila.momen@taxandpurpose.com"
       },
       professionalInfo: {
-        title: "Berufsbezeichnung und berufsrechtliche Regelungen:",
-        jobTitle: "Berufsbezeichnung: Steuerberaterin",
-        chamber: "Zuständige Steuerberaterkammer: Köln",
-        chamberAddressInfo: "Die Anschrift der Kammer finden Sie unter www.bstbk.de/ und unter https://www.stbk-koeln.de/",
-        regulationsTitle: "Die maßgeblichen berufsrechtlichen Regelungen sind:",
+        title: "Job title and professional regulations:",
+        jobTitle: "Job title: Tax Advisor",
+        chamber: "Responsible Chamber of Tax Consultants: Cologne",
+        chamberAddressInfo: "The address of the Chamber can be found at www.bstbk.de/en/ and https://www.stbk-koeln.de/",
+        regulationsTitle: "The relevant professional regulations are:",
         regulations: [
-          "das Steuerberatungsgesetz (StBerG)",
-          "die Durchführungsverordnung zum Steuerberatungsgesetz (DVStB)",
-          "die Berufsordnung der Bundessteuerberaterkammer (BOStB)",
-          "die Steuerberatervergütungsverordnung (StBVV)"
+          "the Tax Advisory Act (Steuerberatungsgesetz - StBerG)",
+          "the Implementing Regulation to the Tax Advisory Act (Durchführungsverordnung zum Steuerberatungsgesetz - DVStB)",
+          "the Professional Code of Conduct for Tax Consultants (Berufsordnung der Bundessteuerberaterkammer - BOStB)",
+          "the Tax Consultant Fees Regulation (Steuerberatervergütungsverordnung - StBVV)"
         ],
-        regulationsLinkInfo: "Die Texte finden Sie unter www. https://www.bstbk.de/de/themen/berufsrecht"
+        regulationsLinkInfo: "The texts can be found at https://www.bstbk.de/en/topics/professional-law"
       },
       disclaimer: {
-        title: "Haftungsausschluss",
-        general: "Die Informationen auf dieser Website sind allgemeiner Art und dienen lediglich dazu, tax&purpose interessierten Internetnutzern vorzustellen. Für die Inhalte ihrer Websites haftet tax&purpose nach den gesetzlichen Bestimmungen. Die Zusammenstellung der Informationen erfolgte mit der gebotenen Sorgfalt.",
-        noResponsibility: "Für Entscheidungen, die der Verwender aufgrund der vorgenannten Informationen trifft, übernimmt tax&Purpose keine Verantwortung. Dieser Inhalt stellt keine individuelle rechtliche, buchführungstechnische, steuerliche oder sonstige fachliche Auskunft oder Empfehlung dar und ist nicht geeignet, eine individuelle Beratung durch fachkundige Personen unter Berücksichtigung der konkreten Umstände des Einzelfalles zu ersetzen. Tax&Purpose behält sich das Recht vor, die auf dieser Website angebotenen Informationen, Produkte oder Dienstleistungen ohne gesonderte Ankündigung jederzeit zu ändern oder zu aktualisieren.",
-        externalLinks: "Diese Website enthält Verweise auf Websites, die von Dritten eingerichtet wurden. tax&purpose hat keinerlei Kontrolle oder Einfluss auf die Inhalte von Websites Dritter, auf die diese Webseiten verweisen. Durch die Verweise und Links auf die Websites Dritter wird nicht zum Ausdruck gebracht, dass sich tax&purpose die Inhalte der Verweise bzw. Links zu Eigen macht. Tax&purpose haftet daher nicht für rechtswidrige, fehlerhafte oder unvollständige Inhalte und für Schäden, die aufgrund der Nutzung von einem hinter dem Verweis oder Link liegenden Inhalt verursacht worden sind.",
-        copyright: "Der Inhalt dieser von tax&purpose selbst erstellten Seiten ist urheberrechtlich geschützt. Diese Informationen sind nur für die persönliche Verwendung bestimmt. Jede den Bestimmungen des Urheberrechtsgesetzes widersprechende Verwendung jeglicher Inhalte dieser Webseiten – insbesondere die weitergehende Nutzung wie beispielsweise die Veröffentlichung, Vervielfältigung und jede Form von gewerblicher Nutzung sowie die Weitergabe an Dritte – auch in Teilen oder in überarbeiteter Form – ohne ausdrückliche Zustimmung von tax&purpose ist untersagt.",
-        internetRisk: "Die Nutzung des Internets erfolgt auf eigene Gefahr des Nutzers. Tax&Purpose haftet vor allem nicht für den technisch bedingten Ausfall des Internets bzw. des Zugangs zum Internet.",
-        lawAndJurisdiction: "Für gegebenenfalls bestehende oder künftig entstehende Rechtsverhältnisse ist ausschließlich deutsches Recht anwendbar und sind nur deutsche Gerichte zuständig."
+        title: "Disclaimer",
+        general: "The information on this website is of a general nature and is intended solely to introduce tax&purpose to interested internet users. Tax&purpose assumes liability for the content of its websites in accordance with legal provisions. The information has been compiled with due care.",
+        noResponsibility: "Tax&Purpose assumes no responsibility for decisions made by the user based on the aforementioned information. This content does not constitute individual legal, accounting, tax, or other professional advice or recommendations, and is not intended to replace individual consultation by a qualified professional, taking into account the specific circumstances of the individual case. Tax&Purpose reserves the right to change or update the information, products, or services offered on this website at any time without prior notice.",
+        externalLinks: "This website contains links to websites maintained by third parties. Tax&purpose has no control or influence over the content of third-party websites linked to these websites. References and links to third-party websites do not imply that Tax&purpose endorses the content of the reference or link. Tax&purpose is therefore not liable for illegal, incorrect, or incomplete content, or for damages resulting from the use of content linked to these websites.",
+        copyright: "The content of these pages created by tax&purpose itself is protected by copyright. This information is intended for personal use only. Any use of any content of this website that violates the provisions of copyright law—in particular, further use such as publication, reproduction, and any form of commercial use, as well as the transfer to third parties, even in part or in revised form—without the express consent of tax&purpose is prohibited.",
+        internetRisk: "Use of the Internet is at the user's own risk. Tax&Purpose is not liable for any technical failure of the Internet or access to the Internet.",
+        lawAndJurisdiction: "Any existing or future legal relationships shall be governed exclusively by German law and only German courts shall have jurisdiction."
       },
       insurance: {
-        title: "Angaben zur Berufshaftpflichtversicherung",
+        title: "Information on Professional Liability Insurance",
         name: "Ergo Versicherung AG",
         address: "ERGO-Platz 1\n40477 Düsseldorf"
       },
       contentResponsible: {
-        title: "Verantwortlich für den Inhalt",
+        title: "Responsible for Content",
         name: "tax&purpose",
         person: "Dr. Leila Momen",
         address: "Jülicher Straße 72a\n52070 Aachen"
@@ -723,7 +685,7 @@ export const translations = {
         }
       ],
       purposeEconomyTerms: [
-         {
+        {
           question: "Was ist Social Entrepreneurship?",
           answer: `
             <p>Unter dem Begriff Social Entrepreneurship (auch Sozialunternehmertum bzw. Soziales Unternehmertum) versteht man eine unternehmerische Tätigkeit, die sich für einen positiven Wandel der Gesellschaft, für das Gemeinwohl sowie die Lösung sozialer Probleme oder für die Umwelt einsetzt.</p>
@@ -772,7 +734,7 @@ export const translations = {
             <p>Die ESG-Definition umfasst mit Umwelt, Soziales und Unternehmensführung drei nachhaltigkeitsbezogene Verantwortungsbereiche von Organisationen. Der Begriff "ESG" ist die Abkürzung der entsprechenden englischen Begriffe Environmental (E), Social (S) und Governance (G). Als ESG-Kriterien stellen sie ein unternehmerisches Instrument und Regelwerk dar, um die Bemühungen der Unternehmen im Bereich Nachhaltigkeit zu erfassen, zu analysieren, messbar zu machen und zu beurteilen.</p>
             <p>Die im Rahmen von ESG erhobenen Daten dienen Unternehmen unter anderem als Grundlage für Nachhaltigkeitsstrategien und -berichte (ESG-Reportings). Letztere bieten die Möglichkeit, die unternehmerischen Bemühungen und Maßnahmen im Bereich Nachhaltigkeit, Klimaschutz und Einsparung von CO₂ sichtbar zu machen und sich bei Mitarbeitenden, Kunden, Lieferanten oder Investoren als verantwortungsvolles Unternehmen zu präsentieren. Im Zusammenhang mit der Corporate Sustainability Reporting Directive (CSRD) sind bestimmte Unternehmen bereits verpflichtet, ESG-Daten zu erheben und ESG-Reportings zu erstellen.</p>
             <p>Gleichzeitig nutzen Rating-Agenturen ESG-Kriterien und -Daten, um die Nachhaltigkeit von Unternehmen zu bewerten (ESG-Ratings). Dadurch haben Investoren die Möglichkeit, ihre Investitionsentscheidungen gezielt auf Nachhaltigkeit auszurichten.</p>
-            <p>Weitere Informationen findet ihr unter folgendem Link:</p>
+            <p>Weitere Informationen findet ihr unter folgenden Links:</p>
             <ul>
                <li><a href="https://www.haufe.de/sustainability/strategie/esg-definition-und-bedeutung-fuer-unternehmen-und-investoren_575772_625088.html" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Haufe - ESG Definition</a></li>
                <li><a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/was-ist-esg" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">PwC - Was ist ESG?</a></li>
@@ -780,43 +742,43 @@ export const translations = {
           `
         },
         {
-            question: "Was bedeutet steuerliche Transparenz & Nachhaltigkeit?",
-            answer: `
-                <p>Nachhaltigkeitsaspekte bestimmen zunehmend den steuerlichen und rechtlichen Rahmen, in dem Unternehmen agieren.</p>
-                <p>Steuerliche Nachhaltigkeitsberichterstattung bezieht sich auf die Offenlegung und Berichterstattung von steuerlichen Informationen durch Unternehmen im Rahmen ihrer Nachhaltigkeitssberichte. Unternehmen berichten z.B. über ihre Steuerstrategie, ihr Tax Risk Management System (TRMS), ihren Umgang mit Stakeholdern (Einbeziehung der Stakeholder) und legen steuerrelevante Kennzahlen offen.</p>
-                <p>Die Bedeutung der steuerlichen Berichterstattung hat sich über viele Jahre hinweg entwickelt. Zuletzt wurde die Reporting-Landschaft stark von der EU geprägt, durch die Corporate Sustainability Reporting Directive (CSRD) und die public CbCR-Richtlinie.</p>
-                <p>Aber auch etablierte Standards wie die Global Reporting Initiative (GRI), das Standard&Poor's Global Corporate Sustainability Assessment, die OECD-Guidelines for Multinational Enterprises on Responsible Business Conduct und die WEF-Metrics spielen eine wichtige Rolle für die Berichterstattung rund um das Thema Steuern.</p>
-                <p>Weitere Informationen findet ihr unter folgendem Link:</p>
-                <ul>
-                 <li><a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/steuerliche-transparenz-nachhaltigkeit" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">PwC - Steuerliche Transparenz & Nachhaltigkeit</a></li>
-                </ul>
-            `
+          question: "Was bedeutet steuerliche Transparenz & Nachhaltigkeit?",
+          answer: `
+            <p>Nachhaltigkeitsaspekte bestimmen zunehmend den steuerlichen und rechtlichen Rahmen, in dem Unternehmen agieren.</p>
+            <p>Steuerliche Nachhaltigkeitsberichterstattung bezieht sich auf die Offenlegung und Berichterstattung von steuerlichen Informationen durch Unternehmen im Rahmen ihrer Nachhaltigkeitssberichte. Unternehmen berichten z.B. über ihre Steuerstrategie, ihr Tax Risk Management System (TRMS), ihren Umgang mit Stakeholdern (Einbeziehung der Stakeholder) und legen steuerrelevante Kennzahlen offen.</p>
+            <p>Die Bedeutung der steuerlichen Berichterstattung hat sich über viele Jahre hinweg entwickelt. Zuletzt wurde die Reporting-Landschaft stark von der EU geprägt, durch die Corporate Sustainability Reporting Directive (CSRD) und die public CbCR-Richtlinie.</p>
+            <p>Aber auch etablierte Standards wie die Global Reporting Initiative (GRI), das Standard&Poor's Global Corporate Sustainability Assessment, die OECD-Guidelines for Multinational Enterprises on Responsible Business Conduct und die WEF-Metrics spielen eine wichtige Rolle für die Berichterstattung rund um das Thema Steuern.</p>
+            <p>Weitere Informationen findet ihr unter folgendem Link:</p>
+            <ul>
+             <li><a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/steuerliche-transparenz-nachhaltigkeit" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">PwC - Steuerliche Transparenz & Nachhaltigkeit</a></li>
+            </ul>
+          `
         },
         {
-            question: "In welchen Bereichen ist ESG steuerlich relevant?",
-            answer: `
-                <p>ESG ist steuerlich u.a. in folgenden Bereichen relevant:</p>
-                <ul>
-                    <li><strong>Steuerliche Transparenz & Nachhaltigkeit:</strong> Siehe hierzu "Was bedeutet steuerliche Transparenz & Nachhaltigkeit"</li>
-                    <li><strong>Umsatzsteuer (Mehrwertsteuer):</strong> Hier sind vielfältige Auswirkungen denkbar, von denen exemplarisch nur einige erwähnt werden: Bestimmte Produkte und Dienstleistungen werden umsatzsteuerlich z.B. über den Nullsteuersatz begünstigt (umsatzsteuerliche Förderung grüner Technologien). Im Zusammenhang mit der Kreislaufwirtschaft können bisherige Abfälle nun als Rohstoff qualifizieren - mit eventuell erforderlichen Anpassungen in der umsatzsteuerlichen Würdigung. Ein nachhaltiges Agieren am Markt kann zu neuen Geschäftsmodellen und neuen Angebotsstrukturen führen. Dies erfordert eine sorgsame Würdigung der zu Grunde liegenden Liefer- und Leistungsbeziehungen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/indirekte-steuern" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Indirekte Steuern</a>)</li>
-                    <li><strong>Strom- & Energiesteuer:</strong> Die neue Energiesteuerrichtlinie der EU führt grundlegende Änderungen bei der Besteuerung von Energieprodukten ein, mit dem Ziel, den Übergang zu einer nachhaltigen und klimaneutralen Energieversorgung zu unterstützen. Anstatt Energieprodukte nach Volumen zu besteuern, wird die Besteuerung nach ihrem Energiegehalt und ihrer Umweltleistung erfolgen. Umweltschädlichere Brennstoffe werden höher besteuert. Die Richtlinie sieht steuerliche Anreize für erneuerbare Energien vor und fördert innovative Technologien wie grünen Wasserstoff und Energiespeicher. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/strom-energiesteuer" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Strom- & Energiesteuer</a>)</li>
-                    <li><strong>Transaktionen und Strukturierungen im Bereich erneuerbare Energien:</strong> Die Umstellung auf erneuerbare Energien (PV, Wind), E-Mobilität oder Wärmeversorgung erfordern spezialisierte steuerliche Strukturierungs- und Transaktionsberatung für Energieunternehmen, Investoren etc. Aspekte umfassen Gesellschaftsstruktur, Finanzierung, Standortwahl und internationale Steuerplanung. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/energy-structuring-transactions" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Energy Structuring</a>)</li>
-                    <li><strong>Verrechnungspreise:</strong> Im ESG-Kontext geht es darum, wer welche Funktionen übernimmt, Risiken trägt und Güter einsetzt bei grenzüberschreitenden, konzerninternen Transaktionen. Es stellt sich die Frage, ob neue Funktionen durch ESG-Anforderungen entstehen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/transfer-pricing" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Verrechnungspreise</a>)</li>
-                    <li><strong>Personalwesen und Vergütung / Steuern:</strong> ESG-konforme Vergütungsbestandteile (z.B. ÖPNV-Zuschuss, Fahrradleasing, Weiterbildung, Kinderbetreuung, faire Vergütung, Mitarbeiterbeteiligung) helfen, gesellschaftliche Verantwortung zu erfüllen, Mitarbeiterengagement zu fördern und Risiken zu minimieren. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/employment-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Employment Tax</a>)</li>
-                    <li><strong>Fördermittel:</strong> Bundesministerien und EU stellen Fördermittel für Klima-, Umwelt-, Nachhaltigkeitsvorhaben bereit. Identifizierung und strategische Beantragung von Fördermitteln (auch Steuervergünstigungen für Erneuerbare) sind Teil der Finanzierung (z.B. grüne Finanzierungen - Green Finance) zur Realisierung von ESG-Zielen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/foerdermittel" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Fördermittel</a>)</li>
-                    <li><strong>Immobilien:</strong> ESG tax Aspekte umfassen steueroptimierte Nutzung erneuerbarer Energien auf Grundstücken, steuerliche Due-Diligence-Prüfung mit ESG-Bezug bei Ankäufen zur Risikoidentifikation und ESG-/steueroptimierte Haltestrukturen zur Vermeidung von Preisabschlägen beim Exit. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/real-estate-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Real Estate Tax</a>)</li>
-                </ul>
-            `
+          question: "In welchen Bereichen ist ESG steuerlich relevant?",
+          answer: `
+            <p>ESG ist steuerlich u.a. in folgenden Bereichen relevant:</p>
+            <ul>
+              <li><strong>Steuerliche Transparenz & Nachhaltigkeit:</strong> Siehe hierzu "Was bedeutet steuerliche Transparenz & Nachhaltigkeit"</li>
+              <li><strong>Umsatzsteuer (Mehrwertsteuer):</strong> Hier sind vielfältige Auswirkungen denkbar, von denen exemplarisch nur einige erwähnt werden: Bestimmte Produkte und Dienstleistungen werden umsatzsteuerlich z.B. über den Nullsteuersatz begünstigt (umsatzsteuerliche Förderung grüner Technologien). Im Zusammenhang mit der Kreislaufwirtschaft können bisherige Abfälle nun als Rohstoff qualifizieren - mit eventuell erforderlichen Anpassungen in der umsatzsteuerlichen Würdigung. Ein nachhaltiges Agieren am Markt kann zu neuen Geschäftsmodellen und neuen Angebotsstrukturen führen. Dies erfordert eine sorgsame Würdigung der zu Grunde liegenden Liefer- und Leistungsbeziehungen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/indirekte-steuern" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Indirekte Steuern</a>)</li>
+              <li><strong>Strom- & Energiesteuer:</strong> Die neue Energiesteuerrichtlinie der EU führt grundlegende Änderungen bei der Besteuerung von Energieprodukten ein, mit dem Ziel, den Übergang zu einer nachhaltigen und klimaneutralen Energieversorgung zu unterstützen. Anstatt Energieprodukte nach Volumen zu besteuern, wird die Besteuerung nach ihrem Energiegehalt und ihrer Umweltleistung erfolgen. Umweltschädlichere Brennstoffe werden höher besteuert. Die Richtlinie sieht steuerliche Anreize für erneuerbare Energien vor und fördert innovative Technologien wie grünen Wasserstoff und Energiespeicher. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/strom-energiesteuer" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Strom- & Energiesteuer</a>)</li>
+              <li><strong>Transaktionen und Strukturierungen im Bereich erneuerbare Energien:</strong> Die Umstellung auf erneuerbare Energien (PV, Wind), E-Mobilität oder Wärmeversorgung erfordern spezialisierte steuerliche Strukturierungs- und Transaktionsberatung für Energieunternehmen, Investoren etc. Aspekte umfassen Gesellschaftsstruktur, Finanzierung, Standortwahl und internationale Steuerplanung. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/energy-structuring-transactions" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Energy Structuring</a>)</li>
+              <li><strong>Verrechnungspreise:</strong> Im ESG-Kontext geht es darum, wer welche Funktionen übernimmt, Risiken trägt und Güter einsetzt bei grenzüberschreitenden, konzerninternen Transaktionen. Es stellt sich die Frage, ob neue Funktionen durch ESG-Anforderungen entstehen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/transfer-pricing" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Verrechnungspreise</a>)</li>
+              <li><strong>Personalwesen und Vergütung / Steuern:</strong> ESG-konforme Vergütungsbestandteile (z.B. ÖPNV-Zuschuss, Fahrradleasing, Weiterbildung, Kinderbetreuung, faire Vergütung, Mitarbeiterbeteiligung) helfen, gesellschaftliche Verantwortung zu erfüllen, Mitarbeiterengagement zu fördern und Risiken zu minimieren. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/employment-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Employment Tax</a>)</li>
+              <li><strong>Fördermittel:</strong> Bundesministerien und EU stellen Fördermittel für Klima-, Umwelt-, Nachhaltigkeitsvorhaben bereit. Identifizierung und strategische Beantragung von Fördermitteln (auch Steuervergünstigungen für Erneuerbare) sind Teil der Finanzierung (z.B. grüne Finanzierungen - Green Finance) zur Realisierung von ESG-Zielen. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/foerdermittel" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Fördermittel</a>)</li>
+              <li><strong>Immobilien:</strong> ESG tax Aspekte umfassen steueroptimierte Nutzung erneuerbarer Energien auf Grundstücken, steuerliche Due-Diligence-Prüfung mit ESG-Bezug bei Ankäufen zur Risikoidentifikation und ESG-/steueroptimierte Haltestrukturen zur Vermeidung von Preisabschlägen beim Exit. (<a href="https://www.topic.pwc.de/climate-transition/tls-esg-2024-08-06/real-estate-tax" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Weitere Infos - PwC Real Estate Tax</a>)</li>
+            </ul>
+          `
         },
         {
           question: "Was beinhaltet das internationale Steuerrecht?",
           answer: `
             <p>Das internationale Steuerrecht umfasst grundsätzlich die Gesamtheit der Normen des in Deutschland gültigen Steuerrechts mit grenzüberschreitendem Bezug. Wesentliche Bestandteile sind:</p>
             <ol>
-              <li><strong>Double Taxation Agreements (DTAs):</strong> Regeln, wie Einkünfte/Vermögen zwischen Staaten besteuert werden, um Doppel-/Minderbesteuerung zu vermeiden.</li>
+              <li><strong>Doppelbesteuerungsabkommen (DBAs):</strong> Regeln, wie Einkünfte/Vermögen zwischen Staaten besteuert werden, um Doppel-/Minderbesteuerung zu vermeiden.</li>
               <li><strong>Nationale Vorschriften mit Auslandsbezug:</strong> Regeln zur Steuerpflicht bei grenzüberschreitenden Sachverhalten oder zur Vermeidung von Doppelbesteuerung.</li>
-              <li><strong>Foreign Tax Act (Außensteuergesetz - AStG):</strong> Enthält spezielle Vorschriften zur Verhinderung von Steuerumgehung durch Verlagerung von Einkünften ins Ausland.</li>
-              <li><strong>EU Law:</strong> Steuerverordnungen und -richtlinien, die innerhalb der EU gelten und die nationalen Steuergesetze der Mitgliedstaaten beeinflussen, ausgerichtet an den Grundfreiheiten des Vertrags über die Arbeitsweise der Europäischen Union (AEUV).</li>
+              <li><strong>Außensteuergesetz (AStG):</strong> Enthält spezielle Vorschriften zur Verhinderung von Steuerumgehung durch Verlagerung von Einkünften ins Ausland.</li>
+              <li><strong>EU-Recht:</strong> Steuerverordnungen und -richtlinien, die innerhalb der EU gelten und die nationalen Steuergesetze der Mitgliedstaaten beeinflussen, ausgerichtet an den Grundfreiheiten des Vertrags über die Arbeitsweise der Europäischen Union (AEUV).</li>
             </ol>
           `
         },
@@ -835,108 +797,57 @@ export const translations = {
           `
         },
         {
-          question: "What does tax transaction advisory cover?",
-          answer: `
-            <p>Tax transaction advisory involves the tax support and optimization of corporate transactions. Key aspects include:</p>
-            <ol>
-              <li><strong>Tax Due Diligence:</strong> Thorough examination of a company's tax situation before a transaction to identify potential tax risks.</li>
-              <li><strong>Tax Structuring:</strong> Developing tax-optimal structures for acquisitions, sales, conversions, or restructurings.</li>
-              <li><strong>Contract Negotiations:</strong> Assisting in the tax-related drafting and negotiation of purchase agreements to achieve tax advantages and minimize risks (negotiating tax-optimized clauses).</li>
-              <li><strong>Post-Transaction Advisory:</strong> Advice after the transaction closes to ensure effective implementation of tax structures and fulfillment of all tax obligations.</li>
-            </ol>
-            <p>This helps companies achieve tax efficiency and ensure tax certainty (minimizing tax risks) during transactions.</p>
-          `
-        },
-        {
-          question: "What is Tax Risk Management and a Tax Risk Management System (TRMS)?",
-          answer: `
-            <p>Tax Risk Management refers to the process of identifying, assessing, mitigating, and monitoring tax risks affecting businesses and individuals.</p>
-            <p>A Tax Risk Management System (TRMS) is a structured procedure helping companies identify, assess, mitigate, and continuously monitor tax risks. Key components are:</p>
-            <ol>
-              <li><strong>Risk Assessment:</strong> Identifying and analyzing tax risks arising from business operations and tax obligations. Assessing their potential impact on financial and (tax) legal situations.</li>
-              <li><strong>Risk Mitigation:</strong> Developing and implementing strategies to minimize identified tax risks.</li>
-              <li><strong>Monitoring and Adaptation:</strong> Regularly reviewing and adjusting risk management strategies to ensure ongoing effectiveness and compliance with current legal requirements.</li>
-              <li><strong>Compliance:</strong> Ensuring adherence to all relevant tax laws and regulations to avoid tax issues.</li>
-            </ol>
-            <p>An effective TRMS helps companies ensure tax compliance and protect their reputation.</p>
-          `
-        },
-        {
-          question: "How can tax advice be provided for financing?",
-          answer: `
-            <p>Tax advisory for financing covers aspects aimed at ensuring tax efficiency and (tax) legal certainty. Key points include:</p>
-            <ol>
-              <li><strong>Financing Structure:</strong> Achieving a tax-optimal structure requires examining and choosing between equity, debt, or mezzanine financing.</li>
-              <li><strong>Tax Implications:</strong> Assessing the tax consequences of various financing options, including the tax deductibility of financing costs.</li>
-              <li><strong>Risk Management:</strong> Identifying and minimizing tax risks associated with financing.</li>
-              <li><strong>Compliance, Contracts, and Reporting:</strong> Ensuring compliance with all relevant tax regulations and assisting with the preparation of financing agreements and other documentation.</li>
-            </ol>
-          `
-        },
-        {
-          question: "How can contracts be optimally designed from a tax perspective?",
-          answer: `
-            <p>Contract design from a tax perspective aims to ensure tax efficiency and (tax) legal certainty. Key aspects include:</p>
-            <ol>
-              <li><strong>Tax Implications:</strong> Every contract has tax consequences (especially income taxes like income, corporate, trade tax, and transaction taxes like VAT, real estate transfer tax) that need careful analysis.</li>
-              <li><strong>Contract Clauses:</strong> Specific tax clauses can be included to minimize tax risks, clarify tax treatment, and optimize it for the respective party.</li>
-              <li><strong>Documentation Requirements:</strong> Contracts should contain clear and necessary documentation and proof requirements to ensure compliance with tax regulations.</li>
-              <li><strong>Abuse of Structuring Options:</strong> Contracts should be designed to avoid being considered an abuse of structuring options under § 42 AO (German Fiscal Code), which can carry significant tax risks.</li>
-            </ol>
-          `
-        },
-        {
           question: "Was umfasst die steuerliche Transaktionsberatung?",
           answer: `
-            <p>Die steuerliche Transaktionsberatung umfasst die steuerliche Unterstützung und Optimierung von Unternehmenstransaktionen. Zu den wichtigsten Aspekten gehören:</p>
+            <p>Die steuerliche Transaktionsberatung umfasst die steuerliche Begleitung und Optimierung von Unternehmenstransaktionen. Wichtige Aspekte sind:</p>
             <ol>
-              <li><strong>Tax Due Diligence:</strong> Gründliche Prüfung der steuerlichen Situation eines Unternehmens vor einer Transaktion, um potenzielle Steuerrisiken zu identifizieren.</li>
-              <li><strong>Steuerliche Strukturierung:</strong> Entwicklung steueroptimaler Strukturen für Akquisitionen, Verkäufe, Umwandlungen oder Restrukturierungen.</li>
-              <li><strong>Vertragsverhandlungen:</strong> Unterstützung bei der steuerlichen Gestaltung und Verhandlung von Kaufverträgen, um steuerliche Vorteile zu erzielen und Risiken zu minimieren (Verhandlung steueroptimierter Klauseln).</li>
-              <li><strong>Nachträgliche Beratung:</strong> Beratung nach Abschluss der Transaktion, um die effektive Umsetzung der Steuerstrukturen und die Erfüllung aller steuerlichen Pflichten sicherzustellen.</li>
+              <li><strong>Tax Due Diligence:</strong> Gründliche Prüfung der steuerlichen Situation eines Unternehmens vor einer Transaktion, um potenzielle steuerliche Risiken zu identifizieren.</li>
+              <li><strong>Steuerliche Strukturierung:</strong> Entwicklung steueroptimaler Strukturen für Erwerb, Verkauf, Umwandlung oder Restrukturierung.</li>
+              <li><strong>Vertragsverhandlungen:</strong> Unterstützung bei der steuerlichen Gestaltung und Verhandlung von Kaufverträgen, um Steuervorteile zu erzielen und Risiken zu minimieren (Verhandlung steueroptimierter Klauseln).</li>
+              <li><strong>Beratung nach der Transaktion:</strong> Beratung nach Abschluss der Transaktion, um die effektive Umsetzung der Steuerstruktur und die Erfüllung aller steuerlichen Pflichten sicherzustellen.</li>
             </ol>
-            <p>Dies hilft Unternehmen, Steuereffizienz zu erreichen und Steuersicherheit (Minimierung von Steuerrisiken) bei Transaktionen zu gewährleisten.</p>
+            <p>Dies hilft Unternehmen, steuerliche Effizienz und Sicherheit bei Transaktionen zu erreichen.</p>
           `
         },
         {
           question: "Was ist Tax Risk Management und ein Tax Risk Management System (TRMS)?",
           answer: `
-            <p>Tax Risk Management bezeichnet den Prozess der Identifizierung, Bewertung, Minderung und Überwachung von Steuerrisiken, die Unternehmen und Einzelpersonen betreffen.</p>
-            <p>Ein Tax Risk Management System (TRMS) ist ein strukturiertes Verfahren, das Unternehmen hilft, Steuerrisiken zu identifizieren, zu bewerten, zu mindern und kontinuierlich zu überwachen. Wichtige Komponenten sind:</p>
+            <p>Tax Risk Management bezeichnet den Prozess der Identifikation, Bewertung, Minderung und Überwachung von steuerlichen Risiken, die Unternehmen und Einzelpersonen betreffen.</p>
+            <p>Ein Tax Risk Management System (TRMS) ist ein strukturiertes Verfahren, das Unternehmen dabei hilft, steuerliche Risiken zu identifizieren, zu bewerten, zu mindern und kontinuierlich zu überwachen. Wesentliche Komponenten sind:</p>
             <ol>
-              <li><strong>Risikobewertung:</strong> Identifizierung und Analyse von Steuerrisiken, die sich aus der Geschäftstätigkeit und steuerlichen Verpflichtungen ergeben. Bewertung ihrer potenziellen Auswirkungen auf die finanzielle und (steuer-) rechtliche Situation.</li>
-              <li><strong>Risikominderung:</strong> Entwicklung und Umsetzung von Strategien zur Minimierung identifizierter Steuerrisiken.</li>
-              <li><strong>Überwachung und Anpassung:</strong> Regelmäßige Überprüfung und Anpassung der Risikomanagementstrategien, um die fortlaufende Wirksamkeit und Compliance mit aktuellen rechtlichen Anforderungen sicherzustellen.</li>
-              <li><strong>Compliance:</strong> Sicherstellung der Einhaltung aller relevanten Steuergesetze und -vorschriften, um steuerliche Probleme zu vermeiden.</li>
+              <li><strong>Risikobewertung:</strong> Identifizierung und Analyse steuerlicher Risiken, die aus den Geschäftstätigkeiten und steuerlichen Verpflichtungen entstehen. Bewertung ihrer potenziellen Auswirkungen auf die finanzielle und (steuerliche) rechtliche Situation.</li>
+              <li><strong>Risikominderung:</strong> Entwicklung und Umsetzung von Strategien zur Minimierung identifizierter steuerlicher Risiken.</li>
+              <li><strong>Überwachung und Anpassung:</strong> Regelmäßige Überprüfung und Anpassung der Risikomanagementstrategien, um deren kontinuierliche Wirksamkeit und Einhaltung der aktuellen rechtlichen Anforderungen sicherzustellen.</li>
+              <li><strong>Compliance:</strong> Gewährleistung der Einhaltung aller relevanten steuerlichen Gesetze und Vorschriften zur Vermeidung steuerlicher Probleme.</li>
             </ol>
-            <p>Ein effektives TRMS hilft Unternehmen, die steuerliche Compliance sicherzustellen und ihren Ruf zu schützen.</p>
+            <p>Ein effektives TRMS hilft Unternehmen, steuerliche Compliance sicherzustellen und ihren Ruf zu schützen.</p>
           `
         },
         {
-          question: "Wie kann steuerliche Beratung bei Finanzierungen erfolgen?",
+          question: "Wie kann steuerliche Beratung für Finanzierungen erfolgen?",
           answer: `
-            <p>Die steuerliche Beratung bei Finanzierungen umfasst Aspekte, die auf die Sicherstellung von Steuereffizienz und (steuer-)rechtlicher Sicherheit abzielen. Zu den wichtigsten Punkten gehören:</p>
+            <p>Die steuerliche Beratung für Finanzierungen umfasst Aspekte, die darauf abzielen, steuerliche Effizienz und (steuerliche) Rechtssicherheit zu gewährleisten. Wichtige Punkte sind:</p>
             <ol>
-              <li><strong>Finanzierungsstruktur:</strong> Um eine steueroptimale Struktur zu erreichen, ist eine Prüfung und Auswahl zwischen Eigenkapital-, Fremdkapital- oder Mezzanine-Finanzierung erforderlich.</li>
-              <li><strong>Steuerliche Auswirkungen:</strong> Bewertung der steuerlichen Folgen verschiedener Finanzierungsoptionen, einschließlich der steuerlichen Abzugsfähigkeit von Finanzierungskosten.</li>
-              <li><strong>Risikomanagement:</strong> Identifizierung und Minimierung von Steuerrisiken im Zusammenhang mit der Finanzierung.</li>
-              <li><strong>Compliance, Verträge und Berichterstattung:</strong> Sicherstellung der Einhaltung aller relevanten Steuervorschriften und Unterstützung bei der Erstellung von Finanzierungsverträgen und anderer Dokumentation.</li>
+              <li><strong>Finanzierungsstruktur:</strong> Erreichen einer steueroptimalen Struktur erfordert die Prüfung und Wahl zwischen Eigenkapital-, Fremdkapital- oder Mezzanine-Finanzierung.</li>
+              <li><strong>Steuerliche Auswirkungen:</strong> Bewertung der steuerlichen Konsequenzen verschiedener Finanzierungsoptionen, einschließlich der steuerlichen Abzugsfähigkeit von Finanzierungskosten.</li>
+              <li><strong>Risikomanagement:</strong> Identifizierung und Minimierung steuerlicher Risiken im Zusammenhang mit der Finanzierung.</li>
+              <li><strong>Compliance, Verträge und Berichterstattung:</strong> Gewährleistung der Einhaltung aller relevanten steuerlichen Vorschriften und Unterstützung bei der Vorbereitung von Finanzierungsverträgen und anderen Dokumentationen.</li>
             </ol>
           `
         },
         {
-          question: "Wie können Verträge aus steuerlicher Sicht optimal gestaltet werden?",
+          question: "Wie können Verträge steuerlich optimal gestaltet werden?",
           answer: `
-            <p>Die Vertragsgestaltung aus steuerlicher Sicht zielt darauf ab, Steuereffizienz und (steuer-)rechtliche Sicherheit zu gewährleisten. Zu den wichtigsten Aspekten gehören:</p>
+            <p>Die steuerliche Vertragsgestaltung zielt darauf ab, steuerliche Effizienz und (steuerliche) Rechtssicherheit zu gewährleisten. Wichtige Aspekte sind:</p>
             <ol>
-              <li><strong>Steuerliche Auswirkungen:</strong> Jeder Vertrag hat steuerliche Folgen (insbesondere Ertragsteuern wie Einkommens-, Körperschaft-, Gewerbesteuer sowie Verkehrsteuern wie Umsatzsteuer, Grunderwerbsteuer), die einer sorgfältigen Analyse bedürfen.</li>
-              <li><strong>Vertragsklauseln:</strong> Spezifische Steuerklauseln können aufgenommen werden, um Steuerrisiken zu minimieren, die steuerliche Behandlung zu klären und für die jeweilige Partei zu optimieren.</li>
-              <li><strong>Dokumentationsanforderungen:</strong> Verträge sollten klare und notwendige Dokumentations- und Nachweisanforderungen enthalten, um die Einhaltung steuerlicher Vorschriften zu gewährleisten.</li>
-              <li><strong>Missbrauch von Gestaltungsmöglichkeiten:</strong> Verträge sollten so gestaltet sein, dass sie nicht als Missbrauch von Gestaltungsmöglichkeiten nach § 42 AO (Abgabenordnung) angesehen werden, was erhebliche steuerliche Risiken mit sich bringen kann.</li>
+              <li><strong>Steuerliche Auswirkungen:</strong> Jeder Vertrag hat steuerliche Konsequenzen (insbesondere Ertragsteuern wie Einkommensteuer, Körperschaftsteuer, Gewerbesteuer und Verkehrsteuern wie Umsatzsteuer, Grunderwerbsteuer), die sorgfältig analysiert werden müssen.</li>
+              <li><strong>Vertragsklauseln:</strong> Spezielle steuerliche Klauseln können eingebaut werden, um steuerliche Risiken zu minimieren, die steuerliche Behandlung zu klären und für die jeweilige Partei zu optimieren.</li>
+              <li><strong>Dokumentationsanforderungen:</strong> Verträge sollten klare und notwendige Dokumentations- und Nachweisanforderungen enthalten, um die Einhaltung steuerlicher Vorschriften sicherzustellen.</li>
+              <li><strong>Missbrauch von Gestaltungsmöglichkeiten:</strong> Verträge sollten so gestaltet werden, dass sie nicht als Missbrauch von Gestaltungsmöglichkeiten nach § 42 AO eingestuft werden, was erhebliche steuerliche Risiken bergen kann.</li>
             </ol>
           `
         }
-       ]
+      ]
     },
     privacyPolicy: {
       title: "Datenschutzerklärung für taxandpurpose.de",
